@@ -3,154 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>넥슨에서 즐거움을 시작하세요!</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>NEXON Website</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 </head>
 <body>
-  <!-- HEADER 시작 -->
-  <header class="sm-pd">
-    <div class="container cf">
-      <h1 class="logo">
-        <a href="">NEXON</a>
-      </h1>
-      <nav>
-        <ul class="cf">
-          <li>
-            <a href="" class="light-g3">현대카드</a>
-          </li>
-          <li>
-            <a href="" class="light-g3">PC방</a>
-          </li>
-          <li>
-            <a href="" class="light-g3">회원가입</a>
-          </li>
-          <li>
-            <a href="" class="btn highlight-bg">로그인djhdjjd</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div style="position: relative; height:0; padding-bottom: 56.25%; margin: 40px 0px;">
-    <iframe src="https://www.youtube.com/embed/ivm5i0Q9HHw?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width:100%; height:100%;"></iframe>
-  </div>
-  <!-- HEADER 끝 -->
-
-  <main>
-    <!-- 인기게임 시작 -->
-    <section class="container features big-pd">
-      <h2 class="content-tt light-g1">인기게임</h2>
-      <ul class="popular_list cf">
-        <li>
-          <h3 class="sm-pd">FIFA 온라인4</h3>
-          <div class="genre_emblem sports">스포츠</div>
-        </li>
-        <li>
-            <h3 class="sm-pd">메이플스토리</h3>
-            <div class="genre_emblem rpg">RPG</div>
-            </div>
-        </li>
-        <li>
-          <h3 class="sm-pd">서든어택</h3>
-          <div class="genre_emblem fps">FPS</div>
-          </div>
-        </li>
-        <li>
-          <h3 class="sm-pd">던전앤파이터</h3>
-          <div class="genre_emblem rpg">RPG</div>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <!-- 인기게임 끝 -->
-
-    <!-- 신규게임 시작 -->
-    <section class="new_game">
-      <div class="new_banner"></div>
-    </section>
-    <!-- 신규게임 끝 -->
-
-    <!-- 추천게임 시작 -->
-    <section class="container portfolio big-pd">
-      <h2 class="content-tt">추천게임</h2>
-      <p class="content-desc">추천을 통해 함께 시작해요!</p>
-
-      
-      <div class="slidewrapper">
-        <ul class="cf">
-          <li>
-            <figure class="recommend">
-              <img src="images/추천게임/cypher.png" alt="추천게임">
-              <figcaption class="light-g2">
-                <h3>사이퍼즈</h3>
-                <p>뛰어난 액션성과 타격감</p>
-              </figcaption>
-              <span class="genre_emblem aos">AOS</span>
-            </figure>
-          </li>
-  
-          <li>
-            <figure>
-              <img src="images/추천게임/finalfantasy.png" alt="추천게임">
-              <figcaption class="light-g2">
-                <p>몰입도 높은 최고 수준의 서사</p>
-              </figcaption>
-              <span class="genre_emblem rpg">RPG</span>
-            </figure>
-          </li>
-
-          <li>
-            <figure>
-              <img src="images/추천게임/night.png" alt="추천게임">
-              <figcaption class="light-g2">
-                <p>꿈의 세계를 향한 모험</p>
-              </figcaption>
-              <span class="genre_emblem rpg">RPG</span>
-            </figure>
-          </li>
-
-          <li>
-            <figure>
-              <img src="images/추천게임/mabinogi.png" alt="추천게임">
-              <figcaption class="light-g2">
-                <p>판타지 세계에서의 낭만</p>
-              </figcaption>
-              <span class="genre_emblem rpg">RPG</span>
-            </figure>
-          </li>
-      </ul>
-
-      <a href="" class="prev">
-        <i class="fa-solid fa-circle-chevron-left"></i>
-      </a>
-      <a href="" class="next">
-        <i class="fa-solid fa-circle-chevron-right"></i>
-      </a>
+  <!-- Header_기서은 -->
+  <header class="cf">
+     <div class="header_inner">
+        <h1><a href="#">Logo</a></h1>
+        <nav>
+            <ul>
+                <li>
+                  <a href="#">전체게임</a>
+                  <div class="header_submenu on">
+                    <ul class="all_tab-menu cf">
+                      <li><a href="#all-type bold">장르별</a></li>
+                      <li><a href="#all-name bold">이름순</a></li>
+                    </ul>
+                    <div class="all_tab-content">
+                      <div id="all-type" class="cf">
+                          <div class="all-type_box">
+                            <h3 class="bold">A~Z</h3>
+                            <ul>
+                              <li><a href="#">FACEPLAY</a></li>
+                              <li><a href="#">FIFA 모바일</a></li>
+                              <li><a href="#">THE FINALS</a></li>
+                              <li><a href="#">V4</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㄱ~ㄹ</h3>
+                            <ul>
+                              <li><a href="#">고질라 디펜스 포스</a></li>
+                              <li><a href="#">그랜드체이스 클래식</a></li>
+                              <li><a href="#">나이트 워커</a></li>
+                              <li><a href="#">넥슨타운: NEXONTOWN</a></li>   
+                              <li><a href="#">던전앤파이터</a></li>   
+                              <li><a href="#">던전앤파이터 듀얼</a></li>   
+                              <li><a href="#">던전앤파이터 모바일</a></li>   
+                              <li><a href="#">데이브 더 다이버</a></li>   
+                              <li><a href="#">드래곤네스트</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box"> 
+                            <h3>ㅁ~ㅅ</h3>
+                            <ul>
+                              <li><a href="#">마비노기</a></li>
+                              <li><a href="#">마비노기 영웅전</a></li>
+                              <li><a href="#">메이플스토리</a></li>
+                              <li><a href="#">메이플스토리 월드</a></li>   
+                              <li><a href="#">메이플스토리2</a></li>   
+                              <li><a href="#">메이플스토리M</a></li>   
+                              <li><a href="#">바람의나라</a></li>   
+                              <li><a href="#">바람의나라: 연</a></li>   
+                              <li><a href="#">버블파이터</a></li>   
+                              <li><a href="#">베일드 엑스퍼트</a></li>   
+                              <li><a href="#">블루 아카이브</a></li>   
+                              <li><a href="#">사이퍼즈</a></li>   
+                              <li><a href="#">서든어택</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㅇ~ㅈ</h3>
+                            <ul>
+                              <li><a href="#">아스가르드</a></li>
+                              <li><a href="#">아키에이지</a></li>
+                              <li><a href="#">어둠의전설</a></li>
+                              <li><a href="#">엘소드</a></li>   
+                              <li><a href="#">워헤이븐</a></li>   
+                              <li><a href="#">일랜시아</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㅊ~ㅋ</h3>
+                            <ul>
+                            <li><a href="#">카운터-스트라이크 온라인</a></li>
+                            <li><a href="#">카트라이더 러쉬플러스</a></li>
+                            <li><a href="#">카트라이더: 드리프트</a></li>
+                            <li><a href="#">크레이지 아케이드</a></li>
+                            <li><a href="#">클로저스</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㅌ~ㅎ</h3>
+                            <ul>
+                              <li><a href="#">테일즈런너</a></li>
+                              <li><a href="#">테일즈위버</a></li>
+                              <li><a href="#">파이널판타지14</a></li>
+                              <li><a href="#">퍼스트 디센던트</a></li>
+                              <li><a href="#">프라시아 전기</a></li>   
+                              <li><a href="#">프리스타일2</a></li>   
+                              <li><a href="#">히트2</a></li>   
+                            </ul>
+                          </div>
+                      </div>
+                        <div id="all-name" class="cf">
+                          <div class="all-type_box">
+                            <h3 class="bold">RPG</h3>
+                            <ul>
+                              <li><a href="#">FACEPLAY</a></li>
+                              <li><a href="#">FIFA 모바일</a></li>
+                              <li><a href="#">THE FINALS</a></li>
+                              <li><a href="#">V4</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㄱ~ㄹ</h3>
+                            <ul>
+                              <li><a href="#">고질라 디펜스 포스</a></li>
+                              <li><a href="#">그랜드체이스 클래식</a></li>
+                              <li><a href="#">나이트 워커</a></li>
+                              <li><a href="#">넥슨타운: NEXONTOWN</a></li>   
+                              <li><a href="#">던전앤파이터</a></li>   
+                              <li><a href="#">던전앤파이터 듀얼</a></li>   
+                              <li><a href="#">던전앤파이터 모바일</a></li>   
+                              <li><a href="#">데이브 더 다이버</a></li>   
+                              <li><a href="#">드래곤네스트</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box"> 
+                            <h3>ㅁ~ㅅ</h3>
+                            <ul>
+                              <li><a href="#">마비노기</a></li>
+                              <li><a href="#">마비노기 영웅전</a></li>
+                              <li><a href="#">메이플스토리</a></li>
+                              <li><a href="#">메이플스토리 월드</a></li>   
+                              <li><a href="#">메이플스토리2</a></li>   
+                              <li><a href="#">메이플스토리M</a></li>   
+                              <li><a href="#">바람의나라</a></li>   
+                              <li><a href="#">바람의나라: 연</a></li>   
+                              <li><a href="#">버블파이터</a></li>   
+                              <li><a href="#">베일드 엑스퍼트</a></li>   
+                              <li><a href="#">블루 아카이브</a></li>   
+                              <li><a href="#">사이퍼즈</a></li>   
+                              <li><a href="#">서든어택</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㅇ~ㅈ</h3>
+                            <ul>
+                              <li><a href="#">아스가르드</a></li>
+                              <li><a href="#">아키에이지</a></li>
+                              <li><a href="#">어둠의전설</a></li>
+                              <li><a href="#">엘소드</a></li>   
+                              <li><a href="#">워헤이븐</a></li>   
+                              <li><a href="#">일랜시아</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㅊ~ㅋ</h3>
+                            <ul>
+                            <li><a href="#">카운터-스트라이크 온라인</a></li>
+                            <li><a href="#">카트라이더 러쉬플러스</a></li>
+                            <li><a href="#">카트라이더: 드리프트</a></li>
+                            <li><a href="#">크레이지 아케이드</a></li>
+                            <li><a href="#">클로저스</a></li>   
+                            </ul>
+                          </div>
+                          <div class="all-type_box">
+                            <h3>ㅌ~ㅎ</h3>
+                            <ul>
+                              <li><a href="#">테일즈런너</a></li>
+                              <li><a href="#">테일즈위버</a></li>
+                              <li><a href="#">파이널판타지14</a></li>
+                              <li><a href="#">퍼스트 디센던트</a></li>
+                              <li><a href="#">프라시아 전기</a></li>   
+                              <li><a href="#">프리스타일2</a></li>   
+                              <li><a href="#">히트2</a></li>   
+                            </ul>
+                          </div>
+                      </div>
+                    </div>                  
+                  </div>
+                </li>
+                <li>
+                  <a href="#">새소식</a>
+                  <ul class="header_submenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">업데이트</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">넥슨<span>플러스+</span></a>
+                  <ul class="header_submenu">
+                    <li><a href="#">신규게임</a></li>
+                    <li><a href="#">추천게임</a></li>
+                    <li><a href="#">매거진</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">이벤트</a>
+                  <ul class="header_submenu">
+                    <li><a href="#">진행 중인 이벤트</a></li>
+                    <li><a href="#">종료된 이벤트</a></li>
+                    <li><a href="#">당첨자 발표</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">고객센터</a>
+                  <ul class="header_submenu">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="#">신고센터</a></li>
+                    <li><a href="#">보안센터</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+          <ul>
+            <li><a href="#">넥슨X현대카드</a></li>
+            <li><a href="#">PC방<span class="on_off">off</span></span></a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
       </div>
-    </section>
+  </header>
+  <section>banner</section>
+  <main>
+    <section></section>
   </main>
-  <!-- 추천게임 끝 -->
-
-  <!-- 공지&이벤트 시작 -->
-  <!-- 공지&이벤트 끝 -->
-
-  <!-- FOOTER 시작 -->
-  <footer>
-    <div class="f2 big-pd light-g2">
-      <p>㈜넥슨코리아 대표이사 이정헌 경기도 성남시 분당구 판교로 256번길 7 전화 : 1588-7701 팩스 : 0502-258-8322</p>
-      <p>E-mail : contact-us@nexon.co.kr 사업자등록번호 : 220-87-17483호 통신판매업 신고번호 : 제2013-경기성남-1659호 사업자정보확인</p>
-      <p>NEXON Korea Corporation All Rights Reserved.</p>
-
-      <h1 class="logo">
-        <a href="">NEXON</a>
-      </h1>
-    </div>
-  </footer>
-  <!-- FOOTER 끝 -->
-  <script src="js/main.js"></script>
 </body>
 </html>
