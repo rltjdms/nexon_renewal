@@ -63,7 +63,7 @@ figcaption{
 .new_banner{
     height: 400px;
     background: url(../images/Banner.png) no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 /* 추천게임 */
