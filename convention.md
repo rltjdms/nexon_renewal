@@ -1,4 +1,4 @@
-# CSS 기술 순서(Mozilla)
+# CSS convention(Mozilla)
 
 ------------
 
@@ -23,3 +23,18 @@
 
 출처 : NHN 코딩 컨벤션
 https://nuli.navercorp.com/data/convention/NHN_Coding_Conventions_for_Markup_Languages.pdf
+
+
+# git commit convention
+> ## 기능
+>> 1. Feat : 새로운 기능을 추가할 경우
+>> 2. Fix : 버그를 고친 경우
+>> 3. Design : CSS 등 사용자 UI 디자인 변경
+> ## 개선
+>> 4. Style : 코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우
+>> 5. Comment : 필요한 주석 추가 및 변경
+
+> ## 그 외
+>> 6. Docs : 문서를 수정한 경우
+>> 7. Rename : 파일혹은 폴더명을 수정하거나 옮기는 작업
+>> 8. Remove : 파일을 삭제한느 작업만 수행한 경우
