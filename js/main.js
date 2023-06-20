@@ -80,4 +80,4 @@ qnaList.forEach(item => {
         })
         e.currentTarget.classList.add('active');
     })
-});
+}); 
