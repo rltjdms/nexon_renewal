@@ -54,12 +54,11 @@ body{
 
 
 /* emblem */
-.genre_emblem{
+.genre_emblem{              /* float:right 제거(0620 김다훈) */
     border: 1px solid #2d2d2d;
     border-radius: 14.5px;
     width: 70px;
     line-height: 27px;
-    float: right;
 }
 
 .rpg{
@@ -102,6 +101,7 @@ body{
 .light-g3{color: #ffffff;}
 
 
+.highlight-g1{color:#0077ff;}           /* highlight color 추가(0620 김다훈) */
 .highlight-bg{background: #0077ff;}
 
 .banner-bg{background: #2d3e4f;}
@@ -118,7 +118,18 @@ body{
     font-weight: bold;
     text-transform: uppercase;
 }
-.btn.big{
-    line-height: 54px;
-    padding: 0 30px;
+/* btn big 제거(0620 김다훈)*/
+
+
+/* 검색창 추가(0620 김다훈) */
+.search{
+    position: relative;
+    width: 623px;
+}
+.search input{
+    width: 100%;
+    border: 1px solid #929898;
+    border-radius: 14.5px;
+    padding: 18px 44px;
+    font-size: 16px;
 }
