@@ -1,0 +1,121 @@
+@charset "utf-8";
+@font-face {
+    font-family: NEXON Gothic Regular;
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot);
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot#iefix) format("embedded-opentype"),url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.woff) format("woff");
+    font-weight: 400
+}
+@font-face {
+    font-family: NEXON Gothic Bold;
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF%20Bold.eot);
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF%20Bold.eot#iefix) format("embedded-opentype"),url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF%20Bold.woff) format("woff");
+    font-weight: 400
+}
+body {
+  font-family: 'NEXON Gothic', sans-serif;
+  font-size: 16px;
+  color: #2d2d2d;
+}
+
+a {
+ color: #2d2d2d;
+}
+/* #wrap {
+	min-width: 640px;
+}
+#wrap, #content {
+	width: 100%;
+}
+.inner {
+	max-width: 1580px;
+	padding: 150px 30px;
+	margin: 0 auto;
+} */
+
+
+/* Header _ 기서은 */
+header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+header .header_inner > *,nav > ul > li {
+  float: left;
+}
+.header_inner {
+  padding: 54px 125px;
+  height: 135px;
+  background-color: #2424;
+  box-sizing: border-box;
+}
+header .header_inner .header-right, 
+.header-right ul li {
+  float: right;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.bold {
+  font-weight: bold;
+}
+
+h1 > a {
+  display: inline-block;
+  width: 169px;
+  height: 27px;
+  text-indent: -9999px;
+  margin-right: 50px;
+  background: url(../img/logo_nexon.png) no-repeat center/cover;
+}
+header nav, 
+header .header-right{
+  padding: 5px 0;
+}
+.bf::before {
+  content: "";
+  display: block;
+}
+nav > ul > li {
+  position: relative;
+  font-size: 17px;
+  margin-right: 45px;
+}
+
+.header_inner .header-right ul li {
+  margin-left: 30px;
+}
+nav .all_tab-menu > li {
+ float: left;
+}
+
+
+.header_submenu, #all-type {
+  display: none;
+}
+.header_submenu.on {
+  display: block;
+}
+.header_submenu {
+  display: none;
+  position: absolute;
+  width: 1000px;
+  top: calc(100% + 59px);
+  left: 0;
+  height: 500px;
+  padding: 27px 0;
+  box-sizing: border-box;
+}
+
+.all_tab-content .all-type_box {
+  display: block;
+  float: left;
+  margin-right: 108px;
+}
+.all_tab-content .all-type_box:last-child {
+  margin-right: 0;
+}
+.all_tab-content {
+  margin-top: 27px;
+}
