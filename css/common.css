@@ -54,12 +54,7 @@ body{
 
 
 /* emblem */
-.genre_emblem{              /* float:right 제거(0620 김다훈) */
-    border: 1px solid #2d2d2d;
-    border-radius: 14.5px;
-    width: 70px;
-    line-height: 27px;
-}
+
 
 .rpg{
     border: 2px solid #c96243;
