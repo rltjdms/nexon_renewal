@@ -156,7 +156,6 @@ nav .all_tab-menu > li + li {
 
 .genre_emblem {
   display: inline-block;
-  border: 1px solid #2d2d2d;
   border-radius: 14.5px;
   height: 27px;
   line-height: 23px;
