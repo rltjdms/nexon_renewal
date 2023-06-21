@@ -1,136 +1,138 @@
 /* Header */
 
-header{
-    background-color: #2d2d2d;
-    position: fixed;
-    left: 0; right: 0; top: 0;
-    z-index: 99;
+header {
+  background-color: #2d2d2d;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }
 
-header h1{
-    float: left;
+header h1 {
+  float: left;
 }
-header nav{
-    float: right;
-}
-
-header nav li{
-    float: left;
-    margin-left: 10px;
+header nav {
+  float: right;
 }
 
-header nav li{
-    margin-right: 20px;
-    line-height: 50px;
-    font-size: 14px;
-    font-weight: bold;
+header nav li {
+  float: left;
+  margin-left: 10px;
 }
-header nav li:first-child span{
-    margin: 0 27px;
+
+header nav li {
+  margin-right: 20px;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: bold;
 }
-.logo{            /* logo size */
-    width: 170px;
-    height: 54px;
-    background: url(../images/logo.png) no-repeat;
-    display: inline-block;
-    text-indent: -9999em;
+header nav li:first-child span {
+  margin: 0 27px;
+}
+.logo {
+  /* logo size */
+  width: 170px;
+  height: 54px;
+  background: url(../images/logo.png) no-repeat;
+  display: inline-block;
+  text-indent: -9999em;
 }
 
 /* 인기게임 */
 
-.popular_list li{
-    width: 300px;
-    float: left;
-    text-align: center;
-    margin-right: 24px;
+.popular_list li {
+  width: 300px;
+  float: left;
+  text-align: center;
+  margin-right: 24px;
 }
-.popular_list li:last-child{
-    margin-right: 0px;
-}
-
-.popular_list h3{
-    font-size: 24px;
-    margin-bottom: 27px;
+.popular_list li:last-child {
+  margin-right: 0px;
 }
 
-figcaption{
-    padding: 27px;
+.popular_list h3 {
+  font-size: 24px;
+  margin-bottom: 27px;
 }
 
+figcaption {
+  padding: 27px;
+}
 
 /* 신규게임 */
 
-.new_banner{
-    height: 400px;
-    background: url(../images/Banner.png) no-repeat;
-    background-size: auto;
+.new_banner {
+  height: 400px;
+  background: url(../images/Banner.png) no-repeat;
+  background-size: auto;
 }
 
 /* 추천게임 */
 
-.recommend{
-    position: relative;
-    width: 370px;
-    height: 300px;
-    margin: auto;
+.recommend {
+  position: relative;
+  width: 370px;
+  height: 300px;
+  margin: auto;
 }
-.recommend p{
-    position: absolute;
-    bottom: 0;
-    left: 10px;
+.recommend p {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
 }
-.recommend span{
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    
-}
-
-.slidewrapper{
-    position: relative;
-    overflow: hidden;
+.recommend span {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 
-.slidewrapper ul{
-    width: 100%;
-    position: relative;
-    left: 0;
-    transition: 0.3s;
+.slidewrapper {
+  position: relative;
+  overflow: hidden;
 }
-.slidewrapper ul li{
-    /* width: 100%; */
-    width: 1272px;
-    float: left;
-    text-align: center;
-    color: #489dcd
+
+.slidewrapper ul {
+  width: 100%;
+  position: relative;
+  left: 0;
+  transition: 0.3s;
 }
-.slidewrapper > a{ 
-    position: absolute;
-    font-size: 45px;
-    color: #ebebeb;
-    top:50%;
-    transform:translateY(-50%);
+.slidewrapper ul li {
+  /* width: 100%; */
+  width: 1272px;
+  float: left;
+  text-align: center;
+  color: #489dcd;
 }
-.slidewrapper .prev{
-    position: absolute;
-    left: 0;
+.slidewrapper > a {
+  position: absolute;
+  font-size: 45px;
+  color: #ebebeb;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.slidewrapper .next{
-    position: absolute;
-    right: 0;
+.slidewrapper .prev {
+  position: absolute;
+  left: 0;
+}
+.slidewrapper .next {
+  position: absolute;
+  right: 0;
 }
 
 /* footer */
 
-footer{
-    text-align: center;
-    font-size: 14px;
-    line-height: 21px;
+footer {
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
 }
-.f2{
-    background-color: #292c2e;
+.f2 {
+  background-color: #292c2e;
+  height: 463px;
 }
 
-footer .logo{
-    margin-top: 54px;
+footer .logo {
+  margin-top: 54px;
 }
