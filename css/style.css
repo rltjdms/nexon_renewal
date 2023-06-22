@@ -46,6 +46,7 @@ figure{
     bottom: 58px;
     font-size: 20px;
     line-height: 24px;
+    font-weight: bold;
 }
 .rec-emblem{
     position: absolute;
