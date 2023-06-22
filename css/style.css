@@ -8,6 +8,16 @@ body{
 .rec_search{
     margin: 27px auto;
 }
+.rec_search i{
+    position: absolute;
+    font-size: 32px;
+    top: 25%;
+    right: 0;
+    cursor: pointer;
+}
+.rec_search i:hover{
+    color: #0077ff;
+}
 
 .rec_hash{
     width: 100%;
