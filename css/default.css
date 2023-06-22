@@ -1,21 +1,47 @@
 /* notice */
 
-.content {
-  width: 1270px;
-}
-.event {
+.content4 {
+
 }
 
-.titlearea > h3 {
-}
 
-.titlearea {
+h4{
+  float: right;
+}
+.notice{
+  width: 588px;
   position: relative;
+  
 }
-
+.notice > a{
+  position: absolute;
+  top:0;
+  right: 0;
+  margin-bottom: 18px;
+  
+}
 .notice ul {
+  margin-bottom: 20px;
   border-top: 2px solid #929898;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* footer */
 footer {
