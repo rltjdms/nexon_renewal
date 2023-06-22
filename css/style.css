@@ -80,11 +80,20 @@ figure{
     left: 0;
     transition: 0.3s;
 }
-.slidewrapper ul li{
+.slidewrapper li{
     float: left;
     padding-right: 10px;    /* offsetWidth를 위해 margin대신 padding */
     background: #fff content-box;
-
+}
+.slidewrapper li figure:hover{
+    box-shadow: inset 0 0 10px #929898;
+}
+.slidewrapper li figure:hover img{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.slidewrapper li figure img{
+    transition: 0.7s;
 }
 
 /* prev, next 버튼 */
