@@ -110,16 +110,6 @@ nav .all_tab-menu > li + li {
   margin-left: 30px;
 }
 
-/* none */
-.header_submenu,
-#all-name {
-  display: none;
-}
-/* block */
-.header_submenu.on {
-  display: block;
-}
-
 .header_submenu {
   position: absolute;
   width: 1100px;
@@ -141,10 +131,10 @@ nav .all_tab-menu > li + li {
   margin-top: 27px;
 }
 .all-type_box + .all-type_box ul {
-  margin-bottom: 27px;
+  margin-bottom: 32px;
 }
 .all_tab-content ul li {
-  margin-bottom: 6px;
+  margin-bottom: 6.5px;
   font-size: 14px;
 }
 
@@ -152,21 +142,21 @@ nav .all_tab-menu > li + li {
 .all_tab-content ul li a {
   color: #929898;
 }
+/* javascript */
 
-
-.genre_emblem {
-  display: inline-block;
-  border-radius: 14.5px;
-  height: 27px;
-  line-height: 23px;
-  font-size: 14px;
-  padding: 0px 10px;
-  box-sizing: border-box;
+/* none */
+.header_submenu,
+#all-name {
+  display: none;
 }
-.rpg {
-  border: 2px solid #c96243;
-  color: #c96243;
+/* block */
+.header_submenu.on {
+  display: block;
 }
-.box span + span {
-  margin-top: 10px;
+.all_tab-menu > li.on a {
+  color: #2d2d2d;
+}
+.all_tab-content ul li a:hover {
+  color:  #2d2d2d;
+  font-weight: bold;
 }
