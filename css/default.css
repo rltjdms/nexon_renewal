@@ -1,6 +1,6 @@
 /* notice */
 
-.conwrap {
+.content {
   width: 1270px;
 }
 .event {
@@ -13,13 +13,7 @@
   position: relative;
 }
 
-.titlearea a {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.notice {
+.notice ul {
   border-top: 2px solid #929898;
 }
 
