@@ -18,28 +18,36 @@ figure span{
     
 }
 
-.slidewrapper ul{
-    width: 100%;
+.slidewrapper{
     position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.slidewrapper ul{
+    position: absolute;
     left: 0;
     transition: 0.3s;
 }
 .slidewrapper ul li{
     float: left;
-    margin-right: 10px;
+    padding-right: 10px;    /* offsetWidth를 위해 margin대신 padding */
 }
-.slidewrapper > a{ 
+
+/* prev, next 버튼 */
+.rec_slide-button > a{ 
     position: absolute;
     font-size: 45px;
     color: #ebebeb;
-    top:50%;
+    top: 50%;
     transform:translateY(-50%);
+    text-shadow:2px 2px 4px #000000;
 }
-.slidewrapper .prev{
-    position: absolute;
+.rec_slide-button .prev{
+    /* right: calc(100% + 10px); */
     left: 0;
 }
-.slidewrapper .next{
-    position: absolute;
+
+.rec_slide-button .next{
+    /* left: calc(100% + 10px); */
     right: 0;
 }
