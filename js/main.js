@@ -17,29 +17,54 @@ let slideWrapper = document.querySelector('.slidewrapper'),                  // 
 // 슬라이드 가로배치
 
 // slideContainer의 너비 지정
-slideContainer.style.width = `${slideWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
+// slideContainer.style.width = `${slideWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
 
 // 슬라이드 이동 함수 moveSlide
+// // function moveSlide(num){
+// //     slideContainer.style.left=`${-100*num}%`;
+// //     currentIndex=num;
+// // }
+
 // function moveSlide(num){
-//     slideContainer.style.left=`${-100*num}%`;
+//     // slideContainer.style.left=`${-100*num}%`;
+//     // slideContainer.style.left=`${-slideWidth*num}px`;
+//     slideContainer.style.left=`${-slideWidth*num}px`;
 //     currentIndex=num;
 // }
 
-function moveSlide(num){
-    // slideContainer.style.left=`${-100*num}%`;
-    // slideContainer.style.left=`${-slideWidth*num}px`;
-    slideContainer.style.left=`${-slideWidth*num}px`;
+// nextBtn.addEventListener('click', e=>{
+//     e.preventDefault();
+//     moveSlide(Math.floor(slideCount/4));
+// });
+// prevBtn.addEventListener('click', e=>{
+//     e.preventDefault();
+//     moveSlide(Math.floor(slideCount/4-1));
+// });
 
-    currentIndex=num;
-}
-
-nextBtn.addEventListener('click', e=>{
+function moveSlide(num) {
+    // 첫 번째 슬라이드에서 이전 버튼을 클릭한 경우
+    if (currentIndex === 0 && num === slideCount - 1) {
+      slideContainer.style.left = `-${slideWidth * slideCount}px`;
+      currentIndex = num;
+    }
+    // 마지막 슬라이드에서 다음 버튼을 클릭한 경우
+    else if (currentIndex === slideCount - 1 && num === 0) {
+      slideContainer.style.left = '0';
+      currentIndex = num;
+    }
+    // 일반적인 슬라이드 이동
+    else {
+      slideContainer.style.left = `-${slideWidth * num}px`;
+      currentIndex = num;
+    }
+  }
+  
+  nextBtn.addEventListener('click', e => {
     e.preventDefault();
-    moveSlide(Math.floor(slideCount/4));
-});
-prevBtn.addEventListener('click', e=>{
+    moveSlide((currentIndex + 1) % slideCount);
+  });
+  
+  prevBtn.addEventListener('click', e => {
     e.preventDefault();
-    moveSlide(Math.floor(slideCount/4-1));
-});
-
-let qnaList = document.querySelectorAll('.qna_list li');
+    moveSlide((currentIndex - 1 + slideCount) % slideCount);
+  });
