@@ -1,26 +1,67 @@
-/* 추천게임 */
+/* 배경색 지정 */
+body{
+    background: #ebebeb;
+}
 
+
+/* 추천게임 - 메인 */
+.rec_search{
+    margin: 27px auto;
+}
+
+.rec_hash{
+    width: 100%;
+    text-align:center;
+    margin-bottom: 27px;
+}
+.rec_hash li{
+    display: inline-block;
+    margin-right: 27px;
+    cursor: pointer;
+}
+
+
+/* 추천게임 - 해시태그(탭메뉴) */
+.rec_hash-list li:hover{
+    color: #0077ff;
+}
+/* .hash-content{
+    
+}
+.hash-active{
+
+} */
+
+
+/* 추천게임 - 슬라이드 */
 figure{
     position: relative;
     width: 370px;
-    height: 300px;
-    margin: auto;
+    height: 378px;
 }
-figure p{
+
+.rec_game_tt{
     position: absolute;
-    bottom: 0;
     left: 10px;
+    bottom: 58px;
+    font-size: 20px;
+    line-height: 24px;
 }
-figure span{
+.rec-emblem{
     position: absolute;
-    bottom: 0;
     right: 10px;
-    
+    bottom: 58px;
+}
+
+.rec_game_desc{
+    position: absolute;
+    bottom: 27px;
+    left: 10px;
 }
 
 .slidewrapper{
     position: relative;
-    height: 300px;
+    height: 378px;
     overflow: hidden;
 }
 .slidewrapper ul{
@@ -31,6 +72,8 @@ figure span{
 .slidewrapper ul li{
     float: left;
     padding-right: 10px;    /* offsetWidth를 위해 margin대신 padding */
+    background: #fff content-box;
+
 }
 
 /* prev, next 버튼 */
