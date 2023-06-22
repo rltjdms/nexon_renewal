@@ -17,7 +17,7 @@ let slideWrapper = document.querySelector('.slidewrapper'),                  // 
 // 슬라이드 가로배치
 
 // slideContainer의 너비 지정
-slideContainer.style.width = `${slides[0].offsetWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
+slideContainer.style.width = `${slideWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
 
 // 슬라이드 이동 함수 moveSlide
 // function moveSlide(num){
@@ -35,13 +35,11 @@ function moveSlide(num){
 
 nextBtn.addEventListener('click', e=>{
     e.preventDefault();
-    // moveSlide(Math.floor(slideCount/4));
-    moveSlide(1)
+    moveSlide(Math.floor(slideCount/4));
 });
 prevBtn.addEventListener('click', e=>{
     e.preventDefault();
-    // moveSlide(Math.floor(slideCount/4-1));
-    moveSlide(0)
+    moveSlide(Math.floor(slideCount/4-1));
 });
 
 let qnaList = document.querySelectorAll('.qna_list li');
