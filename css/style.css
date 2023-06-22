@@ -54,7 +54,7 @@ a {
   content: "";
   display: block;
 }
-.header-tt {
+.header_tt {
   font-size: 20px;
   font-weight: bold;
 }
@@ -63,11 +63,13 @@ a {
 header {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 135px;  /* 스크립트 할 예정*/
+  background:linear-gradient(#ccc 50px, rgba(255,255,255,.5) 50px);
+  transition: height 0.4s;
 }
 header .header_inner > *,
 nav > ul > li,
-.header-right ul li {
+.header_right ul li {
   float: left;
 }
 .header_inner {
@@ -76,7 +78,7 @@ nav > ul > li,
   background-color: #2424;
   box-sizing: border-box;
 }
-header .header-right {
+header .header_right {
   float: right;
 }
 
@@ -95,19 +97,19 @@ nav > ul > li {
   font-size: 17px;
 }
 nav > ul > li > a,
-.header-right {
+.header_right {
   line-height: 135px;
 }
 
-.header-right ul li {
+.header_right ul li {
   margin-left: 30px;
   font-size: 14px;
 }
-nav .all_tab-menu > li,
+nav .all_tab_menu > li,
 nav > ul > li + li > .header_submenu > li {
   float: left;
 }
-nav .all_tab-menu > li + li,
+nav .all_tab_menu > li + li,
 nav > ul > li + li > .header_submenu > li + li {
   margin-left: 30px;
 }
@@ -121,26 +123,26 @@ nav > ul > li + li > .header_submenu > li + li {
   box-sizing: border-box;
 }
 
-.all_tab-content .all-type_box {
+.all_tab_content .all_type_box {
   float: left;
   margin-right: 108px;
 }
-.all_tab-content .all-type_box:last-child {
+.all_tab_content .all_type_box:last-child {
   margin-right: 0;
 }
-.all_tab-content {
+.all_tab_content {
   margin-top: 27px;
 }
-.all-type_box + .all-type_box ul {
+.all_type_box + .all_type_box ul {
   margin-bottom: 32px;
 }
-.all_tab-content ul li {
+.all_tab_content ul li {
   margin-bottom: 6.5px;
   font-size: 14px;
 }
 
-.all_tab-menu > li > a,
-.all_tab-content ul li a {
+.all_tab_menu > li > a,
+.all_tab_content ul li a {
   color: #929898;
 }
 
@@ -148,17 +150,17 @@ nav > ul > li + li > .header_submenu > li + li {
 
 /* none */
 nav > ul > li .header_submenu,
-#all-name {
+#all_name {
   display: none;
 }
 /* block */
 nav > ul > li.on .header_submenu {
   display: block;
 }
-.all_tab-menu > li.on a {
+.all_tab_menu > li.on a {
   color: #2d2d2d;
 }
-.all_tab-content ul li a:hover,
+.all_tab_content ul li a:hover,
 nav > ul > li + li > .header_submenu > li> a:hover {
   color:  #2d2d2d;
   font-weight: bold;
