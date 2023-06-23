@@ -1,15 +1,12 @@
 /* 슬라이드 */
-/*
-    첫 슬라이드에서 이전 버튼을 클릭하면 마지막 슬라이드로 이동
-    마지막 슬라이드에서다음 버튼을 클릭하면 첫 슬라이드로 이동
-*/
+
 
 let slideWrapper = document.querySelector('.slidewrapper'),                  // ul의 부모
     slideContainer = slideWrapper.querySelector('ul'),                    // ul
     slides = slideContainer.querySelectorAll('li'),                    // 각 슬라이드
     slideCount = slides.length,                    // 슬라이드 개수
-    slideWidth = slides[0].offsetWidth+10,
-    slideMargin = 87,
+    slideWidth = 380,
+    slideRemain = 87,
     currentIndex = 0,                   // 현재 보고있는 화면
     slideBtn = document.querySelector('.rec_slide-button'),
     prevBtn = slideBtn.querySelector('.prev'),
@@ -21,15 +18,9 @@ let slideWrapper = document.querySelector('.slidewrapper'),                  // 
 // slideContainer의 너비 지정
 slideContainer.style.width = `${slideWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
 
-// 슬라이드 이동 함수 moveSlide
-// function moveSlide(num){
-//     slideContainer.style.left=`${-100*num}%`;
-//     currentIndex=num;
-// }
-
 function moveSlide(num){
     // slideContainer.style.left=`${-100*num}%`;
-    slideContainer.style.left=`-${(2*slideWidth-slideMargin)*num}px`;
+    slideContainer.style.left=`-${(2*slideWidth-slideRemain)*num}px`;
     currentIndex=num;
 }
 
@@ -42,21 +33,27 @@ prevBtn.addEventListener('click', e=>{
     moveSlide(0);
 });
 
-const highlight = document.querySelector('.highlight');
-const tabMenu = document.querySelectorAll('.tab-menu li');
-const tabContent = document.querySelectorAll('#tab-content > div');
+// 해시태그 탭메뉴
+let recHash = document.querySelectorAll('.rec_hash-list a');
+let recContent = document.querySelectorAll('#rec_tab > ul');
 
-tabMenu.forEach((item,idx) => {
-	item.addEventListener('click', (e)=>{
-		e.preventDefault();
-		let targetLeft = e.target.offsetLeft;
-		let targetWidth = e.target.offsetWidth;
-		highlight.style.left = targetLeft+'px';
-		highlight.style.width = targetWidth+'px';
-		
-		for(tc of tabContent){
-			tc.style.display = 'none';
-		}			
-		tabContent[idx].style.display ='block';
-	})
-}); 
+recHash.forEach(item=> {
+    item.addEventListener('click', e=> {
+        e.preventDefault();
+        let recTab = e.target.getAttribute('href');
+        let recTabs = recTab.replace('#','');
+
+        recContent.forEach(item=> {
+            item.style.display = 'none'
+        })
+
+        document.getElementById(recTabs).style.display = 'block';
+
+        recHash.forEach(item=> {
+            item.classList.remove('active');
+            e.target.classList.add('active');
+        })
+    })
+});
+
+document.getElementById('rec_tab-1').style.display = 'block';
