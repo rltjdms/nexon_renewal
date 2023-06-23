@@ -26,6 +26,15 @@ body{
 .rec_hash a:hover{
     color: #0077ff;
 }
+.rec_hash a.active{
+    background-color: #000000;
+    border-radius: 14.5px;
+    padding: 5px;
+    color: #fff;
+}
+#rec_tab > ul{
+    display: none;
+}
 
 
 
