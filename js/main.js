@@ -8,11 +8,12 @@ let slideWrapper = document.querySelector('.slidewrapper'),                  // 
     slideContainer = slideWrapper.querySelector('ul'),                    // ul
     slides = slideContainer.querySelectorAll('li'),                    // 각 슬라이드
     slideCount = slides.length,                    // 슬라이드 개수
-    slideWidth = slides[0].offsetWidth,
+    slideWidth = slides[0].offsetWidth+10,
     slideMargin = 87,
     currentIndex = 0,                   // 현재 보고있는 화면
-    prevBtn = slideWrapper.querySelector('.prev'),
-    nextBtn = slideWrapper.querySelector('.next');
+    slideBtn = document.querySelector('.rec_slide-button'),
+    prevBtn = slideBtn.querySelector('.prev'),
+    nextBtn = slideBtn.querySelector('.next');
 
 
 // 슬라이드 가로배치
@@ -41,30 +42,21 @@ prevBtn.addEventListener('click', e=>{
     moveSlide(0);
 });
 
-// function moveSlide(num) {
-//     // 첫 번째 슬라이드에서 이전 버튼을 클릭한 경우
-//     if (currentIndex === 0 && num === slideCount - 1) {
-//       slideContainer.style.left = `-${slideWidth * slideCount}px`;
-//       currentIndex = num;
-//     }
-//     // 마지막 슬라이드에서 다음 버튼을 클릭한 경우
-//     else if (currentIndex === slideCount - 1 && num === 0) {
-//       slideContainer.style.left = '0';
-//       currentIndex = num;
-//     }
-//     // 일반적인 슬라이드 이동
-//     else {
-//       slideContainer.style.left = `-${slideWidth * num}px`;
-//       currentIndex = num;
-//     }
-//   }
-  
-//   nextBtn.addEventListener('click', e => {
-//     e.preventDefault();
-//     moveSlide((currentIndex + 1) % slideCount);
-//   });
-  
-//   prevBtn.addEventListener('click', e => {
-//     e.preventDefault();
-//     moveSlide((currentIndex - 1 + slideCount) % slideCount);
-//   });
+const highlight = document.querySelector('.highlight');
+const tabMenu = document.querySelectorAll('.tab-menu li');
+const tabContent = document.querySelectorAll('#tab-content > div');
+
+tabMenu.forEach((item,idx) => {
+	item.addEventListener('click', (e)=>{
+		e.preventDefault();
+		let targetLeft = e.target.offsetLeft;
+		let targetWidth = e.target.offsetWidth;
+		highlight.style.left = targetLeft+'px';
+		highlight.style.width = targetWidth+'px';
+		
+		for(tc of tabContent){
+			tc.style.display = 'none';
+		}			
+		tabContent[idx].style.display ='block';
+	})
+}); 
