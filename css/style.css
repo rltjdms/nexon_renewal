@@ -15,6 +15,9 @@ body{
     right: 0;
     cursor: pointer;
 }
+.rec_search input{
+    padding-right: 0px ;
+}
 .rec_search i:hover{
     color: #0077ff;
 }
