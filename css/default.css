@@ -1,48 +1,45 @@
 /* notice */
 
-.content4 {
-
+.content container cf {
+  /* 624px; */
 }
 
-
-h4{
-  float: right;
+.event {
+  float: left;
 }
-.notice{
+
+.notice {
   width: 588px;
   position: relative;
-  
+  float: right;
 }
-.notice > a{
+
+.notice h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.notice > a {
+  font-size: 14px;
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
-  margin-bottom: 18px;
-  
+}
+
+.notice ul > li > a > h4 {
+  float: right;
 }
 .notice ul {
-  margin-bottom: 20px;
   border-top: 2px solid #929898;
 }
 
+.notice ul li {
+  border-bottom: 1px solid #929898;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+figure {
+  width: 624px;
+}
 /* footer */
 footer {
   text-align: center;
@@ -50,11 +47,15 @@ footer {
   line-height: 21px;
 }
 
-/* .f2 {
+.f big-pd {
+  position: relative;
+}
+
+/* .ft_nav4 {
   background-color: #292c2e;
   height: 463px;
 }
 
 footer .logo {
   margin-top: 54px;
-}  */
+} */
