@@ -5,77 +5,68 @@ body{
 
 
 /* 추천게임 - 메인 */
-.rec_search{
-    margin: 27px auto;
-}
-.rec_search i{
-    position: absolute;
-    font-size: 32px;
-    top: 25%;
-    right: 0;
-    cursor: pointer;
-}
-.rec_search input{
-    padding-right: 0px ;
-}
-.rec_search i:hover{
-    color: #0077ff;
-}
+
 
 .rec_hash{
+    position: relative;
     width: 100%;
     text-align:center;
-    margin-bottom: 27px;
 }
 .rec_hash li{
     display: inline-block;
-    margin-right: 27px;
+    margin: 27px 30px;
     cursor: pointer;
 }
 
 
 /* 추천게임 - 해시태그(탭메뉴) */
-.rec_hash-list li:hover{
+.rec_hash a{
+    color: #929898;
+}
+.rec_hash a:hover{
     color: #0077ff;
 }
-/* .hash-content{
-    
-}
-.hash-active{
 
-} */
 
 
 /* 추천게임 - 슬라이드 */
-figure{
+figcaption{
     position: relative;
-    width: 370px;
-    height: 378px;
+    /* height: 378px; */
 }
 
+.slidewrapper figcaption{
+    height: 118px;
+    /* overflow: hidden; */
+}
 .rec_game_tt{
-    position: absolute;
-    left: 10px;
-    bottom: 58px;
+    /* position: absolute; */
+    display: inline-block;
+    /* float: left; */
+    margin-top: 30px;
+    margin-left: 10px;
     font-size: 20px;
-    line-height: 24px;
+    /* line-height: 24px; */
     font-weight: bold;
 }
-.rec-emblem{
-    position: absolute;
-    right: 10px;
+.rec_game_desc{
+    display: block;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.rec_emblem{
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
     bottom: 58px;
 }
-
-.rec_game_desc{
-    position: absolute;
-    bottom: 27px;
-    left: 10px;
-}
-
-.slidewrapper{
+.slidewrapper-wrap{
     position: relative;
     height: 378px;
+}
+.slidewrapper{
+    position: relative;
+    height: 100%;
     overflow: hidden;
 }
 .slidewrapper ul{
@@ -85,9 +76,25 @@ figure{
 }
 .slidewrapper li{
     float: left;
-    padding-right: 10px;    /* offsetWidth를 위해 margin대신 padding */
+    margin-right: 10px;
     background: #fff content-box;
+    width: 370px;
+    overflow: hidden;
 }
+.slidewrapper li a {
+    width: 100%;
+    height: 100%;
+}
+.slidewrapper li:last-child{
+    margin-right: 0px;
+}
+.slidewrapper li figure {
+    display: inline-block;
+    width: 370px;
+    height: 378px;
+    margin: 0;
+}
+
 .slidewrapper li figure:hover{
     box-shadow: inset 0 0 10px #929898;
 }
@@ -99,21 +106,65 @@ figure{
     transition: 0.7s;
 }
 
+
+
 /* prev, next 버튼 */
-.rec_slide-button > a{ 
+/* .rec_slide-button{
     position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+.rec_slide-button a{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 45px;
     color: #ebebeb;
-    top: 50%;
-    transform:translateY(-50%);
     text-shadow:2px 2px 4px #000000;
 }
 .rec_slide-button .prev{
-    /* right: calc(100% + 10px); */
-    left: 0;
+    right: calc(100% + 10px);
 }
 
 .rec_slide-button .next{
-    /* left: calc(100% + 10px); */
-    right: 0;
+    left: calc(100% + 10px);
+}
+
+
+/* 검색창 추가(0620 김다훈) */
+ 
+.rec_search{
+    position: relative;
+    width: 623px;
+    margin: 0px auto;
+}
+    
+
+.rec_search-icon{
+    position: absolute;
+    font-size: 32px;
+    top: 50%;
+    left: calc(100% - 76px);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.rec_search input{
+    padding-right: 0px ;
+}
+.rec_search button:hover{
+    color: #0077ff;
+}
+.rec_search input{
+    width: 623px;
+    border: 1px solid #929898;
+    border-radius: 50px;
+    padding: 0px 44px;
+    line-height: 50px;
+    /*  padding: 18px 44px; */
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
 }
