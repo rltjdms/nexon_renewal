@@ -95,8 +95,8 @@ nav > ul > li + li > .header_submenu > li + li {
 .header_all_tab_content .header_all_type_box:last-child {
   margin-right: 0;
 }
-.header_all_tab_content {
-  margin-top: 27px;
+.header_all_tab_menu {
+  margin-bottom: 27px;
 }
 .header_all_type_box + .header_all_type_box ul {
   margin-bottom: 32px;
