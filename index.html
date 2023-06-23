@@ -15,92 +15,88 @@
       <div class="rec_main">
         <h2 class="content-tt">추천게임</h2>
         <p class="content-desc">추천을 통해 함께 시작해요!</p>
-
-        <div class="rec_search search">
+        <div class="rec_search">
           <input type="text" placeholder="예&#41; 난이도 쉬운, 듀오 솔플">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-
+          <button class="rec_search-icon" onclick="location.href='index.html'">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+         </div>
         <div class="rec_hash">
           <ul class="rec_hash-list">
-            <li class="light-g2">#역동적인</li>
-            <li class="light-g2">#액션</li>
-            <li class="light-g2">#실시간 1위</li>
-            <li class="light-g2">#무과금</li>
-            <li class="light-g2">#캐주얼</li>
+            <li><a href="#rec_tab-1">#MD추천</a></li>
+            <li><a href="#rec_tab-2">#액션</a></li>
+            <li><a href="#rec_tab-3">#프로모션</a></li>
+            <li><a href="#rec_tab-4">#난이도 쉬운</a></li>
           </ul>
+          <span class="rec_highlight"></span>
         </div>
-
       </div>
       
-      <div class="slidewrapper">
-        <ul class="cf">
-          <li>
-            <a href="">
-              <figure>
-                <img src="images/추천게임/cypher.png" alt="추천게임">
-                <figcaption>
-                  <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
-                  <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
-                </figcaption>
-                <span class="rec-emblem genre-emblem aos">AOS</span>
-              </figure>
-            </a>
-          </li>
-        
-          <li>
-            <a href="">
-              <figure>
-                <img src="images/추천게임/finalfantasy.png" alt="추천게임">
-                <figcaption>
-                  <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
-                  <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
-                </figcaption>
-                <span class="rec-emblem genre-emblem aos">AOS</span>
-              </figure>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <figure>
-                <img src="images/추천게임/night.png" alt="추천게임">
-                <figcaption>
-                  <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
-                  <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
-                </figcaption>
-                <span class="rec-emblem genre-emblem aos">AOS</span>
-              </figure>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <figure>
-                <img src="images/추천게임/mabinogi.png" alt="추천게임">
-                <figcaption>
-                  <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
-                  <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
-                </figcaption>
-                <span class="rec-emblem genre-emblem aos">AOS</span>
-              </figure>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <figure>
-                <img src="images/추천게임/cypher.png" alt="추천게임">
-                <figcaption>
-                  <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
-                  <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
-                </figcaption>
-                <span class="rec-emblem genre-emblem aos">AOS</span>
-              </figure>
-            </a>
-          </li>
-        </ul>
-        
+      <div class="slidewrapper-wrap">
+        <div class="slidewrapper">
+          <ul class="cf" id="#rec_tab-1">
+            <li>
+              <a href="">
+                <figure>
+                  <img src="images/추천게임/cypher.png" alt="추천게임">
+                  <figcaption>
+                    <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
+                    <span class="rec_emblem genre-emblem aos">AOS</span>
+                    <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure>
+                  <img src="images/추천게임/finalfantasy.png" alt="추천게임">
+                  <figcaption>
+                    <h3 class="rec_game_tt light-g1">파이널판타지14</h3>
+                    <span class="rec_emblem genre-emblem rpg">RPG</span>
+                    <p class="rec_game_desc light-g2">몰입도 높은 최고 수준의 서사</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure>
+                  <img src="images/추천게임/night.png" alt="추천게임">
+                  <figcaption>
+                    <h3 class="rec_game_tt light-g1">나이트 워커</h3>
+                    <span class="rec_emblem genre-emblem rpg">RPG</span>
+                    <p class="rec_game_desc light-g2">꿈의 세계를 향한 모험</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure>
+                  <img src="images/추천게임/mabinogi.png" alt="추천게임">
+                  <figcaption>
+                    <h3 class="rec_game_tt light-g1">마비노기</h3>
+                    <span class="rec_emblem genre-emblem aos">RPG</span>
+                    <p class="rec_game_desc light-g2">판타지 세계에서의 낭만</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <figure>
+                  <img src="images/추천게임/cypher.png" alt="추천게임">
+                  <figcaption>
+                    <h3 class="rec_game_tt light-g1">사이퍼즈</h3>
+                    <span class="rec_emblem genre-emblem aos">AOS</span>
+                    <p class="rec_game_desc light-g2">뛰어난 액션성과 타격감</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>   
+        </div>
         <div class="rec_slide-button">
           <a href="" class="prev">
             <i class="fa-solid fa-circle-chevron-left"></i>
@@ -109,7 +105,6 @@
             <i class="fa-solid fa-circle-chevron-right"></i>
           </a>
         </div>
-        
       </div>
     </section>
   </main>
