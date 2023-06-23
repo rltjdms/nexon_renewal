@@ -41,12 +41,10 @@ body{
 /* 추천게임 - 슬라이드 */
 figcaption{
     position: relative;
-    /* height: 378px; */
 }
 
 .slidewrapper figcaption{
     height: 118px;
-    /* overflow: hidden; */
 }
 .rec_game_tt{
     /* position: absolute; */
@@ -71,7 +69,7 @@ figcaption{
 }
 .slidewrapper-wrap{
     position: relative;
-    height: 378px;
+    height: 378px;;
 }
 .slidewrapper{
     position: relative;
@@ -102,6 +100,11 @@ figcaption{
     width: 370px;
     height: 378px;
     margin: 0;
+}
+.slidewrapper img{
+    width: 370px;
+    height: 270px;
+    object-fit: cover;
 }
 
 .slidewrapper li figure:hover{
