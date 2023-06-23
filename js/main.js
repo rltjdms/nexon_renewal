@@ -9,6 +9,7 @@ let slideWrapper = document.querySelector('.slidewrapper'),                  // 
     slides = slideContainer.querySelectorAll('li'),                    // 각 슬라이드
     slideCount = slides.length,                    // 슬라이드 개수
     slideWidth = slides[0].offsetWidth,
+    slideMargin = 87,
     currentIndex = 0,                   // 현재 보고있는 화면
     prevBtn = slideWrapper.querySelector('.prev'),
     nextBtn = slideWrapper.querySelector('.next');
@@ -27,18 +28,17 @@ slideContainer.style.width = `${slideWidth * slideCount}px`;  // ul의 높이가
 
 function moveSlide(num){
     // slideContainer.style.left=`${-100*num}%`;
-    // slideContainer.style.left=`${-slideWidth*num}px`;
-    slideContainer.style.left=`-${slideWidth*num}px`;
+    slideContainer.style.left=`-${(2*slideWidth-slideMargin)*num}px`;
     currentIndex=num;
 }
 
 nextBtn.addEventListener('click', e=>{
     e.preventDefault();
-    moveSlide(Math.floor(slideCount/4));
+    moveSlide(1);
 });
 prevBtn.addEventListener('click', e=>{
     e.preventDefault();
-    moveSlide(Math.floor(slideCount/4-1));
+    moveSlide(0);
 });
 
 // function moveSlide(num) {
