@@ -1,6 +1,6 @@
 let header = document.querySelector("header"),
     headerSub = document.querySelectorAll("header_submenu"),
-    headerSubOST = headerSub.offsetHeight,
+    headerHeight = header.offsetHeight,
     Nav = header.querySelector("nav"),
     NavMenu = Nav.querySelectorAll("nav > ul > li");
 
@@ -8,7 +8,7 @@ let header = document.querySelector("header"),
       item.addEventListener("mouseenter", (e) => {
           e.preventDefault();
           let SubMenuHeight =
-              e.Target.querySelector("ul").offsetHeight;
+              e.currentTarget.querySelector("ul").offsetHeight;
           let totalHeight = headerHeight + SubMenuHeight + 30;
           header.style.height = `${totalHeight}px`;
 
