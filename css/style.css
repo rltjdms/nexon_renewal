@@ -70,11 +70,11 @@ nav > ul > li > a,
   margin-left: 30px;
   font-size: 14px;
 }
-nav .all_tab_menu > li,
+nav .header_all_tab_menu > li,
 nav > ul > li + li > .header_submenu > li {
   float: left;
 }
-nav .all_tab_menu > li + li,
+nav .header_all_tab_menu > li + li,
 nav > ul > li + li > .header_submenu > li + li {
   margin-left: 30px;
 }
@@ -88,26 +88,26 @@ nav > ul > li + li > .header_submenu > li + li {
   box-sizing: border-box;
 }
 
-.all_tab_content .all_type_box {
+.header_all_tab_content .header_all_type_box {
   float: left;
   margin-right: 108px;
 }
-.all_tab_content .all_type_box:last-child {
+.header_all_tab_content .header_all_type_box:last-child {
   margin-right: 0;
 }
-.all_tab_content {
+.header_all_tab_content {
   margin-top: 27px;
 }
-.all_type_box + .all_type_box ul {
+.header_all_type_box + .header_all_type_box ul {
   margin-bottom: 32px;
 }
-.all_tab_content ul li {
+.header_all_tab_content ul li {
   margin-bottom: 6.5px;
   font-size: 14px;
 }
 
-.all_tab_menu > li > a,
-.all_tab_content ul li a {
+.header_all_tab_menu > li > a,
+.header_all_tab_content ul li a {
   color: #929898;
 }
 
@@ -115,17 +115,17 @@ nav > ul > li + li > .header_submenu > li + li {
 
 /* none */
 nav > ul > li .header_submenu,
-#all_name {
+#header_all_name {
   display: none;
 }
 /* block */
 nav > ul > li.on .header_submenu {
   display: block;
 }
-.all_tab_menu > li.on a {
+.header_all_tab_menu > li.on a {
   color: #2d2d2d;
 }
-.all_tab_content ul li a:hover,
+.header_all_tab_content ul li a:hover,
 nav > ul > li + li > .header_submenu > li> a:hover {
   color:  #2d2d2d;
   font-weight: bold;
