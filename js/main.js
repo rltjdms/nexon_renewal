@@ -1,37 +1,43 @@
 /* 슬라이드 */
 
 
-let slideWrapper = document.querySelector('.slidewrapper'),                  // ul의 부모
-    slideContainer = slideWrapper.querySelector('ul'),                    // ul
-    slides = slideContainer.querySelectorAll('li'),                    // 각 슬라이드
-    slideCount = slides.length,                    // 슬라이드 개수
+let slideWrapper = document.querySelector('.slidewrapper'),
+    slideContainer = slideWrapper.querySelectorAll('ul'),
     slideWidth = 380,
-    slideRemain = 87,
+    slideRemain = 142,      // left 이동 픽셀 설정
     currentIndex = 0,                   // 현재 보고있는 화면
     slideBtn = document.querySelector('.rec_slide-button'),
     prevBtn = slideBtn.querySelector('.prev'),
     nextBtn = slideBtn.querySelector('.next');
 
+slideContainer.forEach(item => {
+    let slides = item.querySelectorAll('li');
+    let slideCount = slides.length;
+    slides.forEach(items => {
+        item.style.width = `${slideWidth * slideCount - 10}px`;
 
-// 슬라이드 가로배치
+        function moveSlide(num) {
+            if (slideCount == 5) {
+                item.style.left = `-${(2 * slideWidth - slideRemain) * num}px`;
+            } else if (slideCount == 4) {
+                item.style.left = `-${(slideWidth - slideRemain) * num}px`;
+            }
+            currentIndex = num;
+        }
 
-// slideContainer의 너비 지정
-slideContainer.style.width = `${slideWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
-
-function moveSlide(num){
-    // slideContainer.style.left=`${-100*num}%`;
-    slideContainer.style.left=`-${(2*slideWidth-slideRemain)*num}px`;
-    currentIndex=num;
-}
-
-nextBtn.addEventListener('click', e=>{
-    e.preventDefault();
-    moveSlide(1);
+        nextBtn.addEventListener('click', e => {
+            e.preventDefault();
+            moveSlide(1);
+        });
+        prevBtn.addEventListener('click', e => {
+            e.preventDefault();
+            moveSlide(0);
+        });
+    });
 });
-prevBtn.addEventListener('click', e=>{
-    e.preventDefault();
-    moveSlide(0);
-});
+
+
+
 
 // 해시태그 탭메뉴
 let recHash = document.querySelectorAll('.rec_hash-list a');
