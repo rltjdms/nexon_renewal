@@ -17,10 +17,12 @@ slideContainer.forEach(item => {
         item.style.width = `${slideWidth * slideCount - 10}px`;
 
         function moveSlide(num) {
-            if (slideCount == 5) {
+            if(slideCount == 5) {
                 item.style.left = `-${(2 * slideWidth - slideRemain) * num}px`;
-            } else if (slideCount == 4) {
+            }else if (slideCount == 4) {
                 item.style.left = `-${(slideWidth - slideRemain) * num}px`;
+            }else{
+                item.style.left = '71px'    // 게임 3개일 때 중앙으로
             }
             currentIndex = num;
         }
@@ -33,9 +35,9 @@ slideContainer.forEach(item => {
             e.preventDefault();
             moveSlide(0);
         });
+        moveSlide(0);
     });
 });
-
 
 
 
