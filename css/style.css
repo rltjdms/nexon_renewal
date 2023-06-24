@@ -25,7 +25,7 @@ body{
     color: #0077ff;
 }
 .rec_hash a.active{
-    background-color: #000000;
+    background-color: #2d2d2d;
     border-radius: 14.5px;
     padding: 5px;
     color: #fff;
@@ -48,6 +48,9 @@ body{
     transform: translateY(-50%);
     cursor: pointer;
 }
+.rec_search input:focus{
+    border: 2px solid #0077ff;
+}
 .rec_search button:hover{
     color: #0077ff;
 }
@@ -61,8 +64,6 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-
-
 
 /* 추천게임 - 슬라이드 */
 figcaption{
@@ -150,7 +151,7 @@ figcaption{
     transform: translateY(-50%);
     font-size: 45px;
     color: #ebebeb;
-    text-shadow:2px 2px 4px #000000;
+    text-shadow:2px 2px 4px #2d2d2d;
 }
 .rec_slide-button .prev{
     right: calc(100% + 10px);
