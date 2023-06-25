@@ -71,5 +71,3 @@ recHash.forEach(item=> {
 });
 
 document.getElementById('rec_tab-1').style.display = 'block';
-
-// 해시태그 클릭할 때 마다 moveSlide(0) 실행
