@@ -3,9 +3,10 @@
 
 let slideWrapper = document.querySelector('.rec_slidewrapper'),
     slideContainer = slideWrapper.querySelectorAll('ul'),
+    recHash = document.querySelectorAll('.rec_hash-list a'),
     slideWidth = 380,
     slideRemain = 142,      // left 이동 픽셀 설정
-    currentIndex = 0,                   // 현재 보고있는 화면
+    currentIndex = 0,       // 현재 보고있는 화면
     slideBtn = document.querySelector('.rec_slide-button'),
     prevBtn = slideBtn.querySelector('.prev'),
     nextBtn = slideBtn.querySelector('.next');
@@ -15,7 +16,7 @@ slideContainer.forEach(item => {
     let slideCount = slides.length;
     slides.forEach(items => {
         item.style.width = `${slideWidth * slideCount - 10}px`;
-
+        // 슬라이드 이동 함수 설정
         function moveSlide(num) {
             if(slideCount == 5) {
                 item.style.left = `-${(2 * slideWidth - slideRemain) * num}px`;
@@ -26,7 +27,13 @@ slideContainer.forEach(item => {
             }
             currentIndex = num;
         }
-
+        // 해시태그 클릭할 때 마다 moveSlide(0) 실행
+        recHash.forEach(element=>{
+            element.addEventListener('click',()=>{
+                moveSlide(0);
+            })
+        });
+        // 슬라이드 이동 버튼 설정
         nextBtn.addEventListener('click', e => {
             e.preventDefault();
             moveSlide(1);
@@ -42,7 +49,6 @@ slideContainer.forEach(item => {
 
 
 // 해시태그 탭메뉴
-let recHash = document.querySelectorAll('.rec_hash-list a');
 let recContent = document.querySelectorAll('#rec_tab > ul');
 
 recHash.forEach(item=> {
@@ -65,3 +71,5 @@ recHash.forEach(item=> {
 });
 
 document.getElementById('rec_tab-1').style.display = 'block';
+
+// 해시태그 클릭할 때 마다 moveSlide(0) 실행
