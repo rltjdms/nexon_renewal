@@ -66,10 +66,8 @@ body{
 }
 
 /* 추천게임 - 슬라이드 */
-figcaption{
+.rec_slidewrapper figcaption{
     position: relative;
-}
-.slidewrapper figcaption{
     height: 118px;
 }
 .rec_game_tt{
@@ -90,54 +88,54 @@ figcaption{
     margin-right: 10px;
     bottom: 58px;
 }
-.slidewrapper-wrap{
+.rec_slidewrapper-wrap{
     position: relative;
     height: 378px;;
 }
-.slidewrapper{
+.rec_slidewrapper{
     position: relative;
     height: 100%;
     overflow: hidden;
 }
-.slidewrapper ul{
+.rec_slidewrapper ul{
     position: absolute;
     left: 0;
     transition: 0.3s;
 }
-.slidewrapper li{
+.rec_slidewrapper li{
     float: left;
     margin-right: 10px;
     background: #fff content-box;
     width: 370px;
     overflow: hidden;
 }
-.slidewrapper li a {
+.rec_slidewrapper li a {
     width: 100%;
     height: 100%;
 }
-.slidewrapper li:last-child{
+.rec_slidewrapper li:last-child{
     margin-right: 0px;
 }
-.slidewrapper li figure {
+.rec_slidewrapper li figure {
     display: inline-block;
     width: 370px;
     height: 378px;
     margin: 0;
 }
-.slidewrapper img{
+.rec_slidewrapper img{
     width: 370px;
     height: 270px;
     object-fit: cover;
 }
 
-.slidewrapper li figure:hover{
+.rec_slidewrapper li figure:hover{
     box-shadow: inset 0 0 10px #929898;
 }
-.slidewrapper li figure:hover img{
+.rec_slidewrapper li figure:hover img{
     transform: scale(1.1);
     opacity: 0.8;
 }
-.slidewrapper li figure img{
+.rec_slidewrapper li figure img{
     transition: 0.7s;
 }
 

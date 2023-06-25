@@ -1,7 +1,7 @@
 /* 슬라이드 */
 
 
-let slideWrapper = document.querySelector('.slidewrapper'),
+let slideWrapper = document.querySelector('.rec_slidewrapper'),
     slideContainer = slideWrapper.querySelectorAll('ul'),
     slideWidth = 380,
     slideRemain = 142,      // left 이동 픽셀 설정
