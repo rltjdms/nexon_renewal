@@ -3,7 +3,7 @@ let header = document.querySelector("header"),
     NavMenu = Nav.querySelectorAll("nav > ul > li"),
     headerHeight = header.offsetHeight;
 
-NavMenu.forEach((item) => {
+NavMenu.forEach((item,list) => {
     item.addEventListener("mouseenter", (e) => {
         e.preventDefault();
         item.classList.add("on");
@@ -16,9 +16,9 @@ NavMenu.forEach((item) => {
 
         item.classList.add("on");
     });
-    item.addEventListener("mouseleave", (e) => {
+    header.addEventListener("mouseleave", (e) => {
         e.preventDefault();
-        item.classList.remove("on");
+        list.classList.remove("on");
 
         header.style.height = `${headerHeight}px`;
     });
