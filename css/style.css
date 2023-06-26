@@ -3,39 +3,7 @@ body{
     background: #ebebeb;
 }
 
-/* 추천게임 - 메인 */
-.rec_hash{
-    position: relative;
-    text-align: center;
-}
-.rec_hash li{
-    float: left;
-    padding: 27px 30px 27px 0px;
-}
-.rec_hash li:last-child{
-    padding-right: 0;
-}
-.rec_hash-list{
-    display: inline-block;
-}
-/* 추천게임 - 해시태그(탭메뉴) */
-.rec_hash a{
-    color: #929898;
-}
-.rec_hash a:hover{
-    color: #0077ff;
-}
-.rec_hash a.active{
-    background-color: #2d2d2d;
-    border-radius: 14.5px;
-    padding: 5px;
-    color: #fff;
-}
-#rec_tab > ul{
-    display: none;
-}
-
-/* 검색창 */ 
+/* 추천게임 - 검색창 */ 
 .rec_search{
     position: relative;
     width: 623px;
@@ -45,7 +13,7 @@ body{
     position: absolute;
     font-size: 32px;
     top: 50%;
-    left: calc(100% - 76px);
+    right: 44px;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -66,9 +34,43 @@ body{
     box-sizing: border-box;
 }
 
+/* 추천게임 - 해시태그 */
+.rec_hash{
+    text-align: center;
+}
+.rec_hash li{
+    float: left;
+    padding: 27px 30px 27px 0px;
+}
+.rec_hash li:last-child{
+    padding-right: 0;
+}
+.rec_hash-list{
+    display: inline-block;
+    margin: 0;
+}
+/* 추천게임 - 해시태그(탭메뉴) */
+.rec_hash a{
+    color: #929898;
+}
+.rec_hash a:hover{
+    color: #0077ff;
+}
+.rec_hash a.active{
+    background-color: #2d2d2d;
+    border-radius: 14.5px;
+    padding: 5px;
+    color: #fff;
+}
+#rec_tab > ul{
+    display: none;
+}
+
+
+
 /* 추천게임 - 슬라이드 */
 .rec_slidewrapper figcaption{
-    position: relative;
+    /* position: relative; */
     height: 118px;
 }
 .rec_game_tt{
