@@ -178,10 +178,10 @@ nav > ul > li + li > .header_submenu > li> a:hover {
 
 header .header_right .header_card {
   display: inline-block;
-  width: 128px;
+  width: 150px;
   height: 135px;
   text-indent: -9999px;
-  background: url(../images/header_card_928989) no-repeat center/contain;
+  background: url(../images/header_card_fff.png) no-repeat center/contain;
 }
 header.active .header_right .header_card {
   background: url(../images/header_card_2d2d.png) no-repeat center/contain;

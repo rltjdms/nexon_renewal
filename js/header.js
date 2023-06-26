@@ -3,34 +3,33 @@ let header = document.querySelector("header"),
     NavMenu = Nav.querySelectorAll("nav > ul > li"),
     headerHeight = header.offsetHeight;
 
-NavMenu.forEach((item,list) => {
-    item.addEventListener("mouseenter", (e) => {
-        e.preventDefault();
-        item.classList.add("on");
+    NavMenu.forEach((item) => {
+        item.addEventListener("mouseenter", (e) => {
+            e.preventDefault();
+            item.classList.add("on");
 
-        let SubMenuHeight = e.currentTarget.querySelector("ul").offsetHeight;
-        let headerSubheight =
-            header.querySelector(".header_submenu").offsetHeight;
-        let totalHeight = headerHeight + SubMenuHeight + headerSubheight + 30;
-        header.style.height = `${totalHeight}px`;
+            let SubMenuHeight = e.currentTarget.querySelector("ul").offsetHeight;
+            let headerSubheight =
+                header.querySelector(".header_submenu").offsetHeight;
+            let totalHeight = headerHeight + SubMenuHeight + headerSubheight + 30;
+            header.style.height = `${totalHeight}px`;
 
-        item.classList.add("on");
-    });
-    header.addEventListener("mouseleave", (e) => {
-        e.preventDefault();
-        list.classList.remove("on");
+            item.classList.add("on");
+        });
+        item.addEventListener("mouseleave", (e) => {
+            e.preventDefault();
+            item.classList.remove("on");
 
-        header.style.height = `${headerHeight}px`;
-    });
+            header.style.height = `${headerHeight}px`;
+        });
 });
 // Nav에 마우스를 올리면 서브메뉴 나옴
 
-
 // 스크롤시
-window.addEventListener("scroll", ()=> {
-    if(window.scrollY > 0) {
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
         header.classList.add("active");
     } else {
         header.classList.remove("active");
     }
-})
+});
