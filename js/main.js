@@ -71,3 +71,31 @@ recHash.forEach(item=> {
 });
 
 document.getElementById('rec_tab-1').style.display = 'block';
+
+// 모달
+let recImg = document.querySelectorAll('.rec_slidewrapper img'),
+    recLightbox = document.querySelector('#lightbox-overlay'),
+    recLightboxLink = recLightbox.querySelector('#data-lightbox');
+
+recImg.forEach(item =>{
+    item.addEventListener('mouseenter', ()=>{
+        let linkSrc = item.getAttribute('data-lightbox');
+        recLightboxLink.setAttribute('src',linkSrc);
+        recLightbox.classList.add('visible');
+    });
+});
+recLightbox.addEventListener('mouseleave', ()=>{
+    recLightbox.classList.remove('visible');
+});
+
+
+
+// recLightboxLink.addEventListener('load', ()=>{
+//     recImg.forEach(item =>{
+//         item.addEventListener('click', ()=>{
+//             let linkSrc = item.getAttribute('data-lightbox');
+//             recLightboxLink.setAttribute('src',linkSrc);
+//             recLightbox.classList.add('visible');
+//         });
+//     });
+// })

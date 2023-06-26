@@ -18,7 +18,7 @@ body{
     cursor: pointer;
 }
 .rec_search input:focus{
-    border: 2px solid #0077ff;
+    border: 2px solid #2d2d2d;
 }
 .rec_search button:hover{
     color: #0077ff;
@@ -59,7 +59,8 @@ body{
 .rec_hash a.active{
     background-color: #2d2d2d;
     border-radius: 14.5px;
-    padding: 5px;
+    padding: 6px 9px;
+    line-height: 16px;
     color: #fff;
 }
 #rec_tab > ul{
@@ -132,8 +133,8 @@ body{
     object-fit: cover;
 }
 
-.rec_slidewrapper li figure:hover{
-    box-shadow: inset 0 0 10px #929898;
+.rec_slidewrapper li:hover{
+    filter: drop-shadow(10px 20px 5px #CCCCCC);
 }
 .rec_slidewrapper li figure:hover img{
     transform: scale(1.1);
@@ -142,8 +143,6 @@ body{
 .rec_slidewrapper li figure img{
     transition: 0.7s;
 }
-
-
 
 /* prev, next 버튼 */
 .rec_slide-button a{
@@ -162,3 +161,22 @@ body{
 .rec_slide-button .next{
     left: calc(100% + 10px);
 }
+
+/* 게임 이미지 클릭 시 모달 */
+#lightbox-overlay{
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 50%;
+    top: 20%;
+    left: 0;
+    background-color: rgba(29,31,33,.95);
+    transition: opacity 0.3s ease-in;
+}
+#lightbox-overlay.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ?autoplay=1&amp;mute=1 */
