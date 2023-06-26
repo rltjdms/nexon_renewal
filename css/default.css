@@ -35,6 +35,7 @@ css
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
+  display: fixed;
 }
 .pager a {
   width: 10px;
@@ -139,15 +140,15 @@ footer {
 }
 
 .ft-con2 ul {
-  padding: 25px 0 25px 0;
+  line-height: 81px;
 }
 
 .ft-con2 li {
   display: inline-block;
-  padding: 0 45px 0 45px;
+  padding: 0 60px 0 60px;
 }
 
-i {
+.ft-con2 i {
   color: #929898;
   font-size: 17px;
   padding: 0 7px 0 0px;
@@ -176,8 +177,8 @@ i {
   color: #ffffff;
 }
 
-address,
-p {
+.ft-nav4 address,
+.ft-nav4 p {
   line-height: 21px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.3);
@@ -187,7 +188,7 @@ p {
   margin-top: 54px;
 }
 
-.ft-icon a {
+/* .ft-icon a {
   background-image: url("../images/set_footer/set_footer_360.png");
   width: 19px;
   height: 19px;
@@ -195,16 +196,37 @@ p {
   display: inline-block;
   text-indent: -9999px;
   background-repeat: no-repeat;
-}
+} */
 
 .ft-icon .youtube {
-  padding: 0 5px;
+  background-image: url("../images/set_footer/set_footer_360.png");
+  width: 20px;
+  height: 19px;
+  margin-right: 27px;
+  background-color: #ffffff;
+  display: inline-block;
+  text-indent: -9999px;
   background-position: 0 -50px;
 }
 .ft-icon .twiiter {
+  background-image: url("../images/set_footer/set_footer_360.png");
+  width: 10px;
+  height: 19px;
+  margin-right: 27px;
+  background-color: #ffffff;
+  display: inline-block;
+  text-indent: -9999px;
   padding: 0 5px;
   background-position: 0 -100px;
 }
 .ft-icon .facebook {
+  background-image: url("../images/set_footer/set_footer_360.png");
+  width: 10px;
+  height: 19px;
+  padding: 0 5px;
+  background-color: #ffffff;
+  display: inline-block;
+  text-indent: -9999px;
+  padding: 0 5px;
   background-position: 0 -150px;
 }
