@@ -44,28 +44,61 @@
     <!-- 인기게임 시작 -->
     <section class="container features big-pd">
       <h2 class="content-tt light-g1">인기게임</h2>
+      <section class="tabs">
       <ul class="popular_list cf">
-        <li>
+        <input id="pc" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="pc">PC</label>
+        <input id="mo" type="radio" name="tab_item">
+        <label class="tab_item" for="mo">MO</label>
+        
+        <div class="tab_content" id="pc_content">
+        <ul>
+          <li>
+          <img src="pop_fifaonline.png">
           <h3 class="sm-pd">FIFA 온라인4</h3>
-          <div class="genre_emblem sports">스포츠</div>
-        </li>
-        <li>
-            <h3 class="sm-pd">메이플스토리</h3>
-            <div class="genre_emblem rpg">RPG</div>
-            </div>
-        </li>
-        <li>
+          <div class="genre-emblem sports">스포츠</div>
+          </li>
+          <li>
+          <img src="pop_fifaonline.png">
+          <h3 class="sm-pd">메이플스토리</h3>
+          <div class="genre-emblem rpg">RPG</div>
+          </li>
+          <li>
+          <img src="pop_fifaonline.png">
           <h3 class="sm-pd">서든어택</h3>
-          <div class="genre_emblem fps">FPS</div>
-          </div>
-        </li>
-        <li>
+          <div class="genre-emblem fps">FPS</div>
+          </li>
+          <li>
+          <img src="pop_fifaonline.png">
           <h3 class="sm-pd">던전앤파이터</h3>
-          <div class="genre_emblem rpg">RPG</div>
+          <div class="genre-emblem rpg">RPG</div>
+          </li>
+        </ul>
+        </div>
+        
+        <div class="tab_content" id="mo_content">
+          <ul>
+            <li>
+            <h3 class="sm-pd">FIFA 모바일</h3>
+            <div class="genre-emblem sports">스포츠</div>
+            </li>
+            <li>
+            <h3 class="sm-pd">카트라이더 러쉬플러스</h3>
+            <div class="genre-emblem rpg">RPG</div>
+            </li>
+            <li>
+            <h3 class="sm-pd">모바일</h3>
+            <div class="genre-emblem fps">FPS</div>
+            </li>
+            <li>
+            <h3 class="sm-pd">던전앤파이터 모바일</h3>
+            <div class="genre-emblem rpg">RPG</div>
+            </li>
+          </ul>
           </div>
-        </li>
-      </ul>
-    </section>
+      
+      
+      </section>
     <!-- 인기게임 끝 -->
 
     <!-- 신규게임 시작 -->
@@ -89,7 +122,7 @@
                 <h3>사이퍼즈</h3>
                 <p>뛰어난 액션성과 타격감</p>
               </figcaption>
-              <span class="genre_emblem aos">AOS</span>
+              <span class="genre-emblem aos">AOS</span>
             </figure>
           </li>
   
@@ -99,7 +132,7 @@
               <figcaption class="light-g2">
                 <p>몰입도 높은 최고 수준의 서사</p>
               </figcaption>
-              <span class="genre_emblem rpg">RPG</span>
+              <span class="genre-emblem rpg">RPG</span>
             </figure>
           </li>
 
@@ -109,7 +142,7 @@
               <figcaption class="light-g2">
                 <p>꿈의 세계를 향한 모험</p>
               </figcaption>
-              <span class="genre_emblem rpg">RPG</span>
+              <span class="genre-emblem rpg">RPG</span>
             </figure>
           </li>
 
@@ -119,7 +152,7 @@
               <figcaption class="light-g2">
                 <p>판타지 세계에서의 낭만</p>
               </figcaption>
-              <span class="genre_emblem rpg">RPG</span>
+              <span class="genre-emblem rpg">RPG</span>
             </figure>
           </li>
       </ul>
