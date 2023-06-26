@@ -33,17 +33,27 @@ header {
   height: 135px;
   background:linear-gradient( #323232 135px, rgba(255,255,255,.8) 50px);
 }
+header .header_logo {
+  display: none;
+}
 /* javascript */
 /* header 스크롤시 */
 header.active {
   background:linear-gradient( #fff 135px, rgba(255,255,255,.8) 50px);
 }
+header.active  .header_logo {
+  display: block;
+  width: 170px;
+  height: 135px;
+  background: url(../images/logo_black.png) no-repeat center/contain;
+}
+
 header.active nav a,
 .header_right a {
   color: #2d2d2d;
 }
 
-header .header_inner > h1,
+header .header_inner > *,
 nav > ul > li,
 .header_right ul li {
   float: left;
