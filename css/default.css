@@ -1,76 +1,206 @@
-/* notice */
-/* 624px; */
+css
 
-/* .content container cf {
+/* 이벤트 */
+.event {
+  width: 624px;
+  height: 378px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-slide {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  transition: left 0.3s ease-in;
+}
+
+.event-slide > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.event > img {
+  object-fit: cover;
+}
+
+/* .event > figure {
 } */
 
-.event {
-  float: left;
+.bullets {
+  position: relative;
 }
+.pager {
+  position: absolute;
+  left: 0;
+  top: 345px;
+  right: 665px;
+  text-align: center;
+}
+.pager a {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  text-indent: -9999em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.pager a.active {
+  background: #fff;
+}
+
+/* 공지사항 */
 
 .notice {
   width: 588px;
   position: relative;
   float: right;
-  
 }
 
+/* 공지사항 글씨 */
 .notice h3 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
+/* MORE VIEW+ */
 .notice > a {
   position: absolute;
   font-size: 14px;
   font-weight: bold;
-   top:10px;
+  top: 10px;
   right: 0;
 }
-
+/* notice의 내용*/
 .notice ul > li > a > h4 {
   float: right;
   margin-right: 10px;
 }
+
+/* notice 선*/
 .notice ul {
   border-top: 2px solid #929898;
 }
 
 .notice ul li {
-  border-bottom: 1px solid rgba(146, 152 ,152, 0.7);
+  border-bottom: 1px solid rgba(146, 152, 152, 0.7);
   line-height: 50px;
 }
-
-.date{
+/* 날짜 */
+.date {
   float: left;
   margin: 0 10px;
-  color:#929898;
+  color: #929898;
 }
 
-
-figure {
-  width: 624px;
-}
 /* footer */
-/* footer {
+
+footer {
   text-align: center;
-  font-size: 14px;
+  padding: 67.5px 0 0 0;
+  display: fixed;
+}
+
+.ft-con1 ul {
+  border-top: 1px solid rgba(146, 152, 152, 0.5);
+  border-bottom: 1px solid rgba(146, 152, 152, 0.5);
+  padding: 25px;
+}
+
+.ft-con1 li {
+  position: relative;
+  display: inline-block;
+  padding: 0 30px 0 30px;
+}
+
+.ft-con1 li:before {
+  content: "";
+  width: 1px;
+  height: 13px;
+  background: rgba(146, 152, 152, 0.5);
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+/* 게임시간선택제 앞 선 'ㅣ' 없애기 */
+.ft-con1 ul li:first-child:before {
+  width: 0;
+  height: 0;
+}
+
+.ft-con2 ul {
+  padding: 25px 0 25px 0;
+}
+
+.ft-con2 li {
+  display: inline-block;
+  padding: 0 40px 0 40px;
+}
+
+i {
+  color: #929898;
+  font-size: 20px;
+  padding: 0 7px 0 0px;
+}
+
+.ft-container2 {
+  background-color: #2d2d2d;
+  height: 513px;
+}
+
+.ftt-con4 {
+  padding: 54px 0 54px 0;
+}
+
+.ftt-con4 ul {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 30px 0 30px 0;
+}
+
+.ftt-con4 li {
+  display: inline-block;
+  padding: 0 30px 0 30px;
+}
+.ftt-con4 ul > li > a {
+  color: #ffffff;
+}
+
+address,
+p {
   line-height: 21px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.ft-nav1{
- float: left;
-}
-
-
-footer .logo {
+.logo {
   margin-top: 54px;
-} */
+}
 
+.ft-icon a {
+  background-image: url("../images/set_footer/set_footer_360.png");
+  width: 19px;
+  height: 19px;
+  background-color: #ffffff;
+  display: inline-block;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
 
-
-
-/* .ft_nav4 {
-  background-color: #292c2e;
-  height: 463px;
+.ft-icon .youtube {
+  padding: 0 5px;
+  background-position: 0 -50px;
+}
+.ft-icon .twiiter {
+  padding: 0 5px;
+  background-position: 0 -100px;
+}
+.ft-icon .facebook {
+  background-position: 0 -150px;
 }
