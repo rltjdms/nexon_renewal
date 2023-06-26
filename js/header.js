@@ -33,3 +33,11 @@ window.addEventListener("scroll", () => {
         header.classList.remove("active");
     }
 });
+//헤더에 마우스를 올릴때 하얀색으로 바뀜
+
+    header.addEventListener("mouseenter", () =>{
+        header.classList.add("active");
+    });
+    header.addEventListener("mouseenter", (e) => {
+        header.classList.remove("active");
+    });
