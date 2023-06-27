@@ -11,7 +11,7 @@ css
   position: relative;
   float: left;
   width: 624px;
-  height: 378px;
+  height: 381px;
 }
 
 .event-slide {
@@ -30,14 +30,14 @@ css
   object-fit: cover;
 }
 
-.event-pager {
+.event-dot {
   position: absolute;
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
   display: fixed;
 }
-.event-pager a {
+.event-dot a {
   width: 10px;
   height: 10px;
   margin: 0 5px;
@@ -46,11 +46,11 @@ css
   text-indent: -9999px;
   display: inline-block;
 }
-.event-pager a + a {
+.event-dot a + a {
   margin-left: 5px;
 }
 
-.event-pager a.active {
+.event-dot a.active {
   background: #fff;
 }
 
@@ -212,6 +212,7 @@ footer {
   background-color: #ffffff;
   display: inline-block;
   text-indent: -9999px;
+  margin-right: 27px;
   background-position: 0 -50px;
 }
 .ft-icon .twiiter {
@@ -221,6 +222,7 @@ footer {
   background-color: #ffffff;
   display: inline-block;
   text-indent: -9999px;
+  margin-right: 27px;
   padding: 0 5px;
   background-position: 0 -100px;
 }
