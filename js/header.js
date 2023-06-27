@@ -23,19 +23,28 @@ let header = document.querySelector("header"),
 });
 // Nav에 마우스를 올리면 서브메뉴 나옴
 
-// 스크롤시
-// window.addEventListener("scroll", () => {
-//     if (window.scrollY > 0) {
-//         header.classList.add("active");
-//     } else {
-//         header.classList.remove("active");
-//     }
-// });
+//스크롤시
+let scroll = 0;
+window.addEventListener("scroll", () => {
+    scroll = window.scrollY;
+    if (scroll > 0) {
+        header.classList.add("active");
+    } else {
+        header.classList.remove("active");
+    }
+    // console.log(scroll);
+});
+
 //헤더에 마우스를 올릴때 하얀색으로 바뀜
 
 header.addEventListener("mouseenter", () =>{
-    header.classList.add("active");
+    if(scroll == 0) {
+        header.classList.add("active");
+    } 
+   //꼭대기 일때만...
 });
-header.addEventListener("mouseenter", (e) => {
-    header.classList.remove("active");
+header.addEventListener("mouseleave", (e) => {
+        if (scroll == 0) {
+            header.classList.remove("active");
+        } 
 });

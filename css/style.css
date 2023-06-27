@@ -35,6 +35,7 @@ header {
   height: 135px;
   background-color: #323232;
   /* background:linear-gradient(#323232 135px); */
+  z-index: 100;
 }
 header .header_logo {
   display: none;
@@ -48,7 +49,7 @@ header.active  .header_logo {
   display: block;
   width: 170px;
   height: 135px;
-  background: url(../images/logo_black.png) no-repeat center/contain;
+  background: url(../images/header_logo_black.png) no-repeat center/contain;
 }
 
 header.active nav a,
@@ -79,7 +80,7 @@ h1 > a {
   height: 135px;
   text-indent: -9999px;
   margin-right: 50px;
-  background: url(../images/logo.png) no-repeat center/contain;
+  background: url(../images/header_logo.png) no-repeat center/contain;
 }
 
 nav > ul > li {
@@ -255,9 +256,6 @@ header.active .header_right a {
   width: 1px;
   height: 12px;
 }
-.header_banner {
-  height: 2000px;
-}
 .quick_box {
   position: relative;
 }
@@ -344,7 +342,7 @@ header.active .header_right a {
   height: 27px;
   vertical-align: middle;
   margin-right: 5px;
-  background-image: url(../images/quick_menu_2.png) ;
+  background-image: url(../images/header_quick_menu.png) ;
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
@@ -360,3 +358,18 @@ header.active .header_right a {
   background-position: 0px -81px;
 }
 
+.header_content {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.header_slide {
+  position: relative;
+}
+.header_slide > div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
