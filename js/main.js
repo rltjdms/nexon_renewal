@@ -75,6 +75,7 @@ document.getElementById('rec_tab-1').style.display = 'block';
 let recYoutube = document.querySelectorAll('.fa-youtube'),
     recLightbox = document.querySelector('#lightbox-overlay'),
     recLightboxLink = recLightbox.querySelector('#data-lightbox'),
+    recLightboxBg = document.querySelector('#lightbox-background'),
     lightCloseBtn = document.querySelector('#lightbox-close');
 
 recYoutube.forEach(item =>{
@@ -83,8 +84,10 @@ recYoutube.forEach(item =>{
         let linkSrc = item.getAttribute('data-lightbox');
         recLightboxLink.setAttribute('src',linkSrc);
         recLightbox.classList.add('visible');
+        recLightboxBg.classList.add('visible');
     });
 });
 lightCloseBtn.addEventListener('click', ()=>{
     recLightbox.classList.remove('visible');
+    recLightboxBg.classList.remove('visible');
 });
