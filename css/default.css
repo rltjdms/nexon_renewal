@@ -30,14 +30,14 @@ css
   object-fit: cover;
 }
 
-.pager {
+.event-pager {
   position: absolute;
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
   display: fixed;
 }
-.pager a {
+.event-pager a {
   width: 10px;
   height: 10px;
   margin: 0 5px;
@@ -46,11 +46,11 @@ css
   text-indent: -9999px;
   display: inline-block;
 }
-.pager a + a {
+.event-pager a + a {
   margin-left: 5px;
 }
 
-.pager a.active {
+.event-pager a.active {
   background: #fff;
 }
 
@@ -101,6 +101,7 @@ css
 
 /* footer */
 
+/* footer body */
 footer {
   font-size: 14px;
   text-align: center;
@@ -108,23 +109,28 @@ footer {
   display: fixed;
 }
 
+/* footer 1 body */
 .ft-con1 {
-  vertical-align: baseline;
+  /* vertical-align: baseline; */
   border-top: 1px solid rgba(146, 152, 152, 0.5);
   border-bottom: 1px solid rgba(146, 152, 152, 0.5);
 }
+/* footer 1 부모 */
 .ft-con1 ul {
   display: inline-block;
+  vertical-align: bottom;
   line-height: 81px;
 }
+/* footer 1 자식 */
 .ft-con1 li {
-  position: relative;
   float: left;
+  position: relative;
 }
+/* footer 1 자식간 사이 */
 .ft-con1 li + li {
   margin-left: 74px;
 }
-
+/* footer 1 사이 선 */
 .ft-con1 ul li::after {
   content: "";
   width: 1px;
@@ -134,31 +140,31 @@ footer {
   top: 33px;
   left: -35px;
 }
-
+/* footer 1 사이 선 첫번째 선 삭제 */
 .ft-con1 ul li:first-child:after {
   background: none;
 }
-
+/* footer 1-2 시작 */
 .ft-con2 ul {
   line-height: 81px;
 }
-
+/* footer 1-2 자식 */
 .ft-con2 li {
   display: inline-block;
   padding: 0 60px 0 60px;
 }
-
+/* footer 1-2 아이콘 */
 .ft-con2 i {
   color: #929898;
   font-size: 17px;
   padding: 0 7px 0 0px;
 }
-
+/* footer 3,4 감싸주는 박스 */
 .ft-container2 {
   background-color: #2d2d2d;
   height: 513px;
 }
-
+/* footer 3,4 감싸주는 박스 */
 .ftt-con4 {
   padding: 54px 0 54px 0;
 }
@@ -181,7 +187,7 @@ footer {
 .ft-nav4 p {
   line-height: 21px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .logo {
@@ -198,11 +204,11 @@ footer {
   background-repeat: no-repeat;
 } */
 
+/* footer last icon */
 .ft-icon .youtube {
   background-image: url("../images/set_footer/set_footer_360.png");
   width: 20px;
   height: 19px;
-  margin-right: 27px;
   background-color: #ffffff;
   display: inline-block;
   text-indent: -9999px;
@@ -212,7 +218,6 @@ footer {
   background-image: url("../images/set_footer/set_footer_360.png");
   width: 10px;
   height: 19px;
-  margin-right: 27px;
   background-color: #ffffff;
   display: inline-block;
   text-indent: -9999px;
@@ -221,9 +226,8 @@ footer {
 }
 .ft-icon .facebook {
   background-image: url("../images/set_footer/set_footer_360.png");
-  width: 10px;
+  width: 7px;
   height: 19px;
-  padding: 0 5px;
   background-color: #ffffff;
   display: inline-block;
   text-indent: -9999px;
