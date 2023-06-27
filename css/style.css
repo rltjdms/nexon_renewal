@@ -101,6 +101,7 @@ body{
     transition: 0.3s;
 }
 .rec_slidewrapper li{
+    position: relative;
     float: left;
     width: 370px;
     margin-right: 10px;
