@@ -35,7 +35,8 @@ hr{
 /* typography */
 body{
     font-family: 'NEXON Lv1 Gothic OTF';
-    font: 20px/30px ;  /* font-size/line-height */
+    font: 16px;
+    background-color: #f8f9fa;
 }
 /* section 별 제목 */
 .content-tt{                
