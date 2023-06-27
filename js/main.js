@@ -1,31 +1,30 @@
 /* 슬라이드 */
-
-
-let slideWrapper = document.querySelector('.rec_slidewrapper'),
-    slideContainer = slideWrapper.querySelectorAll('ul'),
+let recSlideWrapper = document.querySelector('.rec_slidewrapper'),
+    recSlideContainer = recSlideWrapper.querySelectorAll('ul'),
     recHash = document.querySelectorAll('.rec_hash-list a'),
-    slideWidth = 380,
-    slideRemain = 142,      // left 이동 픽셀 설정
-    currentIndex = 0,       // 현재 보고있는 화면
-    slideBtn = document.querySelector('.rec_slide-button'),
-    prevBtn = slideBtn.querySelector('.prev'),
-    nextBtn = slideBtn.querySelector('.next');
+    recSlideWidth = 380,
+    recSlideRemain = 142,      // left 이동 픽셀 설정
+    recCurrentIndex = 0,       // 현재 보고있는 화면
+    recSlideBtn = document.querySelector('.rec_slide-button'),
+    recPrevBtn = recSlideBtn.querySelector('.prev'),
+    recNextBtn = recSlideBtn.querySelector('.next');
 
-slideContainer.forEach(item => {
+recSlideContainer.forEach(item => {
     let slides = item.querySelectorAll('li');
     let slideCount = slides.length;
     slides.forEach(items => {
-        item.style.width = `${slideWidth * slideCount - 10}px`;
+        item.style.width = `${recSlideWidth * slideCount - 10}px`;
         // 슬라이드 이동 함수 설정
         function moveSlide(num) {
             if(slideCount == 5) {
-                item.style.left = `-${(2 * slideWidth - slideRemain) * num}px`;
+                item.style.left = `-${(2 * recSlideWidth - recSlideRemain) * num}px`;
             }else if (slideCount == 4) {
-                item.style.left = `-${(slideWidth - slideRemain) * num}px`;
+                item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
             }else{
                 item.style.left = '71px'    // 게임 3개일 때 중앙으로
+                recSlideBtn.classList.add()
             }
-            currentIndex = num;
+            recCurrentIndex = num;
         }
         // 해시태그 클릭할 때 마다 moveSlide(0) 실행
         recHash.forEach(element=>{
@@ -34,11 +33,11 @@ slideContainer.forEach(item => {
             })
         });
         // 슬라이드 이동 버튼 설정
-        nextBtn.addEventListener('click', e => {
+        recNextBtn.addEventListener('click', e => {
             e.preventDefault();
             moveSlide(1);
         });
-        prevBtn.addEventListener('click', e => {
+        recPrevBtn.addEventListener('click', e => {
             e.preventDefault();
             moveSlide(0);
         });
@@ -73,18 +72,20 @@ recHash.forEach(item=> {
 document.getElementById('rec_tab-1').style.display = 'block';
 
 // 모달
-let recImg = document.querySelectorAll('.rec_slidewrapper img'),
+let recYoutube = document.querySelectorAll('.fa-youtube'),
     recLightbox = document.querySelector('#lightbox-overlay'),
-    recLightboxLink = recLightbox.querySelector('#data-lightbox');
+    recLightboxLink = recLightbox.querySelector('#data-lightbox'),
+    lightCloseBtn = document.querySelector('#lightbox-close');
 
-recImg.forEach(item =>{
-    item.addEventListener('mouseenter', ()=>{
+recYoutube.forEach(item =>{
+    item.addEventListener('click', e=>{
+        e.preventDefault();
         let linkSrc = item.getAttribute('data-lightbox');
         recLightboxLink.setAttribute('src',linkSrc);
         recLightbox.classList.add('visible');
     });
 });
-recLightbox.addEventListener('mouseleave', ()=>{
+lightCloseBtn.addEventListener('click', ()=>{
     recLightbox.classList.remove('visible');
 });
 

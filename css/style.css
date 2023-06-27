@@ -94,7 +94,7 @@ body{
 }
 .rec_slidewrapper-wrap{
     position: relative;
-    height: 378px;
+    height: 388px;
 }
 .rec_slidewrapper{
     position: relative;
@@ -128,6 +128,7 @@ body{
     margin: 0;
 }
 .rec_slidewrapper img{
+    position: relative;
     width: 370px;
     height: 270px;
     object-fit: cover;
@@ -136,12 +137,20 @@ body{
 .rec_slidewrapper li:hover{
     filter: drop-shadow(10px 20px 5px #CCCCCC);
 }
-.rec_slidewrapper li figure:hover img{
-    transform: scale(1.1);
-    opacity: 0.8;
+/* 추천게임 hover 시 유튜브 아이콘 생성 */
+.rec_slidewrapper li figure:hover .fa-youtube{
+    opacity: 1;
 }
-.rec_slidewrapper li figure img{
-    transition: 0.7s;
+.rec_slidewrapper li figure .fa-youtube{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    color: red;
+    background-color: rgba(0,0,0,.5);
+    padding: 103px 149px;
+    font-size: 64px;
+    opacity: 0;
+    transition: opacity 0.6s;
 }
 
 /* prev, next 버튼 */
@@ -178,5 +187,10 @@ body{
     opacity: 1;
     pointer-events: auto;
 }
-
-/* ?autoplay=1&amp;mute=1 */
+#lightbox-close{
+    display: block;
+    font-size: 64px;
+    margin: 27px auto 0;
+    color: #0077ff;
+    cursor: pointer;
+}
