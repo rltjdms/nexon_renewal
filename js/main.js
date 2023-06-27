@@ -12,17 +12,20 @@ let recSlideWrapper = document.querySelector('.rec_slidewrapper'),
 recSlideContainer.forEach(item => {
     let slides = item.querySelectorAll('li');
     let slideCount = slides.length;
+    let slideBtn = document.querySelectorAll('rec_slide-button a');
     slides.forEach(items => {
         item.style.width = `${recSlideWidth * slideCount - 10}px`;
         // 슬라이드 이동 함수 설정
         function moveSlide(num) {
             if(slideCount == 5) {
                 item.style.left = `-${(2 * recSlideWidth - recSlideRemain) * num}px`;
+                recSlideBtn.style.display = 'block';
             }else if (slideCount == 4) {
                 item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
-            }else{
+                recSlideBtn.style.display = 'block';
+            }else if (slideCount == 3){
                 item.style.left = '71px'    // 게임 3개일 때 중앙으로
-                recSlideBtn.classList.add()
+                recSlideBtn.style.display = 'none';
             }
             recCurrentIndex = num;
         }
@@ -41,11 +44,8 @@ recSlideContainer.forEach(item => {
             e.preventDefault();
             moveSlide(0);
         });
-        moveSlide(0);
     });
 });
-
-
 
 // 해시태그 탭메뉴
 let recContent = document.querySelectorAll('#rec_tab > ul');
@@ -88,15 +88,3 @@ recYoutube.forEach(item =>{
 lightCloseBtn.addEventListener('click', ()=>{
     recLightbox.classList.remove('visible');
 });
-
-
-
-// recLightboxLink.addEventListener('load', ()=>{
-//     recImg.forEach(item =>{
-//         item.addEventListener('click', ()=>{
-//             let linkSrc = item.getAttribute('data-lightbox');
-//             recLightboxLink.setAttribute('src',linkSrc);
-//             recLightbox.classList.add('visible');
-//         });
-//     });
-// })
