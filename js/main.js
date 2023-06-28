@@ -66,43 +66,44 @@ let recSlideWrapper = document.querySelector('.rec_slidewrapper'),
     recSlideRemain = 142,      // left 이동 픽셀 설정
     recCurrentIndex = 0,       // 현재 보고있는 화면
     recSlideBtn = document.querySelector('.rec_slide-button'),
+    recBtnLink = recSlideBtn.querySelectorAll('a'),
     recPrevBtn = recSlideBtn.querySelector('.prev'),
     recNextBtn = recSlideBtn.querySelector('.next');
 
 recSlideContainer.forEach(item => {
-    let slides = item.querySelectorAll('li');
-    let slideCount = slides.length;
-    let slideBtn = document.querySelectorAll('rec_slide-button a');
-    slides.forEach(items => {
-        item.style.width = `${recSlideWidth * slideCount - 10}px`;
+    let recSlides = item.querySelectorAll('li');
+    let recSlideCount = recSlides.length;
+    
+    recSlides.forEach(items => {
+        item.style.width = `${recSlideWidth * recSlideCount - 10}px`;
+        console.log(recSlideCount);
         // 슬라이드 이동 함수 설정
-        function moveSlide(num) {
-            if(slideCount == 5) {
+        function recMoveSlide(num) {
+            if(recSlideCount == 5) {
                 item.style.left = `-${(2 * recSlideWidth - recSlideRemain) * num}px`;
-                recSlideBtn.style.display = 'block';
-            }else if (slideCount == 4) {
+                slideBtn.style.display = 'block';
+            }else if (recSlideCount == 4) {
                 item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
-                recSlideBtn.style.display = 'block';
-            }else if (slideCount == 3){
+                slideBtn.style.display = 'block';
+            }else if (recSlideCount == 3){
                 item.style.left = '71px'    // 게임 3개일 때 중앙으로
-                recSlideBtn.style.display = 'none';
             }
             recCurrentIndex = num;
         }
-        // 해시태그 클릭할 때 마다 moveSlide(0) 실행
+        // 해시태그 클릭할 때 마다 recMoveSlide(0) 실행
         recHash.forEach(element=>{
             element.addEventListener('click',()=>{
-                moveSlide(0);
+                recMoveSlide(0);
             })
         });
         // 슬라이드 이동 버튼 설정
         recNextBtn.addEventListener('click', e => {
             e.preventDefault();
-            moveSlide(1);
+            recMoveSlide(1);
         });
         recPrevBtn.addEventListener('click', e => {
             e.preventDefault();
-            moveSlide(0);
+            recMoveSlide(0);
         });
     });
 });
