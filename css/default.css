@@ -233,33 +233,83 @@ header.active .header_right a {
 }
 
 /* 인기게임 */
+.pop_tab_wrapper .pop_h2{
+	float: left;
+	margin-right: 40px;
+}
 
-.popular_list li{
+.pop_tab_wrapper .pop_nav,.pop_tab_menu li{
+	float: left;
+    /*position: relative;*/
+	margin-bottom: 27px;
+	margin-right: 20px;
+	margin-top : 2px;
+}
+.pop_tab_menu .pop_st{
+	font-size: 20px;
+    font-weight: bold;
+	text-transform:uppercase;
+}
+.pop_tab_menu li.active a{
+	color: #2d2d2d;
+}
+
+
+#pop_tab_content li{
     width: 300px;
     float: left;
     text-align: center;
     margin-right: 24px;
+    background: #fff;
+	position: relative;
 }
-.popular_list li:last-child{
-    margin-right: 0px;
+#pop_tab_content li:hover{
+	box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
-
-.popular_list h3{
-    font-size: 24px;
-    margin-bottom: 27px;
+#pop_tab_content li:last-child{
+	margin-right: 0px;
 }
-
-figcaption{
-    padding: 27px;
+#pop_tab_content h3{
+	font-size: 20px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+}
+#pop_tab_content .tabs {
+	clear: both;
+}
+#pop_tab_content .tabs:last-child{
+    display: none;
+}
+#pop_tab_content figure figcaption{
+	position: relative;
+}
+#pop_tab_content figure figcaption .genre-emblem {
+	position: absolute;
+	float: right;
+	right: 10px;
+	top : 19px;
+}
+#pop_tab-content > div.active {
+	display: block;
 }
 
 
 /* 신규게임 */
 
+.new_game{
+    width: 100%;
+    height: 216px;
+}
+
 .new_banner{
-    height: 400px;
-    background: url(../images/Banner.png) no-repeat;
-    background-size: auto;
+    width: 100%;
+    height: 216px;
+    margin: 0 auto;
+    background-image: url(../images/new_img/new_veiledexperts.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* 추천게임 */
