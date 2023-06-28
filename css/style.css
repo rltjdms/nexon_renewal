@@ -264,7 +264,6 @@ header.active .header_right a {
   position: absolute;
   bottom: calc(100% + 27px);
   left: 0;
-  text-align: center;
 }
 .quick_list ul {
   display: inline-block;
@@ -276,9 +275,10 @@ header.active .header_right a {
 }
 .quick_list li {
   position: relative;
-  line-height: 54px;
-  display: inline-block;
-  vertical-align: baseline;
+  padding: 14px 0;
+  /* line-height: 54px; */
+  /* display: inline-block; */
+  /* vertical-align: baseline; */
 }
 .quick_list li::after {
   content: "";
