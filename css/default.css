@@ -50,7 +50,7 @@ header.active  .header_logo {
   display: block;
   width: 170px;
   height: 135px;
-  background: url(../images/header_logo_black.png) no-repeat center/contain;
+  background: url(../images/header_img/header_logo_black.png) no-repeat center/contain;
 }
 
 header.active nav > ul > li > a,
@@ -81,7 +81,7 @@ h1 > a {
   height: 135px;
   text-indent: -9999px;
   margin-right: 50px;
-  background: url(../images/header_logo.png) no-repeat center/contain;
+  background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
 
 nav > ul > li {
@@ -189,10 +189,10 @@ header .header_right .header_card {
   width: 170px;
   height: 135px;
   text-indent: -9999px;
-  background: url(../images/header_card_fff.png) no-repeat center/contain;
+  background: url(../images/header_img/header_card_fff.png) no-repeat center/contain;
 }
 header.active .header_right .header_card {
-  background: url(../images/header_card_2d2d.png) no-repeat center/contain;
+  background: url(../images/header_img/header_card_2d2d.png) no-repeat center/contain;
 }
 .header_line > .genre_emblem {
   height: 25px;
@@ -720,7 +720,7 @@ footer {
 /* footer last icon */
 .ft-icon .youtube {
   display: inline-block;
-  background-image: url("../images/set_footer/set_footer_360.png");
+  background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 20px;
   height: 19px;
   margin-right: 27px;
@@ -730,7 +730,7 @@ footer {
 }
 .ft-icon .twiiter {
   display: inline-block;
-  background-image: url("../images/set_footer/set_footer_360.png");
+  background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 10px;
   height: 19px;
   padding: 0 5px;
@@ -741,7 +741,7 @@ footer {
 }
 .ft-icon .facebook {
   display: inline-block;
-  background-image: url("../images/set_footer/set_footer_360.png");
+  background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 7px;
   height: 19px;
   padding: 0 5px;
@@ -862,7 +862,7 @@ footer {
   height: 27px;
   /* vertical-align: middle; */
   /* margin-right: 5px; */
-  background-image: url(../images/header_quick_menu.png) ;
+  background-image: url(../images/quick_img/header_quick_menu.png) ;
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
