@@ -40,23 +40,17 @@ window.addEventListener("scroll", () => {
 header.addEventListener("mouseenter", () => {
     if (scroll == 0) {
         header.classList.add("active");
-<<<<<<< HEAD
     }
     //꼭대기 일때만...
 });
 header.addEventListener("mouseleave", (e) => {
     if (scroll == 0) {
         header.classList.remove("active");
-=======
->>>>>>> 2fc1a39 (Add : main.js_header)
     }
     //꼭대기 일때만...
 });
-<<<<<<< HEAD
-=======
 header.addEventListener("mouseleave", (e) => {
     if (scroll == 0) {
         header.classList.remove("active");
     }
 });
->>>>>>> 2fc1a39 (Add : main.js_header)
