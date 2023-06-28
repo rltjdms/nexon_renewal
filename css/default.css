@@ -1,3 +1,4 @@
+/*헤더 시작 - 기서은*/
 /* Header */
 a {
   color: #2d2d2d;
@@ -28,7 +29,6 @@ a {
   /* a를 block 요소 줘서 넓이 채우면 좋음 사용자 입장에서,, */
 }
 
-/* Header _ 기서은 */
 header {
   position: fixed;
   top: 0; left: 0; 
@@ -234,6 +234,10 @@ header.active .header_right a {
 .header_slide video {
   width: 100%;
 }
+
+/*헤더 종료 - 기서은*/
+
+/*인기게임 시작 - 박선정*/
 /* 인기게임 */
 .pop_tab_wrapper .pop_h2{
 	float: left;
@@ -296,7 +300,9 @@ header.active .header_right a {
 	display: block;
 }
 
+/*인기게임 종료 - 박선정*/
 
+/*신규게임 시작 - 박선정*/
 /* 신규게임 */
 
 .new_game{
@@ -344,7 +350,9 @@ header.active .header_right a {
   line-height: 54px;
   font-size: 16px;
 }
+/*인기게임 종료 - 박선정*/
 
+/*추천게임 시작 - 김다훈*/
 /* 추천게임 - 해시태그 */
 .rec_hash{
   text-align: center;
@@ -509,7 +517,10 @@ header.active .header_right a {
   font-size: 64px;
   cursor: pointer;
 }
+/*추천게임 종료 - 김다훈*/
 
+
+/*이벤트&공지사항 시작 - 김아름*/
 /* 이벤트 */
 .content > .event {
   float: left;
@@ -611,7 +622,9 @@ header.active .header_right a {
   margin: 0 10px;
   color: #929898;
 }
+/*이벤트&공지사항 종료 - 김아름*/
 
+/*푸터 시작 - 김아름*/
 /* footer */
 
 /* footer body */
@@ -749,7 +762,9 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/*푸터 종료 - 김아름*/
 
+/*퀵메뉴 시작 - 기서은*/
 /* quick */
 .quick_box {
   position: fixed;
@@ -893,4 +908,5 @@ footer {
   background-position: 0px -81px;
 }
 
+/*퀵메뉴 시작 - 기서은*/
 
