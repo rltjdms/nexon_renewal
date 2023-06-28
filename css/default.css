@@ -231,7 +231,9 @@ header.active .header_right a {
 .header_banner {
   margin-top: 135px;
 }
-
+.header_slide video {
+  width: 100%;
+}
 /* 인기게임 */
 .pop_tab_wrapper .pop_h2{
 	float: left;
@@ -747,3 +749,148 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+
+/* quick */
+.quick_box {
+  position: fixed;
+  left: calc(50% + 452px);
+  bottom: 167px;
+}
+.quick_btt {  
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  /* text-align: center;   */
+  background-color: #0077ff
+}
+.quick_plus,
+.quick_plus::after {
+  position: absolute;
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.quick_plus::after {
+  content: "";
+  width: 2px;
+  height: 12px;
+}
+
+.quick_list {
+  position: absolute;
+  bottom: calc(100% + 27px);
+  left: 0;
+}
+.quick_list ul {
+  display: block;
+  width: 170px;
+  height: 218px;
+  box-shadow: 0 5px 10px 0 #929898;
+  /* vertical-align: baseline; */
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.quick_list li {
+  position: relative;
+  padding: 13.5px 0;
+  /* line-height: 54px; */
+  /* display: inline-block;
+  vertical-align: baseline; */
+  border-bottom: 1px solid #929898;
+}
+.quick_list li:last-child {
+  border: none;
+}
+
+/* toggle */
+.quick_btn {
+    position: relative;
+    /* display: inline-block; */
+    float: left;
+    width: 44px;
+    height: 22px;
+    /* vertical-align: middle; */
+    margin-right: 5px;
+}
+
+.quick_slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #929898;
+    border-radius: 34px;
+}
+
+.quick_slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.quick_list input:checked + .quick_slider {
+    background-color: #0077ff;
+}
+
+.quick_list input:focus + .quick_slider {
+    box-shadow: 0 0 1px #0077ff;
+}
+
+.quick_list input:checked + .quick_slider:before {
+  transform: translateX(20px);
+}
+
+.quick_list i {
+  float: left;
+  width: 26px;
+  height: 27px;
+  /* vertical-align: middle; */
+  /* margin-right: 5px; */
+  background-image: url(../images/header_quick_menu.png) ;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.quick_list .toggle-label,
+.quick_list a > h4 {
+  float: right;
+}
+.quick_list .toggle-label {
+  padding: 3px 0;
+} 
+.quick_list .quick_dark + h4 {
+  padding: 5.5px 0;
+}
+.quick_list .quick_plug + h4{
+  padding: 5.5px 0;
+}
+.quick_list .quick_play + h4{
+  padding: 4px 0;
+}
+.quick_list .quick_plug {
+  width: 32px;
+  height: 27px;
+  background-position: 0px -40px;
+}
+.quick_list .quick_play {
+  width: 25px;
+  height: 28px;
+  background-position: 0px -81px;
+}
+
+
