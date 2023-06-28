@@ -42,7 +42,6 @@ body{
 .content-tt{                
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 27px; /* 제목 아래 margin */   
 }
 /* section 별 설명 */
@@ -124,4 +123,3 @@ body{
     font-weight: bold;
     text-transform: uppercase;
 }
-/* btn big 제거(0620 김다훈)*/
