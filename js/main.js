@@ -36,7 +36,6 @@ window.addEventListener("scroll", () => {
 });
 
 //헤더에 마우스를 올릴때 하얀색으로 바뀜
-
 header.addEventListener("mouseenter", () => {
     if (scroll == 0) {
         header.classList.add("active");
@@ -49,11 +48,16 @@ header.addEventListener("mouseleave", (e) => {
     }
     //꼭대기 일때만...
 });
-header.addEventListener("mouseleave", (e) => {
-    if (scroll == 0) {
-        header.classList.remove("active");
-    }
-});
+//Quick
+let aside = document.querySelector(".quick_box"),
+    quickBtn = aside.querySelector(".quick_btt"),
+    quickList = aside.querySelector(".quick_list");
+
+
+    quickBtn.addEventListener("click", () => {
+        quickBtn.classList.toggle("on");
+    });
+
 
 // 추천게임
 
