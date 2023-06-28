@@ -59,7 +59,7 @@ header.active nav > ul > li > a,
 }
 
 header .header_inner > *,
-header nav > ul > li,
+nav > ul > li,
 .header_right ul li {
   float: left;
 }
@@ -75,7 +75,7 @@ header .header_right {
   float: right;
 }
 
-header h1 > a {
+h1 > a {
   display: inline-block;
   width: 170px;
   height: 135px;
@@ -84,12 +84,12 @@ header h1 > a {
   background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
 
-header nav > ul > li {
+nav > ul > li {
   position: relative;
   margin-right: 45px;
   font-size: 17px;
 }
-header nav > ul > li > a,
+nav > ul > li > a,
 .header_right {
   line-height: 135px;
 }
@@ -104,12 +104,12 @@ header nav > ul > li > a,
 .header_right ul li:last-child {
     margin-right: 0;
 }
-header nav .header_all_tab_menu > li,
-header nav > ul > li + li > .header_submenu > li {
+nav .header_all_tab_menu > li,
+nav > ul > li + li > .header_submenu > li {
   float: left;
 }
-header nav .header_all_tab_menu > li + li,
-header nav > ul > li + li > .header_submenu > li + li {
+nav .header_all_tab_menu > li + li,
+nav > ul > li + li > .header_submenu > li + li {
   margin-left: 30px;
 }
 
@@ -123,10 +123,10 @@ header nav > ul > li + li > .header_submenu > li + li {
   background-color: #fff;
   padding-left: 10px;
 }
-header nav > ul> li.on::after {
+nav > ul> li.on::after {
   display: block;
 }
-header nav > ul> li:after {
+nav > ul> li:after {
   content: '';
   display: none;
   position: absolute;
@@ -166,20 +166,20 @@ header nav > ul> li:after {
 /* javascript */
 
 /* none */
-header nav > ul > li .header_submenu,
+nav > ul > li .header_submenu,
 #header_all_name {
   display: none;
 }
 
 /* block */
-header nav > ul > li.on .header_submenu {
+nav > ul > li.on .header_submenu {
   display: block;
 }
 .header_all_tab_menu > li.on a {
   color: #2d2d2d;
 }
 .header_all_tab_content ul li a:hover,
-header nav > ul > li + li > .header_submenu > li> a:hover {
+nav > ul > li + li > .header_submenu > li> a:hover {
   color:  #2d2d2d;
   font-weight: bold;
 }
@@ -769,7 +769,7 @@ footer {
 /* quick */
 .quick_box {
   position: fixed;
-  left: calc(100% - 211px);
+  left: calc(50% + 452px);
   bottom: 167px;
 }
 .quick_btt {  
