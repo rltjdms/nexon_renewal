@@ -41,53 +41,54 @@ header nav li:first-child span{
 }
 
 /* 인기게임 */
-/* .pop_tab_wrapper h2{
-	margin-right: 40px;
+.pop_tab_wrapper .pop_h2{
 	float: left;
-} */
+	margin-right: 40px;
+}
 
-.pop_tab_menu{
-	position: relative;
+.pop_tab_wrapper .pop_nav,.pop_tab_menu li{
+	float: left;
+    /*position: relative;*/
+	margin-bottom: 27px;
+	margin-right: 20px;
+	margin-top : 2px;
 }
 .pop_tab_menu .pop_st{
 	font-size: 20px;
-  font-weight: bold;
+    font-weight: bold;
 	text-transform:uppercase;
-	/* position: absolute;
-	left: 140px;
-	top : 3px; */
 }
-
 .pop_tab_menu li.active a{
 	color: #2d2d2d;
 }
 
 
 #pop_tab_content li{
-	width: 300px;
-  float: left;
-  text-align: center;
-  margin-right: 24px;
-  background: #fff;
+    width: 300px;
+    float: left;
+    text-align: center;
+    margin-right: 24px;
+    background: #fff;
 	position: relative;
 }
 #pop_tab_content li:hover{
-	filter: drop-shadow(10px 20px 5px #CCCCCC);
+	box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
 #pop_tab_content li:last-child{
 	margin-right: 0px;
 }
 #pop_tab_content h3{
 	font-size: 20px;
-  font-weight: bold;
-  float: left;
-  margin-left: 10px;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
 }
 #pop_tab_content .tabs {
-	/* display: none; */
 	clear: both;
 }
-
+#pop_tab_content .tabs:last-child{
+    display: none;
+}
 #pop_tab_content figure figcaption{
 	position: relative;
 }
@@ -97,30 +98,26 @@ header nav li:first-child span{
 	right: 10px;
 	top : 19px;
 }
-
-/* #tab-content > div.active {
+#pop_tab-content > div.active {
 	display: block;
-} */
-
-.pop_tab_wrapper > .pop_h2{
-	float: left;
-	margin-right: 40px;
-}
-
-.pop_tab_wrapper > .pop_nav,.pop_tab_menu li{
-	float: left;
-	margin-bottom: 27px;
-	margin-right: 20px;
-	margin-top : 2px;
 }
 
 
 /* 신규게임 */
 
-.new_banner{
-    height: 216px;
-    background: url(../new_vaild.png) no-repeat;
+.new_game{
     width: 100%;
+    height: 216px;
+}
+
+.new_banner{
+    width: 100%;
+    height: 216px;
+    margin: 0 auto;
+    background-image: url(../images/new_img/new_veiledexperts.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* 추천게임 */
