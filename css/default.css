@@ -59,7 +59,7 @@ header.active nav > ul > li > a,
 }
 
 header .header_inner > *,
-nav > ul > li,
+header nav > ul > li,
 .header_right ul li {
   float: left;
 }
@@ -75,7 +75,7 @@ header .header_right {
   float: right;
 }
 
-h1 > a {
+header h1 > a {
   display: inline-block;
   width: 170px;
   height: 135px;
@@ -84,12 +84,12 @@ h1 > a {
   background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
 
-nav > ul > li {
+header nav > ul > li {
   position: relative;
   margin-right: 45px;
   font-size: 17px;
 }
-nav > ul > li > a,
+header nav > ul > li > a,
 .header_right {
   line-height: 135px;
 }
@@ -104,12 +104,12 @@ nav > ul > li > a,
 .header_right ul li:last-child {
     margin-right: 0;
 }
-nav .header_all_tab_menu > li,
-nav > ul > li + li > .header_submenu > li {
+header nav .header_all_tab_menu > li,
+header nav > ul > li + li > .header_submenu > li {
   float: left;
 }
-nav .header_all_tab_menu > li + li,
-nav > ul > li + li > .header_submenu > li + li {
+header nav .header_all_tab_menu > li + li,
+header nav > ul > li + li > .header_submenu > li + li {
   margin-left: 30px;
 }
 
@@ -123,10 +123,10 @@ nav > ul > li + li > .header_submenu > li + li {
   background-color: #fff;
   padding-left: 10px;
 }
-nav > ul> li.on::after {
+header nav > ul> li.on::after {
   display: block;
 }
-nav > ul> li:after {
+header nav > ul> li:after {
   content: '';
   display: none;
   position: absolute;
@@ -166,20 +166,20 @@ nav > ul> li:after {
 /* javascript */
 
 /* none */
-nav > ul > li .header_submenu,
+header nav > ul > li .header_submenu,
 #header_all_name {
   display: none;
 }
 
 /* block */
-nav > ul > li.on .header_submenu {
+header nav > ul > li.on .header_submenu {
   display: block;
 }
 .header_all_tab_menu > li.on a {
   color: #2d2d2d;
 }
 .header_all_tab_content ul li a:hover,
-nav > ul > li + li > .header_submenu > li> a:hover {
+header nav > ul > li + li > .header_submenu > li> a:hover {
   color:  #2d2d2d;
   font-weight: bold;
 }
@@ -769,7 +769,7 @@ footer {
 /* quick */
 .quick_box {
   position: fixed;
-  left: calc(50% + 452px);
+  left: calc(100% - 211px);
   bottom: 167px;
 }
 .quick_btt {  
