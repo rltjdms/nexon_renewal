@@ -320,6 +320,12 @@ header.active .header_right a {
     background-size: cover;
 }
 
+/*인기게임 종료 - 박선정*/
+
+/*추천게임 시작 - 김다훈*/
+.rec_main{
+  text-align: center;
+}
 /* 추천게임 - 검색창 */ 
 .rec_search{
   position: relative;
@@ -335,7 +341,6 @@ header.active .header_right a {
   cursor: pointer;
 }
 .rec_search input:focus{
-  /* border: 2px solid #2d2d2d; */
   box-shadow: 0 0 0 2px #2d2d2d inset;
 }
 .rec_search button:hover{
@@ -351,9 +356,6 @@ header.active .header_right a {
   line-height: 54px;
   font-size: 16px;
 }
-/*인기게임 종료 - 박선정*/
-
-/*추천게임 시작 - 김다훈*/
 /* 추천게임 - 해시태그 */
 .rec_hash{
   text-align: center;
@@ -447,11 +449,10 @@ header.active .header_right a {
 }
 
 .rec_slidewrapper li:hover{
-  filter: drop-shadow(10px 20px 5px #CCCCCC);
-  transition: filter 0.5s;
+  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
 /* 추천게임 - hover 시 유튜브 아이콘 생성 */
-.rec_slidewrapper li figure:hover .fa-youtube{
+.rec_slidewrapper li figure .fa-youtube:hover{
   opacity: 1;
 }
 .rec_slidewrapper li figure .fa-youtube{
