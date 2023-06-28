@@ -218,7 +218,7 @@ footer {
 /* 유튜브 아이콘 */
 .ft-icon .youtube {
   display: inline-block;
-  background-image: url("../images/set_footer/set_footer_360.png");
+  background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 20px;
   height: 19px;
   margin-right: 27px;
@@ -229,7 +229,7 @@ footer {
 /* 트위터 아이콘*/
 .ft-icon .twiiter {
   display: inline-block;
-  background-image: url("../images/set_footer/set_footer_360.png");
+  background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 10px;
   height: 19px;
   padding: 0 5px;
@@ -241,7 +241,7 @@ footer {
 /* 페이스북 아이콘 */
 .ft-icon .facebook {
   display: inline-block;
-  background-image: url("../images/set_footer/set_footer_360.png");
+  background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 7px;
   height: 19px;
   padding: 0 5px;
