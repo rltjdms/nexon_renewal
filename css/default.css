@@ -486,14 +486,14 @@ header.active .header_right a {
 }
 
 /* 추천게임 - 게임 이미지 클릭 시 모달 */
-#lightbox-background{
+#rec_lightbox-background{
   position: fixed;
   width: 0;
   top: 0; bottom: 0; left: 0; right: 0;
   background-color: rgba(0,0,0,.7);
   z-index: 9998;
 }
-#lightbox-overlay{
+#rec_lightbox-overlay{
   position: fixed;
   width: 50%;
   height: 50%;
@@ -504,15 +504,15 @@ header.active .header_right a {
   pointer-events: none;
   z-index: 9999;
 }
-#lightbox-background.visible{
+#rec_lightbox-background.visible{
   width: 100%;
   height: 100%;
 }
-#lightbox-overlay.visible{
+#rec_lightbox-overlay.visible{
   opacity: 1;
   pointer-events: auto;
 }
-#lightbox-close{
+#rec_lightbox-close{
   display: block;
   margin: 27px auto 0;
   color: #fff;

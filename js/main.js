@@ -71,41 +71,45 @@ let recSlideWrapper = document.querySelector('.rec_slidewrapper'),
     recNextBtn = recSlideBtn.querySelector('.next');
 
 recSlideContainer.forEach(item => {
-    let recSlides = item.querySelectorAll('li');
-    let recSlideCount = recSlides.length;
-    
-    recSlides.forEach(items => {
-        item.style.width = `${recSlideWidth * recSlideCount - 10}px`;
-        console.log(recSlideCount);
-        // 슬라이드 이동 함수 설정
-        function recMoveSlide(num) {
-            if(recSlideCount == 5) {
-                item.style.left = `-${(2 * recSlideWidth - recSlideRemain) * num}px`;
-                slideBtn.style.display = 'block';
-            }else if (recSlideCount == 4) {
-                item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
-                slideBtn.style.display = 'block';
-            }else if (recSlideCount == 3){
-                item.style.left = '71px'    // 게임 3개일 때 중앙으로
-            }
-            recCurrentIndex = num;
-        }
-        // 해시태그 클릭할 때 마다 recMoveSlide(0) 실행
-        recHash.forEach(element=>{
-            element.addEventListener('click',()=>{
-                recMoveSlide(0);
-            })
-        });
-        // 슬라이드 이동 버튼 설정
-        recNextBtn.addEventListener('click', e => {
-            e.preventDefault();
-            recMoveSlide(1);
-        });
-        recPrevBtn.addEventListener('click', e => {
-            e.preventDefault();
-            recMoveSlide(0);
-        });
+  let recSlides = item.querySelectorAll('li');
+  let recSlideCount = recSlides.length;
+  
+  recSlides.forEach(items => {
+    item.style.width = `${recSlideWidth * recSlideCount - 10}px`;
+    // 슬라이드 이동 함수 설정
+    function recMoveSlide(num) {
+      if (recSlideCount == 5) {
+        item.style.left = `-${(2 * recSlideWidth - recSlideRemain) * num}px`;
+      } else if (recSlideCount == 4) {
+        item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
+      } else if (recSlideCount == 3) {
+        item.style.left = '71px';    // 게임 3개일 때 중앙으로
+      }
+      recCurrentIndex = num;
+    }
+    // 해시태그 클릭할 때 마다 recMoveSlide(0) 실행
+    recHash.forEach(element => {
+      element.addEventListener('click', () => {
+        recMoveSlide(0);
+      });
     });
+    // 슬라이드 이동 버튼 설정
+    recNextBtn.addEventListener('click', e => {
+      e.preventDefault();
+      recMoveSlide(1);
+    });
+    recPrevBtn.addEventListener('click', e => {
+      e.preventDefault();
+      recMoveSlide(0);
+    });
+  });
+
+  // 좌우 이동 버튼 display 설정
+  if (recSlideCount == 3) {
+    recSlideBtn.style.display = 'none';
+  } else {
+    recSlideBtn.style.display = 'block';
+  }
 });
 
 // 해시태그 탭메뉴
@@ -134,10 +138,10 @@ document.getElementById('rec_tab-1').style.display = 'block';
 
 // 모달
 let recYoutube = document.querySelectorAll('.fa-youtube'),
-    recLightbox = document.querySelector('#lightbox-overlay'),
+    recLightbox = document.querySelector('#rec_lightbox-overlay'),
     recLightboxLink = recLightbox.querySelector('#data-lightbox'),
-    recLightboxBg = document.querySelector('#lightbox-background'),
-    lightCloseBtn = document.querySelector('#lightbox-close');
+    recLightboxBg = document.querySelector('#rec_lightbox-background'),
+    lightCloseBtn = document.querySelector('#rec_lightbox-close');
 
 recYoutube.forEach(item =>{
     item.addEventListener('click', e=>{
