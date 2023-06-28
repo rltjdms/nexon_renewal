@@ -1,12 +1,14 @@
 css
 
-/* 이벤트 */
+/* 이벤트 왼쪽 */
 .content > .event {
   float: left;
 }
+/* 공지사항 오른쪽 */
 .content > .notice {
   float: right;
 }
+/* 이벤트 시작 */
 .event {
   position: relative;
   float: left;
@@ -14,13 +16,13 @@ css
   height: 381px;
   overflow: hidden;
 }
-
+/* 이벤트 슬라이드 이미지 박스 */
 .event-slide {
   width: 100%;
   height: 100%;
   transition: left 0.3s ease-in;
 }
-
+/* 이벤트 슬라이드 이미지 자식들 */
 .event-slide > li {
   position: absolute;
   width: 624px;
@@ -28,11 +30,11 @@ css
   top: 0;
   left: 0;
 }
-
+/* 이벤트 이미지들 */
 .event > img {
   object-fit: cover;
 }
-
+/* 이벤트 페이저 닷 버튼 위치*/
 .event-dot {
   position: absolute;
   left: 50%;
@@ -40,6 +42,7 @@ css
   transform: translateX(-50%);
   /* display: fixed; */
 }
+/* 이벤트 페이저 닷 버튼 크기 */
 .event-dot a {
   display: inline-block;
   width: 10px;
@@ -49,10 +52,11 @@ css
   background: rgba(255, 255, 255, 0.3);
   text-indent: -9999px;
 }
+/* 이벤트 페이저 닷 버튼 간격사이 */
 .event-dot a + a {
   margin-left: 5px;
 }
-
+/* 이벤트 페이저 닷 버튼 활동*/
 .event-dot a.active {
   background: #fff;
 }
@@ -67,7 +71,7 @@ css
 }
 
 /* 공지사항 글씨 */
-.notice h3 {
+.notice > h3 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
@@ -80,22 +84,22 @@ css
   top: 10px;
   right: 0;
 }
-/* notice의 내용*/
-.notice ul > li > a > h4 {
+/* 공지사항의 내용*/
+.notice ul > li > a > p {
   float: right;
   margin-right: 10px;
 }
 
-/* notice 선*/
+/* 공지사항 제목 아래 선*/
 .notice ul {
   border-top: 2px solid #929898;
 }
-
+/* 공지사항 간격 선*/
 .notice ul li {
   border-bottom: 1px solid rgba(146, 152, 152, 0.7);
   line-height: 50px;
 }
-/* 날짜 */
+/* 공지사항 날짜 */
 .date {
   float: left;
   margin: 0 10px;
@@ -104,12 +108,11 @@ css
 
 /* footer */
 
-/* footer body */
+/* 푸터 */
 footer {
   padding: 67.5px 0 0 0;
   font-size: 14px;
   text-align: center;
-  display: fixed;
 }
 
 /* footer 1 body */
@@ -168,24 +171,26 @@ footer {
   background-color: #2d2d2d;
 }
 /* footer 3,4 감싸주는 박스 */
-.ftt-con4 {
+.ft-con4 {
   padding: 54px 0 54px 0;
 }
-
-.ftt-con4 ul {
+/* ft-con4의 위 아래 보더 선 */
+.ft-con4 ul {
   padding: 30px 0 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-.ftt-con4 li {
+/* ft-con4 li 정렬 */
+.ft-con4 li {
   display: inline-block;
   padding: 0 30px 0 30px;
 }
-.ftt-con4 ul > li > a {
+/* ft-con4 개인정보처리방침~광고문의 글씨색상 */
+.ft-con4 ul > li > a {
   color: #ffffff;
 }
 
+/* 푸터 주소, 카피라이터 */
 .ft-nav4 address,
 .ft-nav4 p {
   line-height: 21px;
@@ -193,7 +198,8 @@ footer {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.logo {
+/* 푸터 넥슨 로고 */
+.ft-logo {
   margin-top: 54px;
 }
 
@@ -208,6 +214,8 @@ footer {
 } */
 
 /* footer last icon */
+
+/* 유튜브 아이콘 */
 .ft-icon .youtube {
   display: inline-block;
   background-image: url("../images/set_footer/set_footer_360.png");
@@ -218,6 +226,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/* 트위터 아이콘*/
 .ft-icon .twiiter {
   display: inline-block;
   background-image: url("../images/set_footer/set_footer_360.png");
@@ -229,6 +238,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/* 페이스북 아이콘 */
 .ft-icon .facebook {
   display: inline-block;
   background-image: url("../images/set_footer/set_footer_360.png");
