@@ -194,18 +194,25 @@ header .header_right .header_card {
 header.active .header_right .header_card {
   background: url(../images/header_img/header_card_2d2d.png) no-repeat center/contain;
 }
-.header_line > .genre_emblem {
+.header_line > .header_onoff {
+  display: inline-block;
+  border-radius: 14.5px;
   height: 25px;
   line-height: 25px;
   margin-left: 5px;
   background-color: #929898;
   vertical-align: middle;
+  font-size: 14px;
+  padding: 0px 10px;
+  box-sizing: border-box;
 }
-.header_line > .genre_emblem.active {
+
+.header_line > .header_onoff.active {
   background-color: green;
   color: #2d2d2d;
 }
-.header_login.genre_emblem {
+.header_login {
+  display: inline-block;
   padding: 0px 20px;
   margin: 0;
   height: 40px;
@@ -213,14 +220,15 @@ header.active .header_right .header_card {
   background-color: #2d2d2d;
   border: 2px solid #fff;
   border-radius: 20px;
+  box-sizing: border-box;
 }
-header.active .header_login.genre_emblem:hover {
+header.active .header_login:hover {
   background-color: #0077ff;
   color: #fff;
 }
 /* javascript */
 /* header 스크롤시 */
-header.active .header_login.genre_emblem {
+header.active .header_login {
   background-color: #fff;
   border: 2px solid #2d2d2d;
   color: #2d2d2d;
@@ -769,7 +777,7 @@ footer {
 /* quick */
 .quick_box {
   position: fixed;
-  left: calc(50% + 452px);
+  left: calc(100% - 220px);
   bottom: 167px;
 }
 .quick_btt {  
