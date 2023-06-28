@@ -1,0 +1,125 @@
+@import url(reset.css);
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* layout */
+.container{
+    width: 1272px;
+    margin: 0 auto;
+}
+
+.big-pd{padding: 67.5px 0;}     /* section별 위아래 5칸 */
+.sm-pd{padding: 27px 0;}
+
+
+.hidden{
+    /* display: none; */
+    position: fixed;
+    left: 0;
+    top: -99999em;
+}
+.cf:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+hr{
+    border: none;
+    border-top: 1px solid #ebebeb;
+}
+
+/* typography */
+body{
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font: 16px;
+    background-color: #f8f9fa;
+}
+/* section 별 제목 */
+.content-tt{                
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 27px; /* 제목 아래 margin */   
+}
+/* section 별 설명 */
+.content-desc{              
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 27px; /* 설명 아래 margin */      
+    color: #929898;
+}
+
+
+/* emblem */
+.genre-emblem {
+    display: inline-block;
+    border-radius: 14.5px;
+    height: 27px;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    /* float:right 제거(0620 김다훈) */
+}
+
+.rpg{
+    border: 2px solid #c96243;
+    color: #c96243;
+}
+.tps{
+    border: 2px solid #133a87;
+    color: #133a87;
+}
+.aos{
+    border: 2px solid #f36983;
+    color: #f36983;
+}
+.fps{
+    border: 2px solid #46128f;
+    color: #46128f;
+}
+.pvp{
+    border: 2px solid #e60400;
+    color: #e60400;
+}
+.racing{
+    border: 2px solid #ff7601;
+    color: #ff7601;
+}
+.casual{
+    border: 2px solid #01a09c;
+    color: #01a09c;
+}
+.sports{
+    border: 2px solid #41a1e4;
+    color: #41a1e4;
+}
+
+
+/* colors */
+.light-g1{color: #2d2d2d;}
+.light-g2{color: #929898;}
+.light-g3{color: #ffffff;}
+
+
+.highlight-g1{color:#0077ff;}           /* highlight color 추가(0620 김다훈) */
+.highlight-bg{background: #0077ff;}
+
+.banner-bg{background: #2d3e4f;}
+
+::placeholder{color: #929898;}
+
+/* button */
+.btn{
+    display: inline-block;
+    line-height: 39px;
+    border-radius: 3px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
