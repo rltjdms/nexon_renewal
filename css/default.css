@@ -84,7 +84,7 @@ header h1 > a {
   background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
 header nav > ul {
-  position: relative;
+  /* position: relative; */
 }
 header nav > ul > li {
   margin-right: 45px;
@@ -116,14 +116,16 @@ header nav > ul > li + li > .header_submenu > li + li {
 
 .header_submenu {
   position: absolute;
-  width: 1100px;
+  width: 100%;
   top: 100%;
   left: 0;
-  padding: 13.5px 0;
+  padding: 40.5px 0;
   box-sizing: border-box;
   background-color: #fff;
-  padding-left: 10px;
+  border-top: 0.5px solid #989292;
+  padding-left: 325px;
 }
+
 header nav > ul> li > a {
   position: relative;
 }
@@ -501,7 +503,7 @@ header.active .header_right a {
 }
 
 .rec_slidewrapper li:hover{
-  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
+  box-shadow: 2px 2px 8px 0px rgba(146, 152, 152, 0.3);
 }
 /* 추천게임 - hover 시 유튜브 아이콘 생성 */
 .rec_slidewrapper li figure .fa-youtube:hover{
@@ -932,9 +934,9 @@ footer {
 
 .quick_list i {
   float: left;
-  width: 26px;
+  width: 30px;
   height: 27px;
-  background-image: url(../images/quick_img/header_quick_menu.png) ;
+  background-image: url(../images/quick_img/header_quick_menu\ \(1\).png) ;
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
@@ -960,7 +962,7 @@ footer {
   background-position: 0px -40px;
 }
 .quick_list .quick_play {
-  width: 25px;
+  width: 30px;
   height: 28px;
   background-position: 0px -81px;
 }
