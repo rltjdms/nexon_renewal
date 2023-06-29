@@ -26,6 +26,7 @@ let eventWrapper = document.querySelector(".event"), // event(부모)
   //   eventSlideWidth = eventslideList.offsetWidth,
   slideCount = eventslideList.length, //이벤트 슬라이드 개수
   currentSlideIdx = 0; // 보고있는 이벤트 화면
+
 if (slideCount > 1) {
   eventslideList.forEach((item, idx) => {
     item.style.left = `${idx * 100}%`;
