@@ -1,83 +1,55 @@
+// 헤더 시작 - 기서은 //
+
+// 헤더 종료 - 기서은 //
+
+
+// 인기게임 시작 - 박선정 //
+
 /*
-변수명 header
-윈도우에 스크롤이 생기면 할일
-    그 스크롤양이 0보다 크면 header에 sticky 추가
-    아니면 sticky 제거
+변수명 tabMenu에 리스트를 할당
 */
-let header = document.querySelector('body');       // 다른데 쓸 수도 있음
+let pop_tabMenu = document.querySelectorAll('.pop_tab_menu li');
+let pop_tabContent = document.querySelectorAll('#pop_tab_content > div')
 
-window.addEventListener('scroll', ()=>{
-    if(window.scrollY > 0){
-        header.classList.add('sticky');
-    }else{
-        header.classList.remove('sticky');
-    }
-});
-
-/* 슬라이드 */
 /*
-    첫 슬라이드에서 이전 버튼을 클릭하면 마지막 슬라이드로 이동
-    마지막 슬라이드에서다음 버튼을 클릭하면 첫 슬라이드로 이동
+pop_tabMenu를 클릭하면 모든 pop_tabMenu에서 클래스명 active를 제거하고, 
+클릭된 그 요소에만 active를 추가한다.
 */
 
-let slideWrapper = document.querySelector('.slidewrapper'),                  // ul의 부모
-    slideContainer = slideWrapper.querySelector('ul'),                    // ul
-    slides = slideContainer.querySelectorAll('li'),                    // 각 슬라이드
-    slideCount = slides.length,                    // 슬라이드 개수
-    currentIndex = 0,                   // 현재 보고있는 화면
-    prevBtn = slideWrapper.querySelector('.prev'),
-    nextBtn = slideWrapper.querySelector('.next');
-
-
-// 슬라이드 가로배치
-
-/* 1번 방법
-slides.forEach((item,index)=>{
-    item.style.left = `${index*100}%`;
-}); */
-
-// 2번 방법
-// slideContainer의 너비 지정
-slideContainer.style.width = `${slideWrapper.offsetWidth * slideCount}px`;  // ul의 높이가 안나오므로 cf부여
-
-// 슬라이드 이동 함수 moveSlide
-function moveSlide(num){
-    slideContainer.style.left=`${-100*num}%`;
-    currentIndex=num;
-}
-
-// 좌우 버튼으로 슬라이드 이동
-nextBtn.addEventListener('click',(e)=>{
-    e.preventDefault();         // 링크의 기본속성을 막자
-    if(currentIndex<slideCount-1){
-        moveSlide(currentIndex+1);
-    }else{
-        moveSlide(0);
-    }
-});
-prevBtn.addEventListener('click',(e)=>{
+pop_tabMenu.forEach(i=>{
+  i.addEventListener('click',(e)=>{
     e.preventDefault();
-    if(currentIndex>0){
-        moveSlide(currentIndex-1);
-    }else{
-        moveSlide(slideCount-1);
+    for(let list of pop_tabMenu){
+      list.classList.remove('active');
+    };
+    e.currentTarget.classList.add('active');
+    //모든 pop_tab_content는 보이지 않고, 아이디 tabs-pc 보이도록 display 속성을 block으로 변경
+    let targetId = e.target.getAttribute('href');
+    for(let content of pop_tabContent){
+      content.style.display = 'none';
     }
+    document.querySelector(targetId).style.display = 'block';
+  });
 });
 
-/* 
-변수명 qnaList에 qna_list li를 지정
-qnaList를 클릭하면 할일
-    모든 qnaList에서 active를 제거하고
-    클릭한 그 요소에만 active 추가
-*/
+// 인기게임 종료 - 박선정 //
 
-let qnaList = document.querySelectorAll('.qna_list li');
 
-qnaList.forEach(item => {
-    item.addEventListener('click', e=>{
-        qnaList.forEach(items=>{
-            items.classList.remove('active');
-        })
-        e.currentTarget.classList.add('active');
-    })
-}); 
+// 신규게임 시작 - 박선정 //
+
+// 신규게임 종료 - 박선정 //
+
+
+// 추천게임 시작 - 김다훈 //
+
+// 추천게임 종료 - 김다훈 //
+
+
+// 이벤트&공지사항 시작 - 김아름 //
+
+// 이벤트&공지사항 종료 - 김아름  //
+
+
+// 푸터 시작 - 김아름 //
+
+// 푸터 종료 - 김아름 //

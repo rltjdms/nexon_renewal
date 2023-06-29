@@ -35,13 +35,13 @@ hr{
 /* typography */
 body{
     font-family: 'NEXON Lv1 Gothic OTF';
-    font: 20px/30px ;  /* font-size/line-height */
+    font: 16px;
+    background-color: #f8f9fa;
 }
 /* section 별 제목 */
 .content-tt{                
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 27px; /* 제목 아래 margin */   
 }
 /* section 별 설명 */
@@ -55,7 +55,7 @@ body{
 
 
 /* emblem */
-.genre_emblem {
+.genre-emblem {
     display: inline-block;
     border-radius: 14.5px;
     height: 27px;
@@ -122,19 +122,4 @@ body{
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-}
-/* btn big 제거(0620 김다훈)*/
-
-
-/* 검색창 추가(0620 김다훈) */
-.search{
-    position: relative;
-    width: 623px;
-}
-.search input{
-    width: 100%;
-    border: 1px solid #929898;
-    border-radius: 14.5px;
-    padding: 18px 44px;
-    font-size: 16px;
 }
