@@ -240,13 +240,13 @@ header.active .header_right a {
 }
 .header_banner {
   position: relative;
-  margin-top: 135px;
+  overflow: hidden;
+  height: 100vh;
 }
 .header_content {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  height: 100vh;
+  height: 100%;
 }
 .header_content .header_slide {
   position: absolute;
@@ -262,16 +262,20 @@ header.active .header_right a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: calc(100% - 27px);
   text-align: center;
 }
 .heade_pager a {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
+  width: 14px;
+  height: 14px;
+  margin-right: 20px;
+  text-indent: -9999px;
   border-radius: 50%;
-  background: #ccc;
+  background: rgba(255, 255, 255, .3);
+}
+.heade_pager a.active {
+  background: rgba(255, 255, 255, 1);
 }
 /*헤더 종료 - 기서은*/
 
