@@ -289,10 +289,9 @@ header.active .header_right a {
 	float: left;
 	margin-right: 40px;
 }
-
-.pop_tab_wrapper .pop_nav,.pop_tab_menu li{
+.pop_tab_menu li{
 	float: left;
-    /*position: relative;*/
+  position: relative;
 	margin-bottom: 27px;
 	margin-right: 20px;
 	margin-top : 2px;
@@ -305,53 +304,49 @@ header.active .header_right a {
 .pop_tab_menu li.active a{
 	color: #2d2d2d;
 }
-
-
-#pop_tab_content li{
+.pop_tab_content li{
   width: 300px;
   float: left;
   text-align: center;
   margin-right: 24px;
   background: #fff;
-	position: relative;
+	/* position: relative; */
 }
-#pop_tab_content li:hover{
+.pop_tab_content li:hover{
 	box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
-#pop_tab_content li:last-child{
+.pop_tab_content li:last-child{
 	margin-right: 0px;
 }
-#pop_tab_content h3{
+.pop_tab_content h3{
 	font-size: 20px;
   font-weight: bold;
   float: left;
   margin-left: 10px;
 }
-#pop_tab_content .tabs {
+.pop_tab_content .tabs {
 	clear: both;
 }
-#pop_tab_content > div:last-child{
-  display: none;
-}
-
-#pop_tab_content figure{
+.pop_tab_content figure{
   width: 300px;
   height: 378px;
 }
-
-#pop_tab_content figure figcaption{
+.pop_tab_content figure figcaption{
 	position: relative;
   width: 300px;
   height: 78px;
 }
-#pop_tab_content figure figcaption .genre-emblem {
+.pop_tab_content figure figcaption .genre-emblem {
 	position: absolute;
 	float: right;
 	right: 10px;
 	top : 19px;
 }
-#pop_tab-content > div.active {
-	display: block;
+.pop_tab_content > div{
+  display: none;
+}
+.pop_tab_content > div .active{
+  display: block;
 }
 
 /*인기게임 종료 - 박선정*/
