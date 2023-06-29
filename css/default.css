@@ -386,7 +386,7 @@ header.active .header_right a {
 }
 .rec_search-icon{
   position: absolute;
-  font-size: 32px;
+  font-size: 24px;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -525,16 +525,15 @@ header.active .header_right a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
-  text-shadow: 2px 0px 5px #2d2d2d;
+  color: #2d2d2d;
   font-size: 45px;
 }
 .rec_slide-button .prev{
-  right: calc(100% + 10px);
+  right: calc(100% + 20px);
 }
 
 .rec_slide-button .next{
-  left: calc(100% + 10px);
+  left: calc(100% + 20px);
 }
 
 /* 추천게임 - 게임 이미지 클릭 시 모달 */
