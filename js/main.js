@@ -48,6 +48,41 @@ header.addEventListener("mouseleave", (e) => {
     }
     //꼭대기 일때만...
 });
+//배너 슬라이드
+let headerSection = document.querySelector(".header_banner"),
+    headerContent = headerSection.querySelector(".header_content"),
+    headerSlide = headerSection.querySelectorAll(".header_slide"),
+    headerpager = headerSection.querySelector(".heade_pager"),
+    headerpagerHtml = "",
+    headCounter = headerSlide.length,
+    headCurrentIndex = 0;
+
+if (headCounter >= 0) {
+    headerSlide.forEach((list, idx) => {
+        list.style.left = `${idx * 100}%`;
+        headerpagerHtml += `<a href="">${idx}</a>`;
+    });
+}
+headerpager.innerHTML = headerpagerHtml;
+let headerpagerBtn = headerpager.querySelectorAll("a");
+
+function moveSlide(num) {
+    headerContent.style.left = `${num * -100}%`;
+    headCurrentIndex = num;
+
+for (let headerpg of headerpagerBtn) {
+    headerpg.classList.remove("active");
+}
+    headerpagerBtn[headCurrentIndex].classList.add("active");
+}
+ moveSlide(0);
+ headerpagerBtn.forEach((Btn, idx) => {
+     Btn.addEventListener("click", (e) => {
+         e.preventDefault();
+         moveSlide(idx);
+     });
+ });
+
 //Quick
 let aside = document.querySelector(".quick_box"),
     quickBtn = aside.querySelector(".quick_btt"),
@@ -57,6 +92,7 @@ let aside = document.querySelector(".quick_box"),
     quickBtn.addEventListener("click", () => {
         quickBtn.classList.toggle("on");
     });
+
 
 
 // 추천게임
