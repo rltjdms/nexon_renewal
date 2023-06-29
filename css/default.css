@@ -31,7 +31,8 @@ a {
 
 header {
   position: fixed;
-  top: 0; left: 0; 
+  top: 0;
+  left: 0;
   width: 100%;
   height: 135px;
   background-color: #323232;
@@ -46,11 +47,12 @@ header .header_logo {
 header.active {
   background-color: #fff;
 }
-header.active  .header_logo {
+header.active .header_logo {
   display: block;
   width: 170px;
   height: 135px;
-  background: url(../images/header_img/header_logo_black.png) no-repeat center/contain;
+  background: url(../images/header_img/header_logo_black.png) no-repeat
+    center/contain;
 }
 
 header.active nav > ul > li > a,
@@ -64,7 +66,7 @@ nav > ul > li,
   float: left;
 }
 .header_inner nav {
-    display: inline-block;
+  display: inline-block;
 }
 .header_inner {
   padding: 0px 125px;
@@ -99,10 +101,10 @@ nav > ul > li > a,
   margin-right: 30px;
 }
 .header_right ul li a {
-    color: #fff;
+  color: #fff;
 }
 .header_right ul li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 nav .header_all_tab_menu > li,
 nav > ul > li + li > .header_submenu > li {
@@ -123,11 +125,11 @@ nav > ul > li + li > .header_submenu > li + li {
   background-color: #fff;
   padding-left: 10px;
 }
-nav > ul> li.on::after {
+nav > ul > li.on::after {
   display: block;
 }
-nav > ul> li:after {
-  content: '';
+nav > ul > li:after {
+  content: "";
   display: none;
   position: absolute;
   left: 0;
@@ -135,7 +137,7 @@ nav > ul> li:after {
   width: 100%;
   height: 3px;
   background-color: #0077ff;
-}  
+}
 .header_all_tab_content .header_all_type_box {
   float: left;
   margin-right: 108px;
@@ -179,8 +181,8 @@ nav > ul > li.on .header_submenu {
   color: #2d2d2d;
 }
 .header_all_tab_content ul li a:hover,
-nav > ul > li + li > .header_submenu > li> a:hover {
-  color:  #2d2d2d;
+nav > ul > li + li > .header_submenu > li > a:hover {
+  color: #2d2d2d;
   font-weight: bold;
 }
 
@@ -189,10 +191,12 @@ header .header_right .header_card {
   width: 170px;
   height: 135px;
   text-indent: -9999px;
-  background: url(../images/header_img/header_card_fff.png) no-repeat center/contain;
+  background: url(../images/header_img/header_card_fff.png) no-repeat
+    center/contain;
 }
 header.active .header_right .header_card {
-  background: url(../images/header_img/header_card_2d2d.png) no-repeat center/contain;
+  background: url(../images/header_img/header_card_2d2d.png) no-repeat
+    center/contain;
 }
 .header_line > .genre_emblem {
   height: 25px;
@@ -209,7 +213,7 @@ header.active .header_right .header_card {
   padding: 0px 20px;
   margin: 0;
   height: 40px;
-  line-height: 40px; 
+  line-height: 40px;
   background-color: #2d2d2d;
   border: 2px solid #fff;
   border-radius: 20px;
@@ -239,65 +243,65 @@ header.active .header_right a {
 
 /*인기게임 시작 - 박선정*/
 /* 인기게임 */
-.pop_tab_wrapper .pop_h2{
-	float: left;
-	margin-right: 40px;
+.pop_tab_wrapper .pop_h2 {
+  float: left;
+  margin-right: 40px;
 }
 
-.pop_tab_wrapper .pop_nav,.pop_tab_menu li{
-	float: left;
-    /*position: relative;*/
-	margin-bottom: 27px;
-	margin-right: 20px;
-	margin-top : 2px;
+.pop_tab_wrapper .pop_nav,
+.pop_tab_menu li {
+  float: left;
+  /*position: relative;*/
+  margin-bottom: 27px;
+  margin-right: 20px;
+  margin-top: 2px;
 }
-.pop_tab_menu .pop_st{
-	font-size: 20px;
-    font-weight: bold;
-	text-transform:uppercase;
+.pop_tab_menu .pop_st {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.pop_tab_menu li.active a{
-	color: #2d2d2d;
+.pop_tab_menu li.active a {
+  color: #2d2d2d;
 }
 
-
-#pop_tab_content li{
-    width: 300px;
-    float: left;
-    text-align: center;
-    margin-right: 24px;
-    background: #fff;
-	position: relative;
+#pop_tab_content li {
+  width: 300px;
+  float: left;
+  text-align: center;
+  margin-right: 24px;
+  background: #fff;
+  position: relative;
 }
-#pop_tab_content li:hover{
-	box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
+#pop_tab_content li:hover {
+  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
-#pop_tab_content li:last-child{
-	margin-right: 0px;
+#pop_tab_content li:last-child {
+  margin-right: 0px;
 }
-#pop_tab_content h3{
-	font-size: 20px;
-    font-weight: bold;
-    float: left;
-    margin-left: 10px;
+#pop_tab_content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  margin-left: 10px;
 }
 #pop_tab_content .tabs {
-	clear: both;
+  clear: both;
 }
-#pop_tab_content .tabs:last-child{
-    display: none;
+#pop_tab_content .tabs:last-child {
+  display: none;
 }
-#pop_tab_content figure figcaption{
-	position: relative;
+#pop_tab_content figure figcaption {
+  position: relative;
 }
 #pop_tab_content figure figcaption .genre-emblem {
-	position: absolute;
-	float: right;
-	right: 10px;
-	top : 19px;
+  position: absolute;
+  float: right;
+  right: 10px;
+  top: 19px;
 }
 #pop_tab-content > div.active {
-	display: block;
+  display: block;
 }
 
 /*인기게임 종료 - 박선정*/
@@ -305,28 +309,28 @@ header.active .header_right a {
 /*신규게임 시작 - 박선정*/
 /* 신규게임 */
 
-.new_game{
-    width: 100%;
-    height: 216px;
+.new_game {
+  width: 100%;
+  height: 216px;
 }
 
-.new_banner{
-    width: 100%;
-    height: 216px;
-    margin: 0 auto;
-    background-image: url(../images/new_img/new_veiledexperts.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.new_banner {
+  width: 100%;
+  height: 216px;
+  margin: 0 auto;
+  background-image: url(../images/new_img/new_veiledexperts.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-/* 추천게임 - 검색창 */ 
-.rec_search{
+/* 추천게임 - 검색창 */
+.rec_search {
   position: relative;
   width: 623px;
   margin: 0px auto;
 }
-.rec_search-icon{
+.rec_search-icon {
   position: absolute;
   font-size: 32px;
   top: 50%;
@@ -334,14 +338,14 @@ header.active .header_right a {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.rec_search input:focus{
+.rec_search input:focus {
   /* border: 2px solid #2d2d2d; */
   box-shadow: 0 0 0 2px #2d2d2d inset;
 }
-.rec_search button:hover{
+.rec_search button:hover {
   color: #0077ff;
 }
-.rec_search input{
+.rec_search input {
   width: 623px;
   padding-left: 54px;
   margin: 0;
@@ -355,70 +359,70 @@ header.active .header_right a {
 
 /*추천게임 시작 - 김다훈*/
 /* 추천게임 - 해시태그 */
-.rec_hash{
+.rec_hash {
   text-align: center;
 }
-.rec_hash li{
+.rec_hash li {
   float: left;
   padding: 27px 30px 27px 0px;
 }
-.rec_hash li:last-child{
+.rec_hash li:last-child {
   padding-right: 0;
 }
-.rec_hash-list{
+.rec_hash-list {
   display: inline-block;
   margin: 0;
 }
 /* 추천게임 - 해시태그(탭메뉴) */
-.rec_hash a{
+.rec_hash a {
   color: #929898;
 }
-.rec_hash a:hover{
+.rec_hash a:hover {
   color: #0077ff;
 }
-.rec_hash a.active{
+.rec_hash a.active {
   padding: 6px 9px;
   border-radius: 14.5px;
   background-color: #2d2d2d;
   color: #fff;
   line-height: 16px;
 }
-#rec_tab > ul{
+#rec_tab > ul {
   display: none;
 }
 
 /* 추천게임 - 슬라이드 */
-.rec_game_tt{
+.rec_game_tt {
   display: inline-block;
   margin: 30px 0px 0px 10px;
   font-size: 20px;
   font-weight: bold;
 }
-.rec_game_desc{
+.rec_game_desc {
   display: block;
   margin: 12px 0px 0px 10px;
 }
-.rec_emblem{
+.rec_emblem {
   float: right;
   margin: 30px 10px 0px 0px;
   bottom: 58px;
 }
-.rec_slidewrapper-wrap{
+.rec_slidewrapper-wrap {
   position: relative;
   height: 388px;
 }
-.rec_slidewrapper{
+.rec_slidewrapper {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.rec_slidewrapper ul{
+.rec_slidewrapper ul {
   position: absolute;
   left: 0;
   transition: 0.3s;
 }
-.rec_slidewrapper li{
+.rec_slidewrapper li {
   position: relative;
   float: left;
   width: 370px;
@@ -430,7 +434,7 @@ header.active .header_right a {
   width: 100%;
   height: 100%;
 }
-.rec_slidewrapper li:last-child{
+.rec_slidewrapper li:last-child {
   margin-right: 0px;
 }
 .rec_slidewrapper li figure {
@@ -439,25 +443,25 @@ header.active .header_right a {
   height: 378px;
   margin: 0;
 }
-.rec_slidewrapper img{
+.rec_slidewrapper img {
   position: relative;
   width: 370px;
   height: 270px;
   object-fit: cover;
 }
 
-.rec_slidewrapper li:hover{
-  filter: drop-shadow(10px 20px 5px #CCCCCC);
+.rec_slidewrapper li:hover {
+  filter: drop-shadow(10px 20px 5px #cccccc);
   transition: filter 0.5s;
 }
 /* 추천게임 - hover 시 유튜브 아이콘 생성 */
-.rec_slidewrapper li figure:hover .fa-youtube{
+.rec_slidewrapper li figure:hover .fa-youtube {
   opacity: 1;
 }
-.rec_slidewrapper li figure .fa-youtube{
+.rec_slidewrapper li figure .fa-youtube {
   position: absolute;
   padding: 103px 149px;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #e62117;
   left: 0%;
   top: 0%;
@@ -467,7 +471,7 @@ header.active .header_right a {
 }
 
 /* 추천게임 - prev, next 버튼 */
-.rec_slide-button a{
+.rec_slide-button a {
   display: block;
   position: absolute;
   top: 50%;
@@ -476,42 +480,46 @@ header.active .header_right a {
   text-shadow: 2px 0px 5px #2d2d2d;
   font-size: 45px;
 }
-.rec_slide-button .prev{
+.rec_slide-button .prev {
   right: calc(100% + 10px);
 }
 
-.rec_slide-button .next{
+.rec_slide-button .next {
   left: calc(100% + 10px);
 }
 
 /* 추천게임 - 게임 이미지 클릭 시 모달 */
-#lightbox-background{
+#lightbox-background {
   position: fixed;
   width: 0;
-  top: 0; bottom: 0; left: 0; right: 0;
-  background-color: rgba(0,0,0,.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 9998;
 }
-#lightbox-overlay{
+#lightbox-overlay {
   position: fixed;
   width: 50%;
   height: 50%;
   opacity: 0;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s;
   pointer-events: none;
   z-index: 9999;
 }
-#lightbox-background.visible{
+#lightbox-background.visible {
   width: 100%;
   height: 100%;
 }
-#lightbox-overlay.visible{
+#lightbox-overlay.visible {
   opacity: 1;
   pointer-events: auto;
 }
-#lightbox-close{
+#lightbox-close {
   display: block;
   margin: 27px auto 0;
   color: #fff;
@@ -520,15 +528,17 @@ header.active .header_right a {
 }
 /*추천게임 종료 - 김다훈*/
 
-
 /*이벤트&공지사항 시작 - 김아름*/
 /* 이벤트 */
+/* 이벤트 왼쪽 */
 .content > .event {
   float: left;
 }
+/* 공지사항 오른쪽 */
 .content > .notice {
   float: right;
 }
+/* 이벤트 시작 */
 .event {
   position: relative;
   float: left;
@@ -536,13 +546,13 @@ header.active .header_right a {
   height: 381px;
   overflow: hidden;
 }
-
+/* 이벤트 슬라이드 이미지 박스 */
 .event-slide {
   width: 100%;
   height: 100%;
   transition: left 0.3s ease-in;
 }
-
+/* 이벤트 슬라이드 이미지 자식들 */
 .event-slide > li {
   position: absolute;
   width: 624px;
@@ -550,11 +560,11 @@ header.active .header_right a {
   top: 0;
   left: 0;
 }
-
+/* 이벤트 이미지들 */
 .event > img {
   object-fit: cover;
 }
-
+/* 이벤트 페이저 닷 버튼 위치*/
 .event-dot {
   position: absolute;
   left: 50%;
@@ -562,6 +572,7 @@ header.active .header_right a {
   transform: translateX(-50%);
   /* display: fixed; */
 }
+/* 이벤트 페이저 닷 버튼 크기 */
 .event-dot a {
   display: inline-block;
   width: 10px;
@@ -571,10 +582,11 @@ header.active .header_right a {
   background: rgba(255, 255, 255, 0.3);
   text-indent: -9999px;
 }
+/* 이벤트 페이저 닷 버튼 간격사이 */
 .event-dot a + a {
   margin-left: 5px;
 }
-
+/* 이벤트 페이저 닷 버튼 활동*/
 .event-dot a.active {
   background: #fff;
 }
@@ -589,7 +601,7 @@ header.active .header_right a {
 }
 
 /* 공지사항 글씨 */
-.notice h3 {
+.notice > h3 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
@@ -602,38 +614,35 @@ header.active .header_right a {
   top: 10px;
   right: 0;
 }
-/* notice의 내용*/
-.notice ul > li > a > h4 {
+/* 공지사항의 내용*/
+.notice ul > li > a > p {
   float: right;
   margin-right: 10px;
 }
 
-/* notice 선*/
+/* 공지사항 제목 아래 선*/
 .notice ul {
   border-top: 2px solid #929898;
 }
-
+/* 공지사항 간격 선*/
 .notice ul li {
   border-bottom: 1px solid rgba(146, 152, 152, 0.7);
   line-height: 50px;
 }
-/* 날짜 */
+/* 공지사항 날짜 */
 .date {
   float: left;
   margin: 0 10px;
   color: #929898;
 }
-/*이벤트&공지사항 종료 - 김아름*/
 
-/*푸터 시작 - 김아름*/
 /* footer */
 
-/* footer body */
+/* 푸터 */
 footer {
   padding: 67.5px 0 0 0;
   font-size: 14px;
   text-align: center;
-  display: fixed;
 }
 
 /* footer 1 body */
@@ -692,24 +701,26 @@ footer {
   background-color: #2d2d2d;
 }
 /* footer 3,4 감싸주는 박스 */
-.ftt-con4 {
+.ft-con4 {
   padding: 54px 0 54px 0;
 }
-
-.ftt-con4 ul {
+/* ft-con4의 위 아래 보더 선 */
+.ft-con4 ul {
   padding: 30px 0 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-.ftt-con4 li {
+/* ft-con4 li 정렬 */
+.ft-con4 li {
   display: inline-block;
   padding: 0 30px 0 30px;
 }
-.ftt-con4 ul > li > a {
+/* ft-con4 개인정보처리방침~광고문의 글씨색상 */
+.ft-con4 ul > li > a {
   color: #ffffff;
 }
 
+/* 푸터 주소, 카피라이터 */
 .ft-nav4 address,
 .ft-nav4 p {
   line-height: 21px;
@@ -717,7 +728,8 @@ footer {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.logo {
+/* 푸터 넥슨 로고 */
+.ft-logo {
   margin-top: 54px;
 }
 
@@ -732,6 +744,8 @@ footer {
 } */
 
 /* footer last icon */
+
+/* 유튜브 아이콘 */
 .ft-icon .youtube {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
@@ -742,6 +756,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/* 트위터 아이콘*/
 .ft-icon .twiiter {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
@@ -753,6 +768,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/* 페이스북 아이콘 */
 .ft-icon .facebook {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
@@ -772,7 +788,7 @@ footer {
   left: calc(50% + 452px);
   bottom: 167px;
 }
-.quick_btt {  
+.quick_btt {
   display: inline-block;
   position: relative;
   width: 50px;
@@ -780,7 +796,7 @@ footer {
   line-height: 50px;
   border-radius: 50%;
   /* text-align: center;   */
-  background-color: #0077ff
+  background-color: #0077ff;
 }
 .quick_plus,
 .quick_plus::after {
@@ -828,44 +844,44 @@ footer {
 
 /* toggle */
 .quick_btn {
-    position: relative;
-    /* display: inline-block; */
-    float: left;
-    width: 44px;
-    height: 22px;
-    /* vertical-align: middle; */
-    margin-right: 5px;
+  position: relative;
+  /* display: inline-block; */
+  float: left;
+  width: 44px;
+  height: 22px;
+  /* vertical-align: middle; */
+  margin-right: 5px;
 }
 
 .quick_slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #929898;
-    border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #929898;
+  border-radius: 34px;
 }
 
 .quick_slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    transition: 0.4s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 .quick_list input:checked + .quick_slider {
-    background-color: #0077ff;
+  background-color: #0077ff;
 }
 
 .quick_list input:focus + .quick_slider {
-    box-shadow: 0 0 1px #0077ff;
+  box-shadow: 0 0 1px #0077ff;
 }
 
 .quick_list input:checked + .quick_slider:before {
@@ -878,7 +894,7 @@ footer {
   height: 27px;
   /* vertical-align: middle; */
   /* margin-right: 5px; */
-  background-image: url(../images/quick_img/header_quick_menu.png) ;
+  background-image: url(../images/quick_img/header_quick_menu.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
@@ -888,14 +904,14 @@ footer {
 }
 .quick_list .toggle-label {
   padding: 3px 0;
-} 
+}
 .quick_list .quick_dark + h4 {
   padding: 5.5px 0;
 }
-.quick_list .quick_plug + h4{
+.quick_list .quick_plug + h4 {
   padding: 5.5px 0;
 }
-.quick_list .quick_play + h4{
+.quick_list .quick_play + h4 {
   padding: 4px 0;
 }
 .quick_list .quick_plug {
@@ -910,4 +926,3 @@ footer {
 }
 
 /*퀵메뉴 시작 - 기서은*/
-
