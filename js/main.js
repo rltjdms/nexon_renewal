@@ -150,4 +150,8 @@ recYoutube.forEach(item =>{
 lightCloseBtn.addEventListener('click', ()=>{
     recLightbox.classList.remove('visible');
     recLightboxBg.classList.remove('visible');
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> develop
