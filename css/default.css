@@ -210,8 +210,10 @@ header.active .header_right .header_card {
 }
 
 .header_line > .header_onoff.active {
-  background-color: green;
+  background-color: #929898;
   color: #2d2d2d;
+  font-weight: bold;
+  /* #54b563 */
 }
 .header_login {
   display: inline-block;
@@ -835,17 +837,16 @@ footer {
   height: 50px;
   line-height: 50px;
   border-radius: 50%;
-  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
   background-color: #0077ff;
   transition: 0.5s;
 }
 .quick_btt.on .quick_plus  {
-  transform: translate(-50%, -50%) rotate(45deg);
-  background-color: #2d2d2d;
+  transform: translate(-50%, -50%) rotate(405deg);
+  background-color: #fff;
 }
 .quick_btt.on .quick_plus::after {
   content: "";
-  background-color: #2d2d2d;
+  background-color: #fff;
 }
 
 

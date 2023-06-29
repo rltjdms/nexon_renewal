@@ -67,7 +67,7 @@ if (headCounter > 0) {
 headerpager.innerHTML = headerpagerHtml;
 let headerpagerBtn = headerpager.querySelectorAll("a");
 
-function moveSlide(num) {
+function head_moveSlide(num) {
     headerContent.style.left = `${num * -100}%`;
     headCurrentIndex = num;
 
@@ -76,22 +76,22 @@ function moveSlide(num) {
     }
     headerpagerBtn[headCurrentIndex].classList.add("active");
 }
-moveSlide(0);
+head_moveSlide(0);
 headerpagerBtn.forEach((Btn, idx) => {
     Btn.addEventListener("click", (e) => {
         e.preventDefault();
-        moveSlide(idx);
+        head_moveSlide(idx);
     });
 });
-function autoSlide() {
-    timer = setInterval(()=> {
+function head_autoSlide() {
+  head_timer = setInterval(()=> {
         let headerSlideNext = (headCurrentIndex + 1) % headCounter;
-        moveSlide(headerSlideNext);
+        head_moveSlide(headerSlideNext);
     },28000);
     //clearInterval(timer);
 }
-autoSlide();
-console.log(headCurrentIndex);
+head_autoSlide();
+
 
 //Quick
 let aside = document.querySelector(".quick_box"),
@@ -281,20 +281,20 @@ dotbtn.forEach((item, idx) => {
   });
 });
 // 이벤트 슬라이드 루프 시작하기
-function autoSlide() {
+function event_autoSlide() {
   eventTimer = setInterval(() => {
     let nextIdx = (currentSlideIdx + 1) % slideCount;
     eventmoveSlide(nextIdx); // 다음 슬라이드
   }, 3000);
 }
-autoSlide(); //자동 슬라이드
+event_autoSlide(); //자동 슬라이드
 // 슬라이드에 마우스가 올라간 경우 루프 멈춤
 eventWrapper.addEventListener("mouseenter", () => {
   clearInterval(eventTimer);
 });
 // 슬라이드에 마우스가 나간 경우 루프 재 시작
 eventWrapper.addEventListener("mouseleave", () => {
-  autoSlide();
+  event_autoSlide();
 });
 // 이벤트&공지사항 종료 - 김아름  //
 
