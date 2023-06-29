@@ -551,6 +551,8 @@ header.active .header_right a {
   width: 100%;
   height: 100%;
   transition: left 0.3s ease-in;
+  position: relative;
+  left: 0;
 }
 /* 이벤트 슬라이드 이미지 자식들 */
 .event-slide > li {
@@ -729,21 +731,15 @@ footer {
 }
 
 /* 푸터 넥슨 로고 */
-.ft-logo {
-  margin-top: 54px;
+.ft-logo img {
+  margin-top: 65px;
 }
 
-/* .ft-icon a {
-  background-image: url("../images/set_footer/set_footer_360.png");
-  width: 19px;
-  height: 19px;
-  background-color: #ffffff;
-  display: inline-block;
-  text-indent: -9999px;
-  background-repeat: no-repeat;
-} */
-
 /* footer last icon */
+
+.ft-icon {
+  margin-top: 30px;
+}
 
 /* 유튜브 아이콘 */
 .ft-icon .youtube {
