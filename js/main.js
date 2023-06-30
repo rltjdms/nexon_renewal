@@ -111,7 +111,7 @@ quickBtn.addEventListener("click", () => {
 let pop_tabMenu = document.querySelectorAll('.pop_tab_menu li');
 let pop_tabContent = document.querySelectorAll('.pop_tab_content .tabs');
 
-function activeTab(num){s
+function activeTab(num){
   for(let list of pop_tabMenu){
     list.classList.remove('active');
   };
