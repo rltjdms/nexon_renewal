@@ -207,8 +207,10 @@ header.active .header_right .header_card {
 }
 
 .header_line > .header_onoff.active {
-  background-color: green;
+  background-color: #929898;
   color: #2d2d2d;
+  font-weight: bold;
+  /* #54b563 */
 }
 .header_login {
   display: inline-block;
@@ -381,7 +383,7 @@ header.active .header_right a {
 }
 .rec_search-icon{
   position: absolute;
-  font-size: 32px;
+  font-size: 24px;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -496,7 +498,7 @@ header.active .header_right a {
 }
 
 .rec_slidewrapper li:hover{
-  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
+  box-shadow: 2px 2px 8px 0px rgba(146, 152, 152, 0.3);
 }
 /* 추천게임 - hover 시 유튜브 아이콘 생성 */
 .rec_slidewrapper li figure .fa-youtube:hover{
@@ -520,16 +522,15 @@ header.active .header_right a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
-  text-shadow: 2px 0px 5px #2d2d2d;
+  color: #2d2d2d;
   font-size: 45px;
 }
 .rec_slide-button .prev{
-  right: calc(100% + 10px);
+  right: calc(100% + 60px);
 }
 
 .rec_slide-button .next{
-  left: calc(100% + 10px);
+  left: calc(100% + 60px);
 }
 
 /* 추천게임 - 게임 이미지 클릭 시 모달 */

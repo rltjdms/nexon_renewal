@@ -126,28 +126,28 @@ quickBtn.addEventListener("click", () => {
 /*
 변수명 tabMenu에 리스트를 할당
 */
-let pop_tabMenu = document.querySelectorAll(".pop_tab_menu li");
-let pop_tabContent = document.querySelectorAll("#pop_tab_content > div");
+let pop_tabMenu = document.querySelectorAll('.pop_tab_menu li');
+let pop_tabContent = document.querySelectorAll('#pop_tab_content > div')
 
 /*
 pop_tabMenu를 클릭하면 모든 pop_tabMenu에서 클래스명 active를 제거하고, 
 클릭된 그 요소에만 active를 추가한다.
 */
 
-pop_tabMenu.forEach((i) => {
-    i.addEventListener("click", (e) => {
-        e.preventDefault();
-        for (let list of pop_tabMenu) {
-            list.classList.remove("active");
-        }
-        e.currentTarget.classList.add("active");
-        //모든 pop_tab_content는 보이지 않고, 아이디 tabs-pc 보이도록 display 속성을 block으로 변경
-        let targetId = e.target.getAttribute("href");
-        for (let content of pop_tabContent) {
-            content.style.display = "none";
-        }
-        document.querySelector(targetId).style.display = "block";
-    });
+pop_tabMenu.forEach(i=>{
+  i.addEventListener('click',(e)=>{
+    e.preventDefault();
+    for(let list of pop_tabMenu){
+      list.classList.remove('active');
+    };
+    e.currentTarget.classList.add('active');
+    //모든 pop_tab_content는 보이지 않고, 아이디 tabs-pc 보이도록 display 속성을 block으로 변경
+    let targetId = e.target.getAttribute('href');
+    for(let content of pop_tabContent){
+      content.style.display = 'none';
+    }
+    document.querySelector(targetId).style.display = 'block';
+  });
 });
 // 인기게임 종료 - 박선정 //
 
@@ -156,165 +156,163 @@ pop_tabMenu.forEach((i) => {
 // 신규게임 종료 - 박선정 //
 
 // 추천게임 시작 - 김다훈 //
-let recSlideWrapper = document.querySelector(".rec_slidewrapper"),
-    recSlideContainer = recSlideWrapper.querySelectorAll("ul"),
-    recHash = document.querySelectorAll(".rec_hash-list a"),
+let recSlideWrapper = document.querySelector('.rec_slidewrapper'),
+    recSlideContainer = recSlideWrapper.querySelectorAll('ul'),
+    recHash = document.querySelectorAll('.rec_hash-list a'),
     recSlideWidth = 380,
-    recSlideRemain = 142, // left 이동 픽셀 설정
-    recCurrentIndex = 0, // 현재 보고있는 화면
-    recSlideBtn = document.querySelector(".rec_slide-button"),
-    recBtnLink = recSlideBtn.querySelectorAll("a"),
-    recPrevBtn = recSlideBtn.querySelector(".prev"),
-    recNextBtn = recSlideBtn.querySelector(".next");
+    recSlideRemain = 142,      // left 이동 픽셀 설정
+    recCurrentIndex = 0,       // 현재 보고있는 화면
+    recSlideBtn = document.querySelector('.rec_slide-button'),
+    recBtnLink = recSlideBtn.querySelectorAll('a'),
+    recPrevBtn = recSlideBtn.querySelector('.prev'),
+    recNextBtn = recSlideBtn.querySelector('.next');
 
-recSlideContainer.forEach((item) => {
-    let recSlides = item.querySelectorAll("li");
-    let recSlideCount = recSlides.length;
-
+recSlideContainer.forEach(item => {
+  let recSlides = item.querySelectorAll('li');
+  let recSlideCount = recSlides.length;
+  
     item.style.width = `${recSlideWidth * recSlideCount - 10}px`;
     // 슬라이드 이동 함수 설정
     function recMoveSlide(num) {
-        if (recSlideCount == 5) {
-            item.style.left = `-${
-                (2 * recSlideWidth - recSlideRemain) * num
-            }px`;
-            recSlideBtn.style.display = "block";
-        } else if (recSlideCount == 4) {
-            item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
-            recSlideBtn.style.display = "block";
-        } else if (recSlideCount == 3) {
-            item.style.left = "71px"; // 게임 3개일 때 중앙으로
-            recSlideBtn.style.display = "none";
-        }
-        recCurrentIndex = num;
+      if (recSlideCount == 5) {
+        item.style.left = `-${(2 * recSlideWidth - recSlideRemain) * num}px`;
+        recSlideBtn.style.display = 'block';
+      } else if (recSlideCount == 4) {
+        item.style.left = `-${(recSlideWidth - recSlideRemain) * num}px`;
+        recSlideBtn.style.display = 'block';
+      } else if (recSlideCount == 3) {
+        item.style.left = '71px';    // 게임 3개일 때 중앙으로
+        recSlideBtn.style.display = 'none';
+      }
+      recCurrentIndex = num;
     }
     // 해시태그 클릭할 때 마다 recMoveSlide(0) 실행
-    recHash.forEach((element) => {
-        element.addEventListener("click", () => {
-            recMoveSlide(0);
-        });
+    recHash.forEach(element => {
+      element.addEventListener('click', () => {
+        recMoveSlide(0);
+      });
     });
     // 슬라이드 이동 버튼 설정
-    recNextBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        recMoveSlide(1);
+    recNextBtn.addEventListener('click', e => {
+      e.preventDefault();
+      recMoveSlide(1);
     });
-    recPrevBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        recMoveSlide(0);
+    recPrevBtn.addEventListener('click', e => {
+      e.preventDefault();
+      recMoveSlide(0);
     });
 });
 
 // 추천게임 - 해시태그 탭메뉴
-recHash.forEach((item) => {
-    item.addEventListener("click", (e) => {
+recHash.forEach(item=> {
+    item.addEventListener('click', e=> {
         e.preventDefault();
-        let recTab = e.target.getAttribute("href");
-        let recTabs = recTab.replace("#", "");
+        let recTab = e.target.getAttribute('href');
+        let recTabs = recTab.replace('#','');
         // 이전 슬라이드 안보이게 하기
-        recSlideContainer.forEach((item) => {
-            item.style.display = "none";
-        });
+        recSlideContainer.forEach(item=> {
+            item.style.display = 'none'
+        })
 
         let recSlide = document.getElementById(recTabs),
-            recSlideList = recSlide.querySelectorAll("li"),
-            recSlideLen = recSlideList.length;
+        recSlideList = recSlide.querySelectorAll('li'),
+        recSlideLen = recSlideList.length;
 
         // 해시태그(#rec_tab-1)에서 # 제거된 ID(rec_tab-1)에 해당하는 slidewrapper 보여주기
-        recSlide.style.display = "block";
+        recSlide.style.display = 'block';
 
         // 게임 수 3개면 버튼 안보이게 하기
-        if (recSlideLen == 3) {
-            recSlideBtn.style.display = "none";
+        if(recSlideLen == 3){
+          recSlideBtn.style.display = 'none';
         }
 
         // 선택된 해시태그 스타일 속성 지정
-        recHash.forEach((item) => {
-            item.classList.remove("active");
-            e.target.classList.add("active");
-        });
-    });
+        recHash.forEach(item=> {
+            item.classList.remove('active');
+            e.target.classList.add('active');
+        })
+    })
 });
 
-document.getElementById("rec_tab-1").style.display = "block";
+document.getElementById('rec_tab-1').style.display = 'block';
 
 // 추천게임 - 모달
-let recYoutube = document.querySelectorAll(".fa-youtube"),
-    recLightbox = document.querySelector("#rec_lightbox-overlay"),
-    recLightboxLink = recLightbox.querySelector("#data-lightbox"),
-    recLightboxBg = document.querySelector("#rec_lightbox-background"),
-    lightCloseBtn = document.querySelector("#rec_lightbox-close");
+let recYoutube = document.querySelectorAll('.fa-youtube'),
+    recLightbox = document.querySelector('#rec_lightbox-overlay'),
+    recLightboxLink = recLightbox.querySelector('#data-lightbox'),
+    recLightboxBg = document.querySelector('#rec_lightbox-background'),
+    lightCloseBtn = document.querySelector('#rec_lightbox-close');
 
-recYoutube.forEach((item) => {
-    item.addEventListener("click", (e) => {
+recYoutube.forEach(item =>{
+    item.addEventListener('click', e=>{
         e.preventDefault();
-        let linkSrc = item.getAttribute("data-lightbox");
-        recLightboxLink.setAttribute("src", linkSrc);
-        recLightbox.classList.add("visible");
-        recLightboxBg.classList.add("visible");
+        let linkSrc = item.getAttribute('data-lightbox');
+        recLightboxLink.setAttribute('src',linkSrc);
+        recLightbox.classList.add('visible');
+        recLightboxBg.classList.add('visible');
     });
 });
-lightCloseBtn.addEventListener("click", () => {
-    recLightbox.classList.remove("visible");
-    recLightboxBg.classList.remove("visible");
+lightCloseBtn.addEventListener('click', ()=>{
+    recLightbox.classList.remove('visible');
+    recLightboxBg.classList.remove('visible');
 });
 // 추천게임 종료 - 김다훈 //
 
 // 이벤트&공지사항 시작 - 김아름 //
 let eventWrapper = document.querySelector(".event"), // event(부모)
-    eventSlide = eventWrapper.querySelector(".event-slide"), //event ul
-    eventslideList = eventSlide.querySelectorAll("li"),
-    // 각 슬라이드
-    dotPager = eventWrapper.querySelector(".event-dot"), //dot버튼
-    dotIndex = "", //닷버튼 공간
-    eventTimer, //이벤트 시간
-    //   eventSlideWidth = eventslideList.offsetWidth,
-    slideCount = eventslideList.length, //이벤트 슬라이드 개수
-    currentSlideIdx = 0; // 보고있는 이벤트 화면
+  eventSlide = eventWrapper.querySelector(".event-slide"), //event ul
+  eventslideList = eventSlide.querySelectorAll("li"),
+  // 각 슬라이드
+  dotPager = eventWrapper.querySelector(".event-dot"), //dot버튼
+  dotIndex = "", //닷버튼 공간
+  eventTimer, //이벤트 시간
+  //   eventSlideWidth = eventslideList.offsetWidth,
+  slideCount = eventslideList.length, //이벤트 슬라이드 개수
+  currentSlideIdx = 0; // 보고있는 이벤트 화면
 
 if (slideCount > 1) {
-    eventslideList.forEach((item, idx) => {
-        item.style.left = `${idx * 100}%`;
-        dotIndex += `<a href="">${idx}</a>`; //dot버튼 생성
-    });
+  eventslideList.forEach((item, idx) => {
+    item.style.left = `${idx * 100}%`;
+    dotIndex += `<a href="">${idx}</a>`; //dot버튼 생성
+  });
 }
 dotPager.innerHTML = dotIndex;
 let dotbtn = dotPager.querySelectorAll("a");
 function eventmoveSlide(num) {
-    eventSlide.style.left = `${-num * 100}%`;
-    currentSlideIdx = num;
-    // console.log(currentSlideIdx);
-    for (let es of eventslideList) {
-        es.classList.remove("active");
-    }
-    eventslideList[currentSlideIdx].classList.add("active");
-    for (let db of dotbtn) {
-        db.classList.remove("active");
-    }
-    dotbtn[currentSlideIdx].classList.add("active");
+  eventSlide.style.left = `${-num * 100}%`;
+  currentSlideIdx = num;
+  // console.log(currentSlideIdx);
+  for (let es of eventslideList) {
+    es.classList.remove("active");
+  }
+  eventslideList[currentSlideIdx].classList.add("active");
+  for (let db of dotbtn) {
+    db.classList.remove("active");
+  }
+  dotbtn[currentSlideIdx].classList.add("active");
 }
 eventmoveSlide(0);
 dotbtn.forEach((item, idx) => {
-    item.addEventListener("click", (e) => {
-        e.preventDefault();
-        eventmoveSlide(idx);
-    });
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    eventmoveSlide(idx);
+  });
 });
 // 이벤트 슬라이드 루프 시작하기
 function event_autoSlide() {
-    eventTimer = setInterval(() => {
-        let nextIdx = (currentSlideIdx + 1) % slideCount;
-        eventmoveSlide(nextIdx); // 다음 슬라이드
-    }, 3000);
+  eventTimer = setInterval(() => {
+    let nextIdx = (currentSlideIdx + 1) % slideCount;
+    eventmoveSlide(nextIdx); // 다음 슬라이드
+  }, 3000);
 }
 event_autoSlide(); //자동 슬라이드
 // 슬라이드에 마우스가 올라간 경우 루프 멈춤
 eventWrapper.addEventListener("mouseenter", () => {
-    clearInterval(eventTimer);
+  clearInterval(eventTimer);
 });
 // 슬라이드에 마우스가 나간 경우 루프 재 시작
 eventWrapper.addEventListener("mouseleave", () => {
-    event_autoSlide();
+  event_autoSlide();
 });
 // 이벤트&공지사항 종료 - 김아름  //
 
