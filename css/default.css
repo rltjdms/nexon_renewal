@@ -194,25 +194,54 @@ header .header_right .header_card {
 header.active .header_right .header_card {
   background: url(../images/header_img/header_card_2d2d.png) no-repeat center/contain;
 }
+
 .header_line > .header_onoff {
+  position: relative;
   display: inline-block;
   border-radius: 14.5px;
   height: 25px;
-  line-height: 25px;
+  line-height: 29px;
   margin-left: 5px;
   background-color: #929898;
-  color: #2d2d2d;
-  font-weight: bold;
-  font-size: 14px;
   vertical-align: middle;
+  font-size: 14px;
   padding: 0px 10px;
   box-sizing: border-box;
+  color: #2d2d2d;
+  font-weight: bold;
+  top: 0;
+  overflow: hidden;
 }
-
-.header_line > .header_onoff.active {
+.header_line > .header_onoff:hover::after {
+  top: 0px;
+}
+.header_onoff::after {
+  content: "ON";
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  border-radius: 14.5px;
+  line-height: 29px;
+  width: 49px;
+  height: 25px;
+  padding: 0px 10px;
+  box-sizing: border-box;
   background-color: #54b563;
   color: #fff;
-}
+}  
+/* .header_onoff::after {
+  content: "ON";
+  display: block;
+  border-radius: 14.5px;
+  height: 25px;
+  line-height: 29px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  background-color: #54b563;
+  color: #fff;
+} */
 .header_login {
   display: inline-block;
   padding: 0px 20px;
