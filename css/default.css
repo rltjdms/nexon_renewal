@@ -345,7 +345,7 @@ header.active .header_right a {
 .pop_tab_content > div{
   display: none;
 }
-.pop_tab_content > div .active{
+.pop_tab_content > div.active{
   display: block;
 }
 
