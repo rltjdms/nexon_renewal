@@ -3,17 +3,6 @@
 a {
   color: #2d2d2d;
 }
-/* #wrap {
-	min-width: 640px;
-}
-#wrap, #content {
-	width: 100%;
-}
-.inner {
-	max-width: 1580px;
-	padding: 150px 30px;
-	margin: 0 auto;
-} */
 
 .header_bold {
   font-size: 16px;
@@ -109,21 +98,15 @@ header nav .header_all_tab_menu > li,
 header nav > ul > li + li > .header_submenu > li {
   float: left;
 }
-nav .header_all_tab_menu > li + li,
+/*
+header nav > ul > li + li > .header_submenu > li + li {
+  margin-left: 30px;
+} */
+header nav .header_all_tab_menu > li + li,
 header nav > ul > li + li > .header_submenu > li + li {
   margin-left: 30px;
 }
 
-.header_submenu {
-  position: absolute;
-  width: 1100px;
-  top: 100%;
-  left: 0;
-  padding: 13.5px 0;
-  box-sizing: border-box;
-  background-color: #fff;
-  padding-left: 10px;
-}
 header nav > ul> li > a {
   position: relative;
 }
@@ -137,11 +120,23 @@ header nav > ul> li.on > a::after {
   left: 0;
   background-color: #0077ff;
 }
+.header_submenu {
+  position: absolute;
+  width: 1100px;
+  top: 100%;
+  left: 0;
+  padding: 40.5px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-left: 10px;
+}
 
-.header_all_tab_content .header_all_type_box {
+.header_all_tab_content .header_all_type_box,
+.header_all_tab_content .header_all_name_box {
   float: left;
   margin-right: 108px;
 }
+
 .header_all_tab_content .header_all_type_box:last-child {
   margin-right: 0;
 }
@@ -168,8 +163,11 @@ header nav > ul> li.on > a::after {
 /* javascript */
 
 /* none */
-header nav > ul > li .header_submenu,
-#header_all_name {
+header nav > ul > li .header_submenu {
+  display: none;
+}
+#header_tab_type, 
+#header_tab_name {
   display: none;
 }
 
@@ -177,9 +175,9 @@ header nav > ul > li .header_submenu,
 header nav > ul > li.on .header_submenu {
   display: block;
 }
-.header_all_tab_menu > li.on a {
+/* .header_all_tab_menu > li.on a {
   color: #2d2d2d;
-}
+} */
 .header_all_tab_content ul li a:hover,
 header nav > ul > li + li > .header_submenu > li> a:hover {
   color:  #2d2d2d;
@@ -204,7 +202,6 @@ header.active .header_right .header_card {
   margin-left: 5px;
   background-color: #929898;
   vertical-align: middle;
-  font-size: 14px;
   padding: 0px 10px;
   box-sizing: border-box;
 }
@@ -295,7 +292,7 @@ header.active .header_right a {
 }
 .pop_tab_menu .pop_st{
 	font-size: 20px;
-    font-weight: bold;
+  font-weight: bold;
 	text-transform:uppercase;
 }
 .pop_tab_menu li.active a{
@@ -304,11 +301,11 @@ header.active .header_right a {
 
 
 #pop_tab_content li{
-    width: 300px;
-    float: left;
-    text-align: center;
-    margin-right: 24px;
-    background: #fff;
+  width: 300px;
+  float: left;
+  text-align: center;
+  margin-right: 24px;
+  background: #fff;
 	position: relative;
 }
 #pop_tab_content li:hover{
@@ -319,18 +316,26 @@ header.active .header_right a {
 }
 #pop_tab_content h3{
 	font-size: 20px;
-    font-weight: bold;
-    float: left;
-    margin-left: 10px;
+  font-weight: bold;
+  float: left;
+  margin-left: 10px;
 }
 #pop_tab_content .tabs {
 	clear: both;
 }
-#pop_tab_content .tabs:last-child{
-    display: none;
+#pop_tab_content > div:last-child{
+  display: none;
 }
+
+#pop_tab_content figure{
+  width: 300px;
+  height: 378px;
+}
+
 #pop_tab_content figure figcaption{
 	position: relative;
+  width: 300px;
+  height: 78px;
 }
 #pop_tab_content figure figcaption .genre-emblem {
 	position: absolute;
@@ -348,20 +353,26 @@ header.active .header_right a {
 /* 신규게임 */
 
 .new_game{
-    width: 100%;
-    height: 216px;
+  width: 100%;
+  height: 216px;
 }
 
 .new_banner{
-    width: 100%;
-    height: 216px;
-    margin: 0 auto;
-    background-image: url(../images/new_img/new_veiledexperts.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  width: 100%;
+  height: 216px;
+  margin: 0 auto;
+  background-image: url(../images/new_img/new_veiledexperts.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+/*인기게임 종료 - 박선정*/
+
+/*추천게임 시작 - 김다훈*/
+.rec_main{
+  text-align: center;
+}
 /* 추천게임 - 검색창 */ 
 .rec_search{
   position: relative;
@@ -377,7 +388,6 @@ header.active .header_right a {
   cursor: pointer;
 }
 .rec_search input:focus{
-  /* border: 2px solid #2d2d2d; */
   box-shadow: 0 0 0 2px #2d2d2d inset;
 }
 .rec_search button:hover{
@@ -393,9 +403,6 @@ header.active .header_right a {
   line-height: 54px;
   font-size: 16px;
 }
-/*인기게임 종료 - 박선정*/
-
-/*추천게임 시작 - 김다훈*/
 /* 추천게임 - 해시태그 */
 .rec_hash{
   text-align: center;
@@ -489,11 +496,10 @@ header.active .header_right a {
 }
 
 .rec_slidewrapper li:hover{
-  filter: drop-shadow(10px 20px 5px #CCCCCC);
-  transition: filter 0.5s;
+  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
 /* 추천게임 - hover 시 유튜브 아이콘 생성 */
-.rec_slidewrapper li figure:hover .fa-youtube{
+.rec_slidewrapper li figure .fa-youtube:hover{
   opacity: 1;
 }
 .rec_slidewrapper li figure .fa-youtube{
@@ -527,14 +533,14 @@ header.active .header_right a {
 }
 
 /* 추천게임 - 게임 이미지 클릭 시 모달 */
-#lightbox-background{
+#rec_lightbox-background{
   position: fixed;
   width: 0;
   top: 0; bottom: 0; left: 0; right: 0;
   background-color: rgba(0,0,0,.7);
   z-index: 9998;
 }
-#lightbox-overlay{
+#rec_lightbox-overlay{
   position: fixed;
   width: 50%;
   height: 50%;
@@ -545,15 +551,15 @@ header.active .header_right a {
   pointer-events: none;
   z-index: 9999;
 }
-#lightbox-background.visible{
+#rec_lightbox-background.visible{
   width: 100%;
   height: 100%;
 }
-#lightbox-overlay.visible{
+#rec_lightbox-overlay.visible{
   opacity: 1;
   pointer-events: auto;
 }
-#lightbox-close{
+#rec_lightbox-close{
   display: block;
   margin: 27px auto 0;
   color: #fff;
@@ -565,12 +571,15 @@ header.active .header_right a {
 
 /*이벤트&공지사항 시작 - 김아름*/
 /* 이벤트 */
+/* 이벤트 왼쪽 */
 .content > .event {
   float: left;
 }
+/* 공지사항 오른쪽 */
 .content > .notice {
   float: right;
 }
+/* 이벤트 시작 */
 .event {
   position: relative;
   float: left;
@@ -578,13 +587,15 @@ header.active .header_right a {
   height: 381px;
   overflow: hidden;
 }
-
+/* 이벤트 슬라이드 이미지 박스 */
 .event-slide {
   width: 100%;
   height: 100%;
   transition: left 0.3s ease-in;
+  position: relative;
+  left: 0;
 }
-
+/* 이벤트 슬라이드 이미지 자식들 */
 .event-slide > li {
   position: absolute;
   width: 624px;
@@ -592,11 +603,11 @@ header.active .header_right a {
   top: 0;
   left: 0;
 }
-
+/* 이벤트 이미지들 */
 .event > img {
   object-fit: cover;
 }
-
+/* 이벤트 페이저 닷 버튼 위치*/
 .event-dot {
   position: absolute;
   left: 50%;
@@ -604,6 +615,7 @@ header.active .header_right a {
   transform: translateX(-50%);
   /* display: fixed; */
 }
+/* 이벤트 페이저 닷 버튼 크기 */
 .event-dot a {
   display: inline-block;
   width: 10px;
@@ -613,10 +625,11 @@ header.active .header_right a {
   background: rgba(255, 255, 255, 0.3);
   text-indent: -9999px;
 }
+/* 이벤트 페이저 닷 버튼 간격사이 */
 .event-dot a + a {
   margin-left: 5px;
 }
-
+/* 이벤트 페이저 닷 버튼 활동*/
 .event-dot a.active {
   background: #fff;
 }
@@ -631,7 +644,7 @@ header.active .header_right a {
 }
 
 /* 공지사항 글씨 */
-.notice h3 {
+.notice > h3 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
@@ -644,38 +657,35 @@ header.active .header_right a {
   top: 10px;
   right: 0;
 }
-/* notice의 내용*/
-.notice ul > li > a > h4 {
+/* 공지사항의 내용*/
+.notice ul > li > a > p {
   float: right;
   margin-right: 10px;
 }
 
-/* notice 선*/
+/* 공지사항 제목 아래 선*/
 .notice ul {
   border-top: 2px solid #929898;
 }
-
+/* 공지사항 간격 선*/
 .notice ul li {
   border-bottom: 1px solid rgba(146, 152, 152, 0.7);
   line-height: 50px;
 }
-/* 날짜 */
+/* 공지사항 날짜 */
 .date {
   float: left;
   margin: 0 10px;
   color: #929898;
 }
-/*이벤트&공지사항 종료 - 김아름*/
 
-/*푸터 시작 - 김아름*/
 /* footer */
 
-/* footer body */
+/* 푸터 */
 footer {
   padding: 67.5px 0 0 0;
   font-size: 14px;
   text-align: center;
-  display: fixed;
 }
 
 /* footer 1 body */
@@ -734,24 +744,26 @@ footer {
   background-color: #2d2d2d;
 }
 /* footer 3,4 감싸주는 박스 */
-.ftt-con4 {
+.ft-con4 {
   padding: 54px 0 54px 0;
 }
-
-.ftt-con4 ul {
+/* ft-con4의 위 아래 보더 선 */
+.ft-con4 ul {
   padding: 30px 0 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-.ftt-con4 li {
+/* ft-con4 li 정렬 */
+.ft-con4 li {
   display: inline-block;
   padding: 0 30px 0 30px;
 }
-.ftt-con4 ul > li > a {
+/* ft-con4 개인정보처리방침~광고문의 글씨색상 */
+.ft-con4 ul > li > a {
   color: #ffffff;
 }
 
+/* 푸터 주소, 카피라이터 */
 .ft-nav4 address,
 .ft-nav4 p {
   line-height: 21px;
@@ -759,21 +771,18 @@ footer {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.logo {
-  margin-top: 54px;
+/* 푸터 넥슨 로고 */
+.ft-logo img {
+  margin-top: 65px;
 }
 
-/* .ft-icon a {
-  background-image: url("../images/set_footer/set_footer_360.png");
-  width: 19px;
-  height: 19px;
-  background-color: #ffffff;
-  display: inline-block;
-  text-indent: -9999px;
-  background-repeat: no-repeat;
-} */
-
 /* footer last icon */
+
+.ft-icon {
+  margin-top: 30px;
+}
+
+/* 유튜브 아이콘 */
 .ft-icon .youtube {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
@@ -784,6 +793,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/* 트위터 아이콘*/
 .ft-icon .twiiter {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
@@ -795,6 +805,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+/* 페이스북 아이콘 */
 .ft-icon .facebook {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
@@ -821,17 +832,16 @@ footer {
   height: 50px;
   line-height: 50px;
   border-radius: 50%;
-  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
   background-color: #0077ff;
   transition: 0.5s;
 }
 .quick_btt.on .quick_plus  {
-  transform: translate(-50%, -50%) rotate(45deg);
-  background-color: #2d2d2d;
+  transform: translate(-50%, -50%) rotate(405deg);
+  background-color: #fff;
 }
 .quick_btt.on .quick_plus::after {
   content: "";
-  background-color: #2d2d2d;
+  background-color: #fff;
 }
 
 
@@ -927,18 +937,13 @@ footer {
 .quick_list a > h4 {
   float: right;
 }
+.quick_list li:hover > a > h4 {
+  color: #000;
+}
 .quick_list .toggle-label {
   padding: 3px 0;
 } 
-.quick_list .quick_dark + h4 {
-  padding: 5.5px 0;
-}
-.quick_list .quick_plug + h4{
-  padding: 5.5px 0;
-}
-.quick_list .quick_play + h4{
-  padding: 4px 0;
-}
+
 .quick_list .quick_plug {
   width: 32px;
   height: 27px;
@@ -949,6 +954,22 @@ footer {
   height: 28px;
   background-position: 0px -81px;
 }
-
+.quick_list li:hover a > .quick_dark {
+  background-position: -28px 0px;
+}
+.quick_list li:hover a > .quick_plug {
+  background-position:  -34px -40px;
+}
+.quick_list li:hover a > .quick_play {
+  background-position: -27px -81px;
+}
+.quick_list .quick_dark + h4 {
+  padding: 5.5px 0;
+}
+.quick_list .quick_plug + h4{
+  padding: 5.5px 0;
+}
+.quick_list .quick_play + h4{
+  padding: 4px 0;
+}
 /*퀵메뉴 종료 - 기서은*/
-
