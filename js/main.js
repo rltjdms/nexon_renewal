@@ -1,7 +1,9 @@
 // 헤더 시작 - 기서은 //
 let header = document.querySelector("header"),
     Nav = header.querySelector("nav"),
-    NavMenu = Nav.querySelectorAll("nav > ul > li");
+    NavMenu = Nav.querySelectorAll("nav > ul > li"),
+    headerTabmenu = Nav.querySelectorAll(".header_all_tab_menu > li"),
+    headerTabId = Nav.querySelectorAll(".header_all_tab_content > div");
 // headerHeight = header.offsetHeight;
 
 NavMenu.forEach((item) => {
@@ -23,6 +25,18 @@ NavMenu.forEach((item) => {
     });
 });
 // Nav에 마우스를 올리면 서브메뉴 나옴
+
+headerTabmenu.forEach((item, idx) => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault();
+        for (hdTabId of headerTabId) {
+            hdTabId.style.display = "none";
+            //tc.style.display = 'none';
+        }
+        //tabContent[idx].style.display ='block';
+        headerTabId[idx].style.display = "block";
+    });
+});//header tab menu click 
 
 //스크롤시
 let scroll = 0;
@@ -84,15 +98,21 @@ headerpagerBtn.forEach((Btn, idx) => {
     });
 });
 function head_autoSlide() {
-  head_timer = setInterval(()=> {
+    head_timer = setInterval(() => {
         let headerSlideNext = (headCurrentIndex + 1) % headCounter;
         head_moveSlide(headerSlideNext);
-    },28000);
+    }, 28000);
     //clearInterval(timer);
 }
 head_autoSlide();
 
+//pc방 on off
+let headRIght = document.querySelector(".header_right"),
+    headpcBtn = headRIght.querySelector(".header_onoff"); 
 
+    headpcBtn.addEventListener("click", () => {
+      headpcBtn.classList.toggle("active");
+    });
 //Quick
 let aside = document.querySelector(".quick_box"),
     quickBtn = aside.querySelector(".quick_btt"),
