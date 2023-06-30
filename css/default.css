@@ -201,16 +201,17 @@ header.active .header_right .header_card {
   line-height: 25px;
   margin-left: 5px;
   background-color: #929898;
+  color: #2d2d2d;
+  font-weight: bold;
+  font-size: 14px;
   vertical-align: middle;
   padding: 0px 10px;
   box-sizing: border-box;
 }
 
 .header_line > .header_onoff.active {
-  background-color: #929898;
-  color: #2d2d2d;
-  font-weight: bold;
-  /* #54b563 */
+  background-color: #54b563;
+  color: #fff;
 }
 .header_login {
   display: inline-block;
@@ -240,7 +241,7 @@ header.active .header_right a {
 .header_banner {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: calc(100vh - 135px);
 }
 .header_content {
   position: relative;

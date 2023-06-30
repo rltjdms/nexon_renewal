@@ -105,12 +105,14 @@ function head_autoSlide() {
     //clearInterval(timer);
 }
 head_autoSlide();
+
 //pc방 on off
 let headRIght = document.querySelector(".header_right"),
-    headpcBtn =  headRIght.querySelector(".header_onoff"); 
+    headpcBtn = headRIght.querySelector(".header_onoff"); 
+
     headpcBtn.addEventListener("click", () => {
-        headpcBtn.classList.toggle("active");
-});
+      headpcBtn.classList.toggle("active");
+    });
 //Quick
 let aside = document.querySelector(".quick_box"),
     quickBtn = aside.querySelector(".quick_btt"),
