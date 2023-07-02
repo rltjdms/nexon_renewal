@@ -124,10 +124,6 @@ quickBtn.addEventListener("click", () => {
 // 헤더 종료 - 기서은 //
 
 // 인기게임 시작 - 박선정 //
-
-/*
-변수명 tabMenu에 리스트를 할당
-*/
 let pop_tabMenu = document.querySelectorAll('.pop_tab_menu li');
 let pop_tabContent = document.querySelectorAll('.pop_tab_content .tabs');
 
@@ -151,9 +147,6 @@ pop_tabMenu.forEach((item,index)=>{
 });
 
 activeTab(0);
-
-
-
 // 인기게임 종료 - 박선정 //
 
 // 신규게임 시작 - 박선정 //
@@ -324,3 +317,7 @@ eventWrapper.addEventListener("mouseleave", () => {
 // 푸터 시작 - 김아름 //
 
 // 푸터 종료 - 김아름 //
+
+// 퀵메뉴 시작 - 기서은 //
+
+// 퀵메뉴 종료 - 기서은 //

@@ -355,6 +355,7 @@ header.active .header_right a {
 .pop_tab_content figure{
   width: 300px;
   height: 378px;
+  cursor: pointer;
 }
 .pop_tab_content figure figcaption{
 	position: relative;
@@ -392,6 +393,7 @@ header.active .header_right a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 
 /*인기게임 종료 - 박선정*/
@@ -959,6 +961,9 @@ footer {
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
+.quick_list label {
+  cursor: pointer;
+} 
 .quick_list .toggle-label,
 .quick_list a > h4 {
   float: right;
