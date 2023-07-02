@@ -1,21 +1,18 @@
 // 헤더 시작 - 기서은 //
+// 헤더 시작 - 기서은 //
 let header = document.querySelector("header"),
     Nav = header.querySelector("nav"),
     NavMenu = Nav.querySelectorAll("nav > ul > li"),
+    //NavMenuCounter =  NavMenu.length,
     headerTabmenu = Nav.querySelectorAll(".header_all_tab_menu > li"),
     headerTabId = Nav.querySelectorAll(".header_all_tab_content > div");
 // headerHeight = header.offsetHeight;
 
-NavMenu.forEach((item) => {
+NavMenu.forEach(item => {
     item.addEventListener("mouseenter", (e) => {
         e.preventDefault();
         item.classList.add("on");
 
-        // let SubMenuHeight = e.currentTarget.querySelector("ul").offsetHeight;
-        // let totalHeight = headerHeight + SubMenuHeight + 30;
-        // header.style.height = `${totalHeight}px`;
-
-        item.classList.add("on");
     });
     item.addEventListener("mouseleave", (e) => {
         e.preventDefault();
@@ -26,9 +23,16 @@ NavMenu.forEach((item) => {
 });
 // Nav에 마우스를 올리면 서브메뉴 나옴
 
+
 headerTabmenu.forEach((item, idx) => {
     item.addEventListener("click", (e) => {
         e.preventDefault();
+        // item.classList.toggle("on");
+        for(let hederTabsub of headerTabmenu) {
+          hederTabsub.classList.remove("on");
+        }
+        e.currentTarget.classList.add("on");
+
         for (hdTabId of headerTabId) {
             hdTabId.style.display = "none";
             //tc.style.display = 'none';
@@ -67,6 +71,7 @@ header.addEventListener("mouseleave", (e) => {
 let headerSection = document.querySelector(".header_banner"),
     headerContent = headerSection.querySelector(".header_content"),
     headerSlide = headerSection.querySelectorAll(".header_slide"),
+    headerVedio =  headerSection.querySelectorAll("video"),
     headerpager = headerSection.querySelector(".heade_pager"),
     headerpagerHtml = "",
     headCounter = headerSlide.length,
@@ -89,8 +94,19 @@ function head_moveSlide(num) {
         headerpg.classList.remove("active");
     }
     headerpagerBtn[headCurrentIndex].classList.add("active");
+
+    for(let hdvd of headerVedio) {
+      hdvd.pause();
+      headerVedio.currentTime = 0;
+    }
+    let headslideVideo = headerSlide[headCurrentIndex].querySelectorAll('video');
+    if (headslideVideo .length > 0) {
+       headslideVideo [0].play();
+    }
+    console.log(headslideVideo);
 }
 head_moveSlide(0);
+
 headerpagerBtn.forEach((Btn, idx) => {
     Btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -129,28 +145,31 @@ quickBtn.addEventListener("click", () => {
 변수명 tabMenu에 리스트를 할당
 */
 let pop_tabMenu = document.querySelectorAll('.pop_tab_menu li');
-let pop_tabContent = document.querySelectorAll('#pop_tab_content > div')
+let pop_tabContent = document.querySelectorAll('.pop_tab_content .tabs');
 
-/*
-pop_tabMenu를 클릭하면 모든 pop_tabMenu에서 클래스명 active를 제거하고, 
-클릭된 그 요소에만 active를 추가한다.
-*/
+function activeTab(num){
+  for(let list of pop_tabMenu){
+    list.classList.remove('active');
+  };
+  pop_tabMenu[num].classList.add('active');
 
-pop_tabMenu.forEach(i=>{
-  i.addEventListener('click',(e)=>{
+  for(let content of pop_tabContent){
+    content.classList.remove('active');
+  };
+  pop_tabContent[num].classList.add('active');
+};
+
+pop_tabMenu.forEach((item,index)=>{
+  item.addEventListener('click', e=>{
     e.preventDefault();
-    for(let list of pop_tabMenu){
-      list.classList.remove('active');
-    };
-    e.currentTarget.classList.add('active');
-    //모든 pop_tab_content는 보이지 않고, 아이디 tabs-pc 보이도록 display 속성을 block으로 변경
-    let targetId = e.target.getAttribute('href');
-    for(let content of pop_tabContent){
-      content.style.display = 'none';
-    }
-    document.querySelector(targetId).style.display = 'block';
-  });
+    activeTab(index);
+  })
 });
+
+activeTab(0);
+
+
+
 // 인기게임 종료 - 박선정 //
 
 // 신규게임 시작 - 박선정 //
