@@ -97,7 +97,7 @@ function head_moveSlide(num) {
 
     for(let hdvd of headerVedio) {
       hdvd.pause();
-      headerVedio.currentTime = 0;
+      hdvd.currentTime = 0;
     }
     let headslideVideo = headerSlide[headCurrentIndex].querySelectorAll('video');
     if (headslideVideo .length > 0) {
