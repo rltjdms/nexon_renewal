@@ -333,23 +333,29 @@ eventWrapper.addEventListener("mouseleave", () => {
 });
 // 이벤트&공지사항 종료 - 김아름  //
 
+// 퀵메뉴 시작 - 기서은 //
+window.addEventListener("scroll", () => {
+  popGame= document.querySelector('.pop_tab_wrapper');
+  popGameTop = popGame.offsetTop;
+  scroll = window.scrollY;
+  ftGame= document.querySelector('footer');
+  ftGameTop = ftGame.offsetTop;
+  console.log(popGameTop);
+
+  if (scroll > popGameTop - 500 && scroll < ftGameTop - 500) {
+    aside.classList.remove("fixed");
+  } else {
+    aside.classList.add("fixed");
+  }
+});
+// 퀵메뉴 종료 - 기서은 //
+
 // 푸터 시작 - 김아름 //
 
 // 푸터 종료 - 김아름 //
 
-// 퀵메뉴 시작 - 기서은 //
-window.addEventListener("scroll", () => {
-    popGame= document.querySelector('.pop_tab_wrapper');
-    popGameTop = popGame.offsetTop;
-    scroll = window.scrollY;
-    ftGame= document.querySelector('footer');
-    ftGameTop = ftGame.offsetTop;
-    console.log(popGameTop);
+// 팝업창 시작 - 김아름 //
 
-    if (scroll > popGameTop - 500 && scroll < ftGameTop - 500) {
-      aside.classList.remove("fixed");
-    } else {
-      aside.classList.add("fixed");
-    }
-});
-// 퀵메뉴 종료 - 기서은 //
+// 팝업창 시작 - 김아름 //
+
+
