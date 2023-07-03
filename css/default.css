@@ -223,7 +223,7 @@ header.active .header_right .header_card {
   display: inline-block;
   border-radius: 14.5px;
   height: 25px;
-  line-height: 29px;
+  line-height: 27px;
   margin-left: 5px;
   background-color: #929898;
   vertical-align: middle;
@@ -968,7 +968,7 @@ footer {
   float: left;
   width: 26px;
   height: 27px;
-  background-image: url(../images/quick_img/quick_menu.png) ;
+  background-image: url(../images/quick_img/header_quick_menu.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
