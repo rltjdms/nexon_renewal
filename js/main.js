@@ -319,21 +319,18 @@ eventWrapper.addEventListener("mouseleave", () => {
 // 푸터 종료 - 김아름 //
 
 // 퀵메뉴 시작 - 기서은 //
-
-let footer = document.querySelector("footer");
-let fotTop = footer.offsetTop;
 window.addEventListener("scroll", () => {
+    popGame= document.querySelector('.pop_tab_wrapper');
+    popGameTop = popGame.offsetTop;
     scroll = window.scrollY;
-    if (scroll > 500) {
-     aside.classList.remove("fixed");
-    } else {
-     aside.classList.add("fixed");
-    }
-    if (fotTop < 300) {
+    ftGame= document.querySelector('footer');
+    ftGameTop = ftGame.offsetTop;
+    console.log(popGameTop);
+
+    if (scroll > popGameTop - 300 && scroll < ftGameTop - 500) {
       aside.classList.remove("fixed");
-     } else {
+    } else {
       aside.classList.add("fixed");
-     }
-    console.log(scroll);
+    }
 });
 // 퀵메뉴 종료 - 기서은 //
