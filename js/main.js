@@ -319,13 +319,21 @@ eventWrapper.addEventListener("mouseleave", () => {
 // 푸터 종료 - 김아름 //
 
 // 퀵메뉴 시작 - 기서은 //
+
+let footer = document.querySelector("footer");
+let fotTop = footer.offsetTop;
 window.addEventListener("scroll", () => {
     scroll = window.scrollY;
-    if (scroll > 300) {
+    if (scroll > 500) {
      aside.classList.remove("fixed");
     } else {
      aside.classList.add("fixed");
     }
+    if (fotTop < 300) {
+      aside.classList.remove("fixed");
+     } else {
+      aside.classList.add("fixed");
+     }
     console.log(scroll);
 });
 // 퀵메뉴 종료 - 기서은 //
