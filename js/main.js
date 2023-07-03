@@ -319,5 +319,13 @@ eventWrapper.addEventListener("mouseleave", () => {
 // 푸터 종료 - 김아름 //
 
 // 퀵메뉴 시작 - 기서은 //
-
+window.addEventListener("scroll", () => {
+    scroll = window.scrollY;
+    if (scroll > 300) {
+     aside.classList.remove("fixed");
+    } else {
+     aside.classList.add("fixed");
+    }
+    console.log(scroll);
+});
 // 퀵메뉴 종료 - 기서은 //

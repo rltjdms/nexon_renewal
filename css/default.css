@@ -908,6 +908,7 @@ footer {
   box-shadow: 0 5px 10px 0 #929898;
   padding: 0 20px;
   box-sizing: border-box;
+  border-radius: 10px;
   background-color: #fff;
 }
 .quick_list li {
@@ -986,13 +987,13 @@ footer {
   background-position: 0px -81px;
 }
 .quick_list li:hover a > .quick_dark {
-  background-position: -28px 0px;
+  background-position: -34px 0px;
 }
 .quick_list li:hover a > .quick_plug {
   background-position:  -34px -40px;
 }
 .quick_list li:hover a > .quick_play {
-  background-position: -27px -81px;
+  background-position: -34px -81px;
 }
 .quick_list .quick_dark + h4 {
   padding: 5.5px 0;
@@ -1002,5 +1003,9 @@ footer {
 }
 .quick_list .quick_play + h4{
   padding: 4px 0;
+}
+
+.fixed{
+  display : none;
 }
 /*퀵메뉴 종료 - 기서은*/
