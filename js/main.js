@@ -1,21 +1,18 @@
 // 헤더 시작 - 기서은 //
+// 헤더 시작 - 기서은 //
 let header = document.querySelector("header"),
     Nav = header.querySelector("nav"),
     NavMenu = Nav.querySelectorAll("nav > ul > li"),
+    //NavMenuCounter =  NavMenu.length,
     headerTabmenu = Nav.querySelectorAll(".header_all_tab_menu > li"),
     headerTabId = Nav.querySelectorAll(".header_all_tab_content > div");
 // headerHeight = header.offsetHeight;
 
-NavMenu.forEach((item) => {
+NavMenu.forEach(item => {
     item.addEventListener("mouseenter", (e) => {
         e.preventDefault();
         item.classList.add("on");
 
-        // let SubMenuHeight = e.currentTarget.querySelector("ul").offsetHeight;
-        // let totalHeight = headerHeight + SubMenuHeight + 30;
-        // header.style.height = `${totalHeight}px`;
-
-        item.classList.add("on");
     });
     item.addEventListener("mouseleave", (e) => {
         e.preventDefault();
@@ -26,9 +23,16 @@ NavMenu.forEach((item) => {
 });
 // Nav에 마우스를 올리면 서브메뉴 나옴
 
+
 headerTabmenu.forEach((item, idx) => {
     item.addEventListener("click", (e) => {
         e.preventDefault();
+        // item.classList.toggle("on");
+        for(let hederTabsub of headerTabmenu) {
+          hederTabsub.classList.remove("on");
+        }
+        e.currentTarget.classList.add("on");
+
         for (hdTabId of headerTabId) {
             hdTabId.style.display = "none";
             //tc.style.display = 'none';
@@ -67,6 +71,7 @@ header.addEventListener("mouseleave", (e) => {
 let headerSection = document.querySelector(".header_banner"),
     headerContent = headerSection.querySelector(".header_content"),
     headerSlide = headerSection.querySelectorAll(".header_slide"),
+    headerVedio =  headerSection.querySelectorAll("video"),
     headerpager = headerSection.querySelector(".heade_pager"),
     headerpagerHtml = "",
     headCounter = headerSlide.length,
@@ -89,8 +94,19 @@ function head_moveSlide(num) {
         headerpg.classList.remove("active");
     }
     headerpagerBtn[headCurrentIndex].classList.add("active");
+
+    for(let hdvd of headerVedio) {
+      hdvd.pause();
+      hdvd.currentTime = 0;
+    }
+    let headslideVideo = headerSlide[headCurrentIndex].querySelectorAll('video');
+    if (headslideVideo .length > 0) {
+       headslideVideo [0].play();
+    }
+    console.log(headslideVideo);
 }
 head_moveSlide(0);
+
 headerpagerBtn.forEach((Btn, idx) => {
     Btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -147,6 +163,9 @@ pop_tabMenu.forEach((item,index)=>{
 });
 
 activeTab(0);
+
+
+
 // 인기게임 종료 - 박선정 //
 
 // 신규게임 시작 - 박선정 //
