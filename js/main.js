@@ -10,6 +10,7 @@ function setCookie(name, value, day) {
   document.cookie = `${name}=${value};expires=
     ${date.toUTCString()}`;
 }
+
 //쿠키 가져오기
 function checkCookie(name) {
   let cookieArr = document.cookie.split(";");
@@ -23,7 +24,7 @@ function checkCookie(name) {
     }
   }
   console.log(visited);
-  if (visited == false) {
+  if (!visited) {
     popup.setAttribute("open", "");
   }
 }
