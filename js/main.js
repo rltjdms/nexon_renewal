@@ -1,3 +1,51 @@
+// 팝업 시작 - 김아름 //
+// 팝업창
+let popup = document.querySelector("dialog"),
+  popupClose = popup.querySelector(".close"),
+  dayCheck = document.querySelector("#todayView");
+
+//쿠키설정 24시간
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=
+    ${date.toUTCString()}`;
+
+}
+
+//쿠키 가져오기
+function checkCookie(name) {
+  let cookieArr = document.cookie.split(";");
+  console.log(cookieArr)
+
+  let visited = false;
+
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
+    }
+  }
+  console.log(visited);
+  if (!visited) {
+    popup.setAttribute("open", "");
+  }
+}
+
+//X버튼 클릭하면 닫기
+checkCookie("nexonss");
+popupClose.addEventListener("click", () => {
+  if (dayCheck.checked) {
+    setCookie("nexonss", "home", 1);
+  } else {
+    setCookie("nexonss", "home", -1);
+  }
+  popup.removeAttribute("open");
+});
+
+// 팝업 종료 - 김아름 //
+
+
 // 헤더 시작 - 기서은 //
 // 헤더 시작 - 기서은 //
 let header = document.querySelector("header"),

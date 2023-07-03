@@ -1,3 +1,94 @@
+/*팝업 시작 - 김아름*/
+dialog {
+  position: fixed;
+  width: 570px;
+  top: 100px;
+  left: 100px;
+  padding: 40px 25px 20px 25px;
+  margin: 0;
+  background: #fff;
+  border: 3px solid #0077ff;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 500;
+}
+.popup-nexon-logo {
+  text-align: center;
+}
+.main-popup {
+  font-weight: bold;
+}
+.main-popup h2  {
+  display: inline-block;
+  width: 170px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url(../images/header_img/header_logo_black.png) no-repeat;
+}
+
+.main-popup p {
+  line-height: 28px;
+}
+.main-popup h3 {
+  font-size: 20px;
+}
+.main-popup h3, .popup-content2 > strong  {
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.popup-nexon-logo {
+  padding: 10px 0 30px 0;
+}
+
+
+/* .main-popup h2 {
+  margin-bottom: 10px;
+  color: #0077ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main-popup h3 {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0;
+} */
+
+hr {
+  border: 1px solid rgb(0, 119, 255, 0.3);
+}
+.popup-content1,
+.popup-content2 {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.popup-content1 > p > a {
+  color: #0077ff;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+/* 오늘 하루보지않기 */
+.checkbox-close {
+  float: right;
+}
+.checkbox-close:hover {
+  color: #0077ff;
+}
+/* 닫기버튼 */
+.close i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 40px;
+}
+
+
+/* 팝업 종료 - 김아름*/
+
 /*헤더 시작 - 기서은*/
 /* Header */
 a {
@@ -128,16 +219,16 @@ header nav > ul> li.on > a::after {
   border-top: 1px solid #929898;
 }
 header nav > ul > li:nth-child(2) .header_submenu {
-  padding: 40.5px  479px;
+  padding: 40.5px  465px;
 }
 header nav > ul > li:nth-child(3) .header_submenu {
   padding: 40.5px 570px;
 }
 header nav > ul > li:nth-child(4) .header_submenu {
-  padding: 40.5px 685px;
+  padding: 40.5px 715px;
 }
 header nav > ul > li:nth-child(5) .header_submenu {
-  padding: 40.5px 775px;
+  padding: 40.5px 830px;
 }
 
 .header_all_tab_content .header_all_type_box,
@@ -839,15 +930,12 @@ header.active .header_right a {
 .quick_list a > h3  {
   float: right;
 }
-.quick_list li:hover h3  {
+.quick_list li:hover h3 {
   color: #0077ff;
 }
 .quick_list .toggle-label {
   padding: 3px 0;
 } 
-.quick_list .quick_dark {
-  margin-left: 4px;
-}
 .quick_list .quick_plug {
   width: 32px;
   height: 27px;
@@ -857,7 +945,6 @@ header.active .header_right a {
   width: 30px;
   height: 28px;
   background-position: 0px -81px;
-  margin-left: 3px;
 }
 .quick_list li:hover a > .quick_dark {
   background-position: -34px 0px;
