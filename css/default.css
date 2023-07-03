@@ -15,13 +15,34 @@ dialog {
 .popup-nexon-logo {
   text-align: center;
 }
-.main-popup h1 {
-  padding-bottom: 15px;
-  color: #0077ff;
+.main-popup {
+  font-weight: bold;
+}
+.main-popup h2  {
+  display: inline-block;
+  width: 170px;
+  height: 30px;
   text-indent: -9999px;
+  background: url(../images/header_img/header_logo_black.png) no-repeat;
 }
 
-.main-popup h2 {
+.main-popup p {
+  line-height: 28px;
+}
+.main-popup h3 {
+  font-size: 20px;
+}
+.main-popup h3, .popup-content2 > strong  {
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.popup-nexon-logo {
+  padding: 10px 0 30px 0;
+}
+
+
+/* .main-popup h2 {
   margin-bottom: 10px;
   color: #0077ff;
   font-size: 20px;
@@ -32,7 +53,7 @@ dialog {
   font-size: 15px;
   line-height: 30px;
   margin: 0;
-}
+} */
 
 hr {
   border: 1px solid rgb(0, 119, 255, 0.3);
