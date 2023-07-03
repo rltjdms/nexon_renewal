@@ -10,8 +10,15 @@ dialog {
   border: 3px solid #0077ff;
   border-radius: 20px;
   font-size: 14px;
-  line-height: 30px;
   z-index: 500;
+}
+.popup-nexon-logo {
+  text-align: center;
+}
+.main-popup h1 {
+  padding-bottom: 15px;
+  color: #0077ff;
+  text-indent: -9999px;
 }
 
 .main-popup h2 {
@@ -23,12 +30,17 @@ dialog {
 
 .main-popup h3 {
   font-size: 15px;
-  line-height: 24px;
+  line-height: 30px;
   margin: 0;
 }
 
 hr {
   border: 1px solid rgb(0, 119, 255, 0.3);
+}
+.popup-content1,
+.popup-content2 {
+  font-size: 14px;
+  line-height: 30px;
 }
 
 .popup-content1 > p > a {
@@ -39,6 +51,9 @@ hr {
 /* 오늘 하루보지않기 */
 .checkbox-close {
   float: right;
+}
+.checkbox-close:hover {
+  color: #0077ff;
 }
 /* 닫기버튼 */
 .close i {
