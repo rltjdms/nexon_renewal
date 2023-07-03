@@ -327,7 +327,7 @@ window.addEventListener("scroll", () => {
     ftGameTop = ftGame.offsetTop;
     console.log(popGameTop);
 
-    if (scroll > popGameTop - 300 && scroll < ftGameTop - 500) {
+    if (scroll > popGameTop - 500 && scroll < ftGameTop - 500) {
       aside.classList.remove("fixed");
     } else {
       aside.classList.add("fixed");
