@@ -355,6 +355,7 @@ header.active .header_right a {
 .pop_tab_content figure{
   width: 300px;
   height: 378px;
+  cursor: pointer;
 }
 .pop_tab_content figure figcaption{
 	position: relative;
@@ -392,6 +393,7 @@ header.active .header_right a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 
 /*인기게임 종료 - 박선정*/
@@ -906,6 +908,7 @@ footer {
   box-shadow: 0 5px 10px 0 #929898;
   padding: 0 20px;
   box-sizing: border-box;
+  border-radius: 10px;
   background-color: #fff;
 }
 .quick_list li {
@@ -959,6 +962,9 @@ footer {
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
+.quick_list label {
+  cursor: pointer;
+} 
 .quick_list .toggle-label,
 .quick_list a > h4 {
   float: right;
@@ -981,13 +987,13 @@ footer {
   background-position: 0px -81px;
 }
 .quick_list li:hover a > .quick_dark {
-  background-position: -28px 0px;
+  background-position: -34px 0px;
 }
 .quick_list li:hover a > .quick_plug {
   background-position:  -34px -40px;
 }
 .quick_list li:hover a > .quick_play {
-  background-position: -27px -81px;
+  background-position: -34px -81px;
 }
 .quick_list .quick_dark + h4 {
   padding: 5.5px 0;
@@ -997,5 +1003,9 @@ footer {
 }
 .quick_list .quick_play + h4{
   padding: 4px 0;
+}
+
+.fixed{
+  display : none;
 }
 /*퀵메뉴 종료 - 기서은*/
