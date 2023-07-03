@@ -1,3 +1,57 @@
+/* 팝업창 시작 */
+dialog {
+  position: fixed;
+  width: 570px;
+  top: 100px;
+  left: 100px;
+  padding: 40px 25px 20px 25px;
+  margin: 0;
+  background: #fff;
+  border: 3px solid #0077ff;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 30px;
+  z-index: 500;
+}
+
+.main-popup h2 {
+  margin-bottom: 10px;
+  color: #0077ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main-popup h3 {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0;
+}
+
+hr {
+  border: 1px solid rgb(0, 119, 255, 0.3);
+}
+
+.popup-content1 > p > a {
+  color: #0077ff;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+/* 오늘 하루보지않기 */
+.checkbox-close {
+  float: right;
+}
+/* 닫기버튼 */
+.close i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 40px;
+}
+
+/* 팝업창 끝 */
+
 /*헤더 시작 - 기서은*/
 /* Header */
 a {
@@ -31,7 +85,8 @@ a {
 
 header {
   position: fixed;
-  top: 0; left: 0; 
+  top: 0;
+  left: 0;
   width: 100%;
   height: 135px;
   background-color: #323232;
@@ -46,11 +101,12 @@ header .header_logo {
 header.active {
   background-color: #fff;
 }
-header.active  .header_logo {
+header.active .header_logo {
   display: block;
   width: 170px;
   height: 135px;
-  background: url(../images/header_img/header_logo_black.png) no-repeat center/contain;
+  background: url(../images/header_img/header_logo_black.png) no-repeat
+    center/contain;
 }
 
 header.active nav > ul > li > a,
@@ -64,7 +120,7 @@ header nav > ul > li,
   float: left;
 }
 .header_inner nav {
-    display: inline-block;
+  display: inline-block;
 }
 .header_inner {
   padding: 0px 125px;
@@ -100,10 +156,10 @@ header nav > ul > li > a,
   margin-right: 30px;
 }
 .header_right ul li a {
-    color: #fff;
+  color: #fff;
 }
 .header_right ul li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 header nav .header_all_tab_menu > li,
 header nav > ul > li + li > .header_submenu > li {
@@ -124,16 +180,16 @@ header nav > ul > li + li > .header_submenu > li + li {
   background-color: #fff;
   padding-left: 10px;
 }
-header nav > ul> li > a {
+header nav > ul > li > a {
   position: relative;
 }
-header nav > ul> li.on > a::after {
+header nav > ul > li.on > a::after {
   position: absolute;
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  top: calc(100% - 2px) ;
+  top: calc(100% - 2px);
   left: 0;
   background-color: #0077ff;
 }
@@ -181,8 +237,8 @@ header nav > ul > li.on .header_submenu {
   color: #2d2d2d;
 }
 .header_all_tab_content ul li a:hover,
-header nav > ul > li + li > .header_submenu > li> a:hover {
-  color:  #2d2d2d;
+header nav > ul > li + li > .header_submenu > li > a:hover {
+  color: #2d2d2d;
   font-weight: bold;
 }
 
@@ -191,10 +247,12 @@ header .header_right .header_card {
   width: 170px;
   height: 135px;
   text-indent: -9999px;
-  background: url(../images/header_img/header_card_fff.png) no-repeat center/contain;
+  background: url(../images/header_img/header_card_fff.png) no-repeat
+    center/contain;
 }
 header.active .header_right .header_card {
-  background: url(../images/header_img/header_card_2d2d.png) no-repeat center/contain;
+  background: url(../images/header_img/header_card_2d2d.png) no-repeat
+    center/contain;
 }
 .header_line > .header_onoff {
   display: inline-block;
@@ -220,7 +278,7 @@ header.active .header_right .header_card {
   padding: 0px 20px;
   margin: 0;
   height: 40px;
-  line-height: 40px; 
+  line-height: 40px;
   background-color: #2d2d2d;
   border: 2px solid #fff;
   border-radius: 20px;
@@ -274,7 +332,7 @@ header.active .header_right a {
   margin-right: 20px;
   text-indent: -9999px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, 0.3);
 }
 .heade_pager a.active {
   background: rgba(255, 255, 255, 1);
@@ -283,73 +341,73 @@ header.active .header_right a {
 
 /*인기게임 시작 - 박선정*/
 /* 인기게임 */
-.pop_tab_wrapper .pop_h2{
-	float: left;
-	margin-right: 40px;
+.pop_tab_wrapper .pop_h2 {
+  float: left;
+  margin-right: 40px;
 }
 
-.pop_tab_wrapper .pop_nav,.pop_tab_menu li{
-	float: left;
-    /*position: relative;*/
-	margin-bottom: 27px;
-	margin-right: 20px;
-	margin-top : 2px;
+.pop_tab_wrapper .pop_nav,
+.pop_tab_menu li {
+  float: left;
+  /*position: relative;*/
+  margin-bottom: 27px;
+  margin-right: 20px;
+  margin-top: 2px;
 }
-.pop_tab_menu .pop_st{
-	font-size: 20px;
+.pop_tab_menu .pop_st {
+  font-size: 20px;
   font-weight: bold;
-	text-transform:uppercase;
+  text-transform: uppercase;
 }
-.pop_tab_menu li.active a{
-	color: #2d2d2d;
+.pop_tab_menu li.active a {
+  color: #2d2d2d;
 }
 
-
-#pop_tab_content li{
+#pop_tab_content li {
   width: 300px;
   float: left;
   text-align: center;
   margin-right: 24px;
   background: #fff;
-	position: relative;
+  position: relative;
 }
-#pop_tab_content li:hover{
-	box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
+#pop_tab_content li:hover {
+  box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
-#pop_tab_content li:last-child{
-	margin-right: 0px;
+#pop_tab_content li:last-child {
+  margin-right: 0px;
 }
-#pop_tab_content h3{
-	font-size: 20px;
+#pop_tab_content h3 {
+  font-size: 20px;
   font-weight: bold;
   float: left;
   margin-left: 10px;
 }
 #pop_tab_content .tabs {
-	clear: both;
+  clear: both;
 }
-#pop_tab_content > div:last-child{
+#pop_tab_content > div:last-child {
   display: none;
 }
 
-#pop_tab_content figure{
+#pop_tab_content figure {
   width: 300px;
   height: 378px;
 }
 
-#pop_tab_content figure figcaption{
-	position: relative;
+#pop_tab_content figure figcaption {
+  position: relative;
   width: 300px;
   height: 78px;
 }
 #pop_tab_content figure figcaption .genre-emblem {
-	position: absolute;
-	float: right;
-	right: 10px;
-	top : 19px;
+  position: absolute;
+  float: right;
+  right: 10px;
+  top: 19px;
 }
 #pop_tab-content > div.active {
-	display: block;
+  display: block;
 }
 
 /*인기게임 종료 - 박선정*/
@@ -357,12 +415,12 @@ header.active .header_right a {
 /*신규게임 시작 - 박선정*/
 /* 신규게임 */
 
-.new_game{
+.new_game {
   width: 100%;
   height: 216px;
 }
 
-.new_banner{
+.new_banner {
   width: 100%;
   height: 216px;
   margin: 0 auto;
@@ -375,16 +433,16 @@ header.active .header_right a {
 /*인기게임 종료 - 박선정*/
 
 /*추천게임 시작 - 김다훈*/
-.rec_main{
+.rec_main {
   text-align: center;
 }
-/* 추천게임 - 검색창 */ 
-.rec_search{
+/* 추천게임 - 검색창 */
+.rec_search {
   position: relative;
   width: 623px;
   margin: 0px auto;
 }
-.rec_search-icon{
+.rec_search-icon {
   position: absolute;
   font-size: 32px;
   top: 50%;
@@ -392,13 +450,13 @@ header.active .header_right a {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.rec_search input:focus{
+.rec_search input:focus {
   box-shadow: 0 0 0 2px #2d2d2d inset;
 }
-.rec_search button:hover{
+.rec_search button:hover {
   color: #0077ff;
 }
-.rec_search input{
+.rec_search input {
   width: 623px;
   padding-left: 54px;
   margin: 0;
@@ -409,70 +467,70 @@ header.active .header_right a {
   font-size: 16px;
 }
 /* 추천게임 - 해시태그 */
-.rec_hash{
+.rec_hash {
   text-align: center;
 }
-.rec_hash li{
+.rec_hash li {
   float: left;
   padding: 27px 30px 27px 0px;
 }
-.rec_hash li:last-child{
+.rec_hash li:last-child {
   padding-right: 0;
 }
-.rec_hash-list{
+.rec_hash-list {
   display: inline-block;
   margin: 0;
 }
 /* 추천게임 - 해시태그(탭메뉴) */
-.rec_hash a{
+.rec_hash a {
   color: #929898;
 }
-.rec_hash a:hover{
+.rec_hash a:hover {
   color: #0077ff;
 }
-.rec_hash a.active{
+.rec_hash a.active {
   padding: 6px 9px;
   border-radius: 14.5px;
   background-color: #2d2d2d;
   color: #fff;
   line-height: 16px;
 }
-#rec_tab > ul{
+#rec_tab > ul {
   display: none;
 }
 
 /* 추천게임 - 슬라이드 */
-.rec_game_tt{
+.rec_game_tt {
   display: inline-block;
   margin: 30px 0px 0px 10px;
   font-size: 20px;
   font-weight: bold;
 }
-.rec_game_desc{
+.rec_game_desc {
   display: block;
   margin: 12px 0px 0px 10px;
 }
-.rec_emblem{
+.rec_emblem {
   float: right;
   margin: 30px 10px 0px 0px;
   bottom: 58px;
 }
-.rec_slidewrapper-wrap{
+.rec_slidewrapper-wrap {
   position: relative;
   height: 388px;
 }
-.rec_slidewrapper{
+.rec_slidewrapper {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.rec_slidewrapper ul{
+.rec_slidewrapper ul {
   position: absolute;
   left: 0;
   transition: 0.3s;
 }
-.rec_slidewrapper li{
+.rec_slidewrapper li {
   position: relative;
   float: left;
   width: 370px;
@@ -484,7 +542,7 @@ header.active .header_right a {
   width: 100%;
   height: 100%;
 }
-.rec_slidewrapper li:last-child{
+.rec_slidewrapper li:last-child {
   margin-right: 0px;
 }
 .rec_slidewrapper li figure {
@@ -493,24 +551,24 @@ header.active .header_right a {
   height: 378px;
   margin: 0;
 }
-.rec_slidewrapper img{
+.rec_slidewrapper img {
   position: relative;
   width: 370px;
   height: 270px;
   object-fit: cover;
 }
 
-.rec_slidewrapper li:hover{
+.rec_slidewrapper li:hover {
   box-shadow: 4px 4px 10px 0px rgba(146, 152, 152, 0.3);
 }
 /* 추천게임 - hover 시 유튜브 아이콘 생성 */
-.rec_slidewrapper li figure .fa-youtube:hover{
+.rec_slidewrapper li figure .fa-youtube:hover {
   opacity: 1;
 }
-.rec_slidewrapper li figure .fa-youtube{
+.rec_slidewrapper li figure .fa-youtube {
   position: absolute;
   padding: 103px 149px;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #e62117;
   left: 0%;
   top: 0%;
@@ -520,7 +578,7 @@ header.active .header_right a {
 }
 
 /* 추천게임 - prev, next 버튼 */
-.rec_slide-button a{
+.rec_slide-button a {
   display: block;
   position: absolute;
   top: 50%;
@@ -529,42 +587,46 @@ header.active .header_right a {
   text-shadow: 2px 0px 5px #2d2d2d;
   font-size: 45px;
 }
-.rec_slide-button .prev{
+.rec_slide-button .prev {
   right: calc(100% + 10px);
 }
 
-.rec_slide-button .next{
+.rec_slide-button .next {
   left: calc(100% + 10px);
 }
 
 /* 추천게임 - 게임 이미지 클릭 시 모달 */
-#rec_lightbox-background{
+#rec_lightbox-background {
   position: fixed;
   width: 0;
-  top: 0; bottom: 0; left: 0; right: 0;
-  background-color: rgba(0,0,0,.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 9998;
 }
-#rec_lightbox-overlay{
+#rec_lightbox-overlay {
   position: fixed;
   width: 50%;
   height: 50%;
   opacity: 0;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s;
   pointer-events: none;
   z-index: 9999;
 }
-#rec_lightbox-background.visible{
+#rec_lightbox-background.visible {
   width: 100%;
   height: 100%;
 }
-#rec_lightbox-overlay.visible{
+#rec_lightbox-overlay.visible {
   opacity: 1;
   pointer-events: auto;
 }
-#rec_lightbox-close{
+#rec_lightbox-close {
   display: block;
   margin: 27px auto 0;
   color: #fff;
@@ -572,7 +634,6 @@ header.active .header_right a {
   cursor: pointer;
 }
 /*추천게임 종료 - 김다훈*/
-
 
 /*이벤트&공지사항 시작 - 김아름*/
 /* 이벤트 */
@@ -830,7 +891,7 @@ footer {
   left: calc(100% - 220px);
   bottom: 167px;
 }
-.quick_btt {  
+.quick_btt {
   display: inline-block;
   position: relative;
   width: 50px;
@@ -840,7 +901,7 @@ footer {
   background-color: #0077ff;
   transition: 0.5s;
 }
-.quick_btt.on .quick_plus  {
+.quick_btt.on .quick_plus {
   transform: translate(-50%, -50%) rotate(405deg);
   background-color: #fff;
 }
@@ -848,7 +909,6 @@ footer {
   content: "";
   background-color: #fff;
 }
-
 
 .quick_plus,
 .quick_plus::after {
@@ -876,7 +936,7 @@ footer {
   transition: 0.6s;
 }
 .quick_btt.on + .quick_list {
- opacity: 1;
+  opacity: 1;
 }
 .quick_list ul {
   display: block;
@@ -925,16 +985,15 @@ footer {
 #quick_toggle:checked + label {
   background-color: #0077ff;
 }
-#quick_toggle:checked + label::after  {
+#quick_toggle:checked + label::after {
   left: calc(100% - 18px);
 }
-
 
 .quick_list i {
   float: left;
   width: 26px;
   height: 27px;
-  background-image: url(../images/quick_img/header_quick_menu.png) ;
+  background-image: url(../images/quick_img/header_quick_menu.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
@@ -944,14 +1003,14 @@ footer {
 }
 .quick_list .toggle-label {
   padding: 3px 0;
-} 
+}
 .quick_list .quick_dark + h4 {
   padding: 5.5px 0;
 }
-.quick_list .quick_plug + h4{
+.quick_list .quick_plug + h4 {
   padding: 5.5px 0;
 }
-.quick_list .quick_play + h4{
+.quick_list .quick_play + h4 {
   padding: 4px 0;
 }
 .quick_list .quick_plug {
