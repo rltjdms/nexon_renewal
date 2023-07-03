@@ -9,11 +9,13 @@ function setCookie(name, value, day) {
   date.setDate(date.getDate() + day);
   document.cookie = `${name}=${value};expires=
     ${date.toUTCString()}`;
+
 }
 
 //쿠키 가져오기
 function checkCookie(name) {
   let cookieArr = document.cookie.split(";");
+  console.log(cookieArr)
 
   let visited = false;
 

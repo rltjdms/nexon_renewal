@@ -667,7 +667,8 @@ header.active .header_right a {
   width: 624px;
   height: 381px;
   overflow: hidden;
-}
+  }
+  
 /* 이벤트 슬라이드 이미지 박스 */
 .event-slide {
   width: 100%;
@@ -683,7 +684,7 @@ header.active .header_right a {
   height: 381px;
   top: 0;
   left: 0;
-}
+ }
 /* 이벤트 이미지들 */
 .event > img {
   object-fit: cover;
