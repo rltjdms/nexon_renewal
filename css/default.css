@@ -1109,3 +1109,163 @@ footer {
 }
 /*푸터 종료 - 김아름*/
 
+/*퀵메뉴 시작 - 기서은*/
+/* quick */
+.quick_box {
+  position: fixed;
+  left: calc(100% - 220px);
+  bottom: 167px;
+}
+.quick_btt {  
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #0077ff;
+  transition: 0.5s;
+}
+.quick_btt.on .quick_plus  {
+  transform: translate(-50%, -50%) rotate(405deg);
+  background-color: #fff;
+}
+.quick_btt.on .quick_plus::after {
+  content: "";
+  background-color: #fff;
+}
+
+
+.quick_plus,
+.quick_plus::after {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: 0.5s;
+}
+.quick_plus::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+}
+
+.quick_list {
+  position: absolute;
+  bottom: calc(100% + 27px);
+  left: 0;
+  opacity: 0;
+  transition: 0.6s;
+}
+.quick_btt.on + .quick_list {
+ opacity: 1;
+}
+.quick_list ul {
+  display: block;
+  width: 170px;
+  height: 218px;
+  box-shadow: 0 5px 10px 0 #929898;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.quick_list li {
+  position: relative;
+  padding: 13.5px 0;
+  border-bottom: 1px solid #929898;
+}
+.quick_list li:last-child {
+  border: none;
+}
+
+/* toggle */
+.quick_list form {
+  float: right;
+}
+#quick_toggle + label {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+  border-radius: 34px;
+  background-color: #929898;
+}
+#quick_toggle + label::after {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+#quick_toggle {
+  display: none;
+}
+#quick_toggle:checked + label {
+  background-color: #0077ff;
+}
+#quick_toggle:checked + label::after  {
+  left: calc(100% - 18px);
+}
+
+
+.quick_list i {
+  float: left;
+  width: 26px;
+  height: 27px;
+  background-image: url(../images/quick_img/header_quick_menu.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.quick_list .toggle-label {
+ float: left;
+}
+.quick_list a > h3  {
+  float: right;
+}
+.quick_list li:hover h3  {
+  color: #0077ff;
+}
+.quick_list .toggle-label {
+  padding: 3px 0;
+} 
+.quick_list .quick_dark {
+  margin-left: 4px;
+}
+.quick_list .quick_plug {
+  width: 32px;
+  height: 27px;
+  background-position: 0px -40px;
+}
+.quick_list .quick_play {
+  width: 25px;
+  height: 28px;
+  background-position: 0px -81px;
+  margin-left: 3px;
+}
+.quick_list li:hover a > .quick_dark {
+  background-position: -28px 0px;
+}
+.quick_list li:hover a > .quick_plug {
+  background-position:  -34px -40px;
+}
+.quick_list li:hover a > .quick_play {
+  background-position: -27px -81px;
+}
+.quick_list .quick_dark + h3 {
+  padding: 5.5px 0;
+}
+.quick_list .quick_plug + h3 {
+  padding: 5.5px 0;
+}
+.quick_list .quick_play + h3 {
+  padding: 4px 0;
+}
+/*퀵메뉴 종료 - 기서은*/
