@@ -931,7 +931,7 @@ footer {
 
 /* toggle */
 .quick_list form {
-  float: left;
+  float: right;
 }
 #quick_toggle + label {
   position: relative;
@@ -971,7 +971,9 @@ footer {
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
-.quick_list .toggle-label,
+.quick_list .toggle-label {
+ float: left;
+}
 .quick_list a > h3  {
   float: right;
 }
