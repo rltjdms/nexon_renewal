@@ -124,3 +124,34 @@ body{
     font-weight: bold;
     text-transform: uppercase;
 }
+
+/* 다크모드 */
+body .dark-active{
+    background-color: #2d2d2d;
+}
+/* 다크 만들어보기 */
+.dark-active .content-tt {
+    color: #fff;
+  }
+  .dark-active section  > h3 {
+    color: #fff;
+  }
+  .dark-active section  .pop_tab_.dark-active menu li a  {
+    color: #fff;
+  }
+  .dark-active section  .notice > h3 {
+    color: #fff;
+  }
+  .dark-active section  .notice > a {
+    color: #fff;
+  }
+  .dark-active section .rec.dark-active _hash a  {
+    background-color: #fff;
+    color: #2D2D2D;
+  }
+  .dark-active section .notice ul li a{
+    color: #fff;
+  }
+  .dark-active footer a {
+    color: #fff;
+  }

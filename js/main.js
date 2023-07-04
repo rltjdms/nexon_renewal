@@ -38,7 +38,7 @@ popupClose.addEventListener("click", () => {
   if (dayCheck.checked) {
     setCookie("nexonss", "home", 1);
   } else {
-    setCookie("nexonss", "home", -1);
+    //setCookie("nexonss", "home", -1);
   }
   popup.removeAttribute("open");
 });
@@ -402,8 +402,12 @@ window.addEventListener("scroll", () => {
 
 // 푸터 종료 - 김아름 //
 
-// 팝업창 시작 - 김아름 //
-
-// 팝업창 시작 - 김아름 //
-
-
+// 다크모드 시작 //
+let darkcheck = document.querySelector(".quick_box");
+let darkcheckbox = darkcheck.querySelector("#quick_toggle");
+let darkBtn = darkcheck.querySelector("#darkBtn");
+let body = document.querySelector("body");
+darkBtn.addEventListener("click", ()=> {
+    body.classList.toggle("dark-active");
+  });
+// 다크모드 종료 //
