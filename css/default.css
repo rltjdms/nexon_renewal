@@ -492,13 +492,12 @@ header.active .header_right a {
 }
 .new_banner{
   width: 100%;
+}
+.new_banner a{
+  display: block;
   height: 216px;
-  margin: 0 auto;
-  background-image: url(../images/new_img/new_veiledexperts.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
+  background: url(../images/new_img/new_veiledexperts.png) no-repeat center / cover;
+  text-indent: -9999em;
 }
 
 /*인기게임 종료 - 박선정*/
@@ -1096,28 +1095,28 @@ footer h2{
   display: none;
 }
 /* footer 1 body */
-.ft-con1 {
+.ft_con1 {
   /* vertical-align: baseline; */
   border-top: 1px solid rgba(146, 152, 152, 0.5);
   border-bottom: 1px solid rgba(146, 152, 152, 0.5);
 }
 /* footer 1 부모 */
-.ft-con1 ul {
+.ft_con1 ul {
   display: inline-block;
   line-height: 81px;
   vertical-align: bottom;
 }
 /* footer 1 자식 */
-.ft-con1 li {
+.ft_con1 li {
   float: left;
   position: relative;
 }
 /* footer 1 자식간 사이 */
-.ft-con1 li + li {
+.ft_con1 li + li {
   margin-left: 74px;
 }
 /* footer 1 사이 선 */
-.ft-con1 ul li::after {
+.ft_con1 ul li::after {
   position: absolute;
   content: "";
   width: 1px;
@@ -1127,70 +1126,70 @@ footer h2{
   left: -35px;
 }
 /* footer 1 사이 선 첫번째 선 삭제 */
-.ft-con1 ul li:first-child:after {
+.ft_con1 ul li:first-child:after {
   background: none;
 }
 /* footer 1-2 시작 */
-.ft-con2 ul {
+.ft_con2 ul {
   line-height: 81px;
 }
 /* footer 1-2 자식 */
-.ft-con2 li {
+.ft_con2 li {
   display: inline-block;
   padding: 0 60px 0 60px;
 }
 /* footer 1-2 아이콘 */
-.ft-con2 i {
+.ft_con2 i {
   padding: 0 7px 0 0px;
   color: #929898;
   font-size: 17px;
 }
 /* footer 3,4 감싸주는 박스 */
-.ft-container2 {
+.ft_container2 {
   height: 513px;
   background-color: #2d2d2d;
 }
 /* footer 3,4 감싸주는 박스 */
-.ft-con4 {
+.ft_con4 {
   padding: 54px 0 54px 0;
 }
-/* ft-con4의 위 아래 보더 선 */
-.ft-con4 ul {
+/* ft_con4의 위 아래 보더 선 */
+.ft_con4 ul {
   padding: 30px 0 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-/* ft-con4 li 정렬 */
-.ft-con4 li {
+/* ft_con4 li 정렬 */
+.ft_con4 li {
   display: inline-block;
   padding: 0 30px 0 30px;
 }
-/* ft-con4 개인정보처리방침~광고문의 글씨색상 */
-.ft-con4 ul > li > a {
+/* ft_con4 개인정보처리방침~광고문의 글씨색상 */
+.ft_con4 ul > li > a {
   color: #ffffff;
 }
 
 /* 푸터 주소, 카피라이터 */
-.ft-nav4 address,
-.ft-nav4 p {
+.ft_nav4 address,
+.ft_nav4 p {
   line-height: 21px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
 }
 
 /* 푸터 넥슨 로고 */
-.ft-logo img {
+.ft_logo img {
   margin-top: 65px;
 }
 
 /* footer last icon */
 
-.ft-icon {
+.ft_icon {
   margin-top: 30px;
 }
 
 /* 유튜브 아이콘 */
-.ft-icon .youtube {
+.ft_icon .youtube {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 20px;
@@ -1201,7 +1200,7 @@ footer h2{
   text-indent: -9999px;
 }
 /* 트위터 아이콘*/
-.ft-icon .twiiter {
+.ft_icon .twiiter {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 10px;
@@ -1213,7 +1212,7 @@ footer h2{
   text-indent: -9999px;
 }
 /* 페이스북 아이콘 */
-.ft-icon .facebook {
+.ft_icon .facebook {
   display: inline-block;
   background-image: url("../images/footer_img/sns/footer_sns.png");
   width: 7px;
