@@ -1,3 +1,94 @@
+/*팝업 시작 - 김아름*/
+dialog {
+  position: fixed;
+  width: 570px;
+  top: 100px;
+  left: 100px;
+  padding: 40px 25px 20px 25px;
+  margin: 0;
+  background: #fff;
+  border: 3px solid #0077ff;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 500;
+}
+.popup-nexon-logo {
+  text-align: center;
+}
+.main-popup {
+  font-weight: bold;
+}
+.main-popup h2  {
+  display: inline-block;
+  width: 170px;
+  height: 30px;
+  text-indent: -9999px;
+  background: url(../images/header_img/header_logo_black.png) no-repeat;
+}
+
+.main-popup p {
+  line-height: 28px;
+}
+.main-popup h3 {
+  font-size: 20px;
+}
+.main-popup h3, .popup-content2 > strong  {
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.popup-nexon-logo {
+  padding: 10px 0 30px 0;
+}
+
+
+/* .main-popup h2 {
+  margin-bottom: 10px;
+  color: #0077ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main-popup h3 {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0;
+} */
+
+hr {
+  border: 1px solid rgb(0, 119, 255, 0.3);
+}
+.popup-content1,
+.popup-content2 {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.popup-content1 > p > a {
+  color: #0077ff;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+/* 오늘 하루보지않기 */
+.checkbox-close {
+  float: right;
+}
+.checkbox-close:hover {
+  color: #0077ff;
+}
+/* 닫기버튼 */
+.close i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 40px;
+}
+
+
+/* 팝업 종료 - 김아름*/
+
 /*헤더 시작 - 기서은*/
 /* Header */
 a {
@@ -34,6 +125,7 @@ header .header_logo {
 /* header 스크롤시 */
 header.active {
   background-color: #fff;
+  border-bottom: 1px solid #2d2d2d;
 }
 header.active  .header_logo {
   display: block;
@@ -72,12 +164,8 @@ header h1 > a {
   margin-right: 50px;
   background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
-header nav > ul {
-  position: relative;
-}
 header nav > ul > li {
   margin-right: 45px;
-  font-size: 17px;
 }
 header nav > ul > li > a,
 .header_right {
@@ -122,13 +210,25 @@ header nav > ul> li.on > a::after {
 }
 .header_submenu {
   position: absolute;
-  width: 1100px;
+  width: 100%;
   top: 100%;
   left: 0;
-  padding: 40.5px 0;
+  padding: 40.5px 340px;
   box-sizing: border-box;
   background-color: #fff;
-  padding-left: 10px;
+  border-top: 1px solid #929898;
+}
+header nav > ul > li:nth-child(2) .header_submenu {
+  padding: 40.5px 0 40.5px 465px;
+}
+header nav > ul > li:nth-child(3) .header_submenu {
+  padding: 40.5px 0 40.5px 570px;
+}
+header nav > ul > li:nth-child(4) .header_submenu {
+  padding: 40.5px 0 40.5px 715px;
+}
+header nav > ul > li:nth-child(5) .header_submenu {
+  padding: 40.5px 0 40.5px 830px;
 }
 
 .header_all_tab_content .header_all_type_box,
@@ -140,12 +240,7 @@ header nav > ul> li.on > a::after {
 .header_all_tab_content .header_all_type_box:last-child {
   margin-right: 0;
 }
-.header_all_tab_menu {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 27px;
-}
+
 .header_all_type_box + .header_all_type_box ul {
   margin-bottom: 32px;
 }
@@ -166,18 +261,36 @@ header nav > ul> li.on > a::after {
 header nav > ul > li .header_submenu {
   display: none;
 }
-#header_tab_type, 
-#header_tab_name {
+
+#header_all_type.on, 
+#header_all_name {
   display: none;
 }
 
+header nav > ul > li.on .header_all_tab_content > div {
+  display: block;
+}
+
+.header_all_tab_content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 27px;
+}
+
+header nav > ul > li.on .header_all_tab_menu.on + div > div {
+  display: block;
+}
 /* block */
 header nav > ul > li.on .header_submenu {
   display: block;
 }
-/* .header_all_tab_menu > li.on a {
+
+header nav > ul > li.on .header_submenu .header_all_tab_menu > li.on > a {
+  font-weight: bold;
   color: #2d2d2d;
-} */
+}
+
 .header_all_tab_content ul li a:hover,
 header nav > ul > li + li > .header_submenu > li> a:hover {
   color:  #2d2d2d;
@@ -200,7 +313,7 @@ header.active .header_right .header_card {
   display: inline-block;
   border-radius: 14.5px;
   height: 25px;
-  line-height: 29px;
+  line-height: 27px;
   margin-left: 5px;
   background-color: #929898;
   vertical-align: middle;
@@ -223,7 +336,7 @@ header.active .header_right .header_card {
   top: 25px;
   left: 0px;
   border-radius: 14.5px;
-  line-height: 29px;
+  line-height: 27px;
   width: 49px;
   height: 25px;
   padding: 0px 10px;
@@ -231,17 +344,6 @@ header.active .header_right .header_card {
   background-color: #54b563;
   color: #fff;
 }  
-/* .header_onoff::after {
-  content: "ON";
-  display: block;
-  border-radius: 14.5px;
-  height: 25px;
-  line-height: 29px;
-  padding: 0px 10px;
-  box-sizing: border-box;
-  background-color: #54b563;
-  color: #fff;
-} */
 .header_login {
   display: inline-block;
   padding: 0px 20px;
@@ -256,6 +358,7 @@ header.active .header_right .header_card {
 header.active .header_login:hover {
   background-color: #0077ff;
   color: #fff;
+  border: 2px solid transparent;
 }
 /* javascript */
 /* header 스크롤시 */
@@ -355,6 +458,7 @@ header.active .header_right a {
 .pop_tab_content figure{
   width: 300px;
   height: 378px;
+  cursor: pointer;
 }
 .pop_tab_content figure figcaption{
 	position: relative;
@@ -383,15 +487,17 @@ header.active .header_right a {
   width: 100%;
   height: 216px;
 }
-
+.new_game h2{
+  display: none;
+}
 .new_banner{
   width: 100%;
+}
+.new_banner a{
+  display: block;
   height: 216px;
-  margin: 0 auto;
-  background-image: url(../images/new_img/new_veiledexperts.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../images/new_img/new_veiledexperts.png) no-repeat center / cover;
+  text-indent: -9999em;
 }
 
 /*인기게임 종료 - 박선정*/
@@ -705,144 +811,115 @@ header.active .header_right a {
   color: #929898;
 }
 
-/* footer */
 
-/* 푸터 */
-footer {
-  padding: 67.5px 0 0 0;
-  font-size: 14px;
-  text-align: center;
+/*퀵메뉴 시작 - 기서은*/
+/* quick */
+.quick_box {
+  position: fixed;
+  left: calc(100% - 220px);
+  bottom: 167px;
 }
-
-/* footer 1 body */
-.ft-con1 {
-  /* vertical-align: baseline; */
-  border-top: 1px solid rgba(146, 152, 152, 0.5);
-  border-bottom: 1px solid rgba(146, 152, 152, 0.5);
-}
-/* footer 1 부모 */
-.ft-con1 ul {
+.quick_btt {  
   display: inline-block;
-  line-height: 81px;
-  vertical-align: bottom;
-}
-/* footer 1 자식 */
-.ft-con1 li {
-  float: left;
   position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #0077ff;
+  transition: 0.5s;
 }
-/* footer 1 자식간 사이 */
-.ft-con1 li + li {
-  margin-left: 74px;
+.quick_btt.on .quick_plus  {
+  transform: translate(-50%, -50%) rotate(405deg);
+  background-color: #fff;
 }
-/* footer 1 사이 선 */
-.ft-con1 ul li::after {
+.quick_btt.on .quick_plus::after {
+  content: "";
+  background-color: #fff;
+}
+.quick_plus,
+.quick_plus::after {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: 0.5s;
+}
+.quick_plus::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+}
+
+.quick_list {
+  position: absolute;
+  bottom: calc(100% + 27px);
+  left: 0;
+  opacity: 0;
+  transition: 0.6s;
+}
+.quick_btt.on + .quick_list {
+ opacity: 1;
+}
+.quick_list ul {
+  display: block;
+  width: 170px;
+  height: 218px;
+  box-shadow: 0 5px 10px 0 #929898;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.quick_list li {
+  position: relative;
+  padding: 13.5px 0;
+  border-bottom: 1px solid #929898;
+}
+.quick_list li:last-child {
+  border: none;
+}
+
+/* toggle */
+.quick_list form {
+  float: left;
+}
+#quick_toggle + label {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+  border-radius: 34px;
+  background-color: #929898;
+}
+#quick_toggle + label::after {
   position: absolute;
   content: "";
-  width: 1px;
-  height: 13px;
-  background: rgba(146, 152, 152, 0.5);
-  top: 33px;
-  left: -35px;
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
 }
-/* footer 1 사이 선 첫번째 선 삭제 */
-.ft-con1 ul li:first-child:after {
-  background: none;
+#quick_toggle {
+  display: none;
 }
-/* footer 1-2 시작 */
-.ft-con2 ul {
-  line-height: 81px;
+#quick_toggle:checked + label {
+  background-color: #0077ff;
 }
-/* footer 1-2 자식 */
-.ft-con2 li {
-  display: inline-block;
-  padding: 0 60px 0 60px;
-}
-/* footer 1-2 아이콘 */
-.ft-con2 i {
-  padding: 0 7px 0 0px;
-  color: #929898;
-  font-size: 17px;
-}
-/* footer 3,4 감싸주는 박스 */
-.ft-container2 {
-  height: 513px;
-  background-color: #2d2d2d;
-}
-/* footer 3,4 감싸주는 박스 */
-.ft-con4 {
-  padding: 54px 0 54px 0;
-}
-/* ft-con4의 위 아래 보더 선 */
-.ft-con4 ul {
-  padding: 30px 0 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-/* ft-con4 li 정렬 */
-.ft-con4 li {
-  display: inline-block;
-  padding: 0 30px 0 30px;
-}
-/* ft-con4 개인정보처리방침~광고문의 글씨색상 */
-.ft-con4 ul > li > a {
-  color: #ffffff;
+#quick_toggle:checked + label::after  {
+  left: calc(100% - 18px);
 }
 
-/* 푸터 주소, 카피라이터 */
-.ft-nav4 address,
-.ft-nav4 p {
-  line-height: 21px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
+.fixed{
+  display : none;
 }
-
-/* 푸터 넥슨 로고 */
-.ft-logo img {
-  margin-top: 65px;
-}
-
-/* footer last icon */
-
-.ft-icon {
-  margin-top: 30px;
-}
-
-/* 유튜브 아이콘 */
-.ft-icon .youtube {
-  display: inline-block;
-  background-image: url("../images/footer_img/sns/footer_sns.png");
-  width: 20px;
-  height: 19px;
-  margin-right: 27px;
-  background-position: 0 -50px;
-  background-color: #ffffff;
-  text-indent: -9999px;
-}
-/* 트위터 아이콘*/
-.ft-icon .twiiter {
-  display: inline-block;
-  background-image: url("../images/footer_img/sns/footer_sns.png");
-  width: 10px;
-  height: 19px;
-  padding: 0 5px;
-  margin-right: 27px;
-  background-position: 0 -100px;
-  background-color: #ffffff;
-  text-indent: -9999px;
-}
-/* 페이스북 아이콘 */
-.ft-icon .facebook {
-  display: inline-block;
-  background-image: url("../images/footer_img/sns/footer_sns.png");
-  width: 7px;
-  height: 19px;
-  padding: 0 5px;
-  background-position: 0 -150px;
-  background-color: #ffffff;
-  text-indent: -9999px;
-}
-/*푸터 종료 - 김아름*/
 
 /*퀵메뉴 시작 - 기서은*/
 /* quick */
@@ -919,7 +996,7 @@ footer {
 
 /* toggle */
 .quick_list form {
-  float: left;
+  float: right;
 }
 #quick_toggle + label {
   position: relative;
@@ -951,25 +1028,30 @@ footer {
 }
 
 
-.quick_list i {
-  float: left;
-  width: 30px;
-  height: 27px;
-  background-image: url(../images/quick_img/quick_menu.png) ;
-  background-position: 0px 0px;
-  background-repeat: no-repeat;
+
+.quick_list .toggle-label {
+ float: left;
 }
-.quick_list .toggle-label,
-.quick_list a > h4 {
+.quick_list a > h3  {
   float: right;
 }
-.quick_list li:hover > a > h4 {
-  color: #000;
+.quick_list li + li:hover h3  {
+  color: #0077ff;
 }
 .quick_list .toggle-label {
   padding: 3px 0;
 } 
-
+.quick_list i {
+  float: left;
+  width: 26px;
+  height: 27px;
+  background-image: url(../images/quick_img/quick_menu.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.quick_list .quick_dark {
+  width: 32px;
+}
 .quick_list .quick_plug {
   width: 32px;
   height: 27px;
@@ -981,21 +1063,163 @@ footer {
   background-position: 0px -81px;
 }
 .quick_list li:hover a > .quick_dark {
-  background-position: -28px 0px;
+  background-position: -34px 0px;
 }
 .quick_list li:hover a > .quick_plug {
   background-position:  -34px -40px;
 }
 .quick_list li:hover a > .quick_play {
-  background-position: -27px -81px;
+  background-position: -34px -81px;
 }
-.quick_list .quick_dark + h4 {
+.quick_list .quick_dark + h3 {
   padding: 5.5px 0;
 }
-.quick_list .quick_plug + h4{
+.quick_list .quick_plug + h3 {
   padding: 5.5px 0;
 }
-.quick_list .quick_play + h4{
+.quick_list .quick_play + h3 {
   padding: 4px 0;
 }
 /*퀵메뉴 종료 - 기서은*/
+
+
+/* footer */
+
+/* 푸터 */
+footer {
+  padding: 67.5px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+footer h2{
+  display: none;
+}
+/* footer 1 body */
+.ft_con1 {
+  /* vertical-align: baseline; */
+  border-top: 1px solid rgba(146, 152, 152, 0.5);
+  border-bottom: 1px solid rgba(146, 152, 152, 0.5);
+}
+/* footer 1 부모 */
+.ft_con1 ul {
+  display: inline-block;
+  line-height: 81px;
+  vertical-align: bottom;
+}
+/* footer 1 자식 */
+.ft_con1 li {
+  float: left;
+  position: relative;
+}
+/* footer 1 자식간 사이 */
+.ft_con1 li + li {
+  margin-left: 74px;
+}
+/* footer 1 사이 선 */
+.ft_con1 ul li::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 13px;
+  background: rgba(146, 152, 152, 0.5);
+  top: 33px;
+  left: -35px;
+}
+/* footer 1 사이 선 첫번째 선 삭제 */
+.ft_con1 ul li:first-child:after {
+  background: none;
+}
+/* footer 1-2 시작 */
+.ft_con2 ul {
+  line-height: 81px;
+}
+/* footer 1-2 자식 */
+.ft_con2 li {
+  display: inline-block;
+  padding: 0 60px 0 60px;
+}
+/* footer 1-2 아이콘 */
+.ft_con2 i {
+  padding: 0 7px 0 0px;
+  color: #929898;
+  font-size: 17px;
+}
+/* footer 3,4 감싸주는 박스 */
+.ft_container2 {
+  height: 513px;
+  background-color: #2d2d2d;
+}
+/* footer 3,4 감싸주는 박스 */
+.ft_con4 {
+  padding: 54px 0 54px 0;
+}
+/* ft_con4의 위 아래 보더 선 */
+.ft_con4 ul {
+  padding: 30px 0 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* ft_con4 li 정렬 */
+.ft_con4 li {
+  display: inline-block;
+  padding: 0 30px 0 30px;
+}
+/* ft_con4 개인정보처리방침~광고문의 글씨색상 */
+.ft_con4 ul > li > a {
+  color: #ffffff;
+}
+
+/* 푸터 주소, 카피라이터 */
+.ft_nav4 address,
+.ft_nav4 p {
+  line-height: 21px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 푸터 넥슨 로고 */
+.ft_logo img {
+  margin-top: 65px;
+}
+
+/* footer last icon */
+
+.ft_icon {
+  margin-top: 30px;
+}
+
+/* 유튜브 아이콘 */
+.ft_icon .youtube {
+  display: inline-block;
+  background-image: url("../images/footer_img/sns/footer_sns.png");
+  width: 20px;
+  height: 19px;
+  margin-right: 27px;
+  background-position: 0 -50px;
+  background-color: #ffffff;
+  text-indent: -9999px;
+}
+/* 트위터 아이콘*/
+.ft_icon .twiiter {
+  display: inline-block;
+  background-image: url("../images/footer_img/sns/footer_sns.png");
+  width: 10px;
+  height: 19px;
+  padding: 0 5px;
+  margin-right: 27px;
+  background-position: 0 -100px;
+  background-color: #ffffff;
+  text-indent: -9999px;
+}
+/* 페이스북 아이콘 */
+.ft_icon .facebook {
+  display: inline-block;
+  background-image: url("../images/footer_img/sns/footer_sns.png");
+  width: 7px;
+  height: 19px;
+  padding: 0 5px;
+  background-position: 0 -150px;
+  background-color: #ffffff;
+  text-indent: -9999px;
+}
+/*푸터 종료 - 김아름*/

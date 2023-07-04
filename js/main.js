@@ -1,21 +1,66 @@
+// 팝업 시작 - 김아름 //
+// 팝업창
+let popup = document.querySelector("dialog"),
+  popupClose = popup.querySelector(".close"),
+  dayCheck = document.querySelector("#todayView");
+
+//쿠키설정 24시간
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=
+    ${date.toUTCString()}`;
+
+}
+
+//쿠키 가져오기
+function checkCookie(name) {
+  let cookieArr = document.cookie.split(";");
+  console.log(cookieArr)
+
+  let visited = false;
+
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
+    }
+  }
+  console.log(visited);
+  if (!visited) {
+    popup.setAttribute("open", "");
+  }
+}
+
+//X버튼 클릭하면 닫기
+checkCookie("nexonss");
+popupClose.addEventListener("click", () => {
+  if (dayCheck.checked) {
+    setCookie("nexonss", "home", 1);
+  } else {
+    //setCookie("nexonss", "home", -1);
+  }
+  popup.removeAttribute("open");
+});
+
+// 팝업 종료 - 김아름 //
+
+
+// 헤더 시작 - 기서은 //
 // 헤더 시작 - 기서은 //
 let header = document.querySelector("header"),
     Nav = header.querySelector("nav"),
     NavMenu = Nav.querySelectorAll("nav > ul > li"),
+    //NavMenuCounter =  NavMenu.length,
     headerTabmenu = Nav.querySelectorAll(".header_all_tab_menu > li"),
     headerTabId = Nav.querySelectorAll(".header_all_tab_content > div");
 // headerHeight = header.offsetHeight;
 
-NavMenu.forEach((item) => {
+NavMenu.forEach(item => {
     item.addEventListener("mouseenter", (e) => {
         e.preventDefault();
         item.classList.add("on");
 
-        // let SubMenuHeight = e.currentTarget.querySelector("ul").offsetHeight;
-        // let totalHeight = headerHeight + SubMenuHeight + 30;
-        // header.style.height = `${totalHeight}px`;
-
-        item.classList.add("on");
     });
     item.addEventListener("mouseleave", (e) => {
         e.preventDefault();
@@ -26,9 +71,16 @@ NavMenu.forEach((item) => {
 });
 // Nav에 마우스를 올리면 서브메뉴 나옴
 
+
 headerTabmenu.forEach((item, idx) => {
     item.addEventListener("click", (e) => {
         e.preventDefault();
+        // item.classList.toggle("on");
+        for(let hederTabsub of headerTabmenu) {
+          hederTabsub.classList.remove("on");
+        }
+        e.currentTarget.classList.add("on");
+
         for (hdTabId of headerTabId) {
             hdTabId.style.display = "none";
             //tc.style.display = 'none';
@@ -67,6 +119,7 @@ header.addEventListener("mouseleave", (e) => {
 let headerSection = document.querySelector(".header_banner"),
     headerContent = headerSection.querySelector(".header_content"),
     headerSlide = headerSection.querySelectorAll(".header_slide"),
+    headerVedio =  headerSection.querySelectorAll("video"),
     headerpager = headerSection.querySelector(".heade_pager"),
     headerpagerHtml = "",
     headCounter = headerSlide.length,
@@ -89,8 +142,19 @@ function head_moveSlide(num) {
         headerpg.classList.remove("active");
     }
     headerpagerBtn[headCurrentIndex].classList.add("active");
+
+    for(let hdvd of headerVedio) {
+      hdvd.pause();
+      hdvd.currentTime = 0;
+    }
+    let headslideVideo = headerSlide[headCurrentIndex].querySelectorAll('video');
+    if (headslideVideo .length > 0) {
+       headslideVideo [0].play();
+    }
+    console.log(headslideVideo);
 }
 head_moveSlide(0);
+
 headerpagerBtn.forEach((Btn, idx) => {
     Btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -124,10 +188,6 @@ quickBtn.addEventListener("click", () => {
 // 헤더 종료 - 기서은 //
 
 // 인기게임 시작 - 박선정 //
-
-/*
-변수명 tabMenu에 리스트를 할당
-*/
 let pop_tabMenu = document.querySelectorAll('.pop_tab_menu li');
 let pop_tabContent = document.querySelectorAll('.pop_tab_content .tabs');
 
@@ -321,6 +381,33 @@ eventWrapper.addEventListener("mouseleave", () => {
 });
 // 이벤트&공지사항 종료 - 김아름  //
 
+// 퀵메뉴 시작 - 기서은 //
+window.addEventListener("scroll", () => {
+  popGame= document.querySelector('.pop_tab_wrapper');
+  popGameTop = popGame.offsetTop;
+  scroll = window.scrollY;
+  ftGame= document.querySelector('footer');
+  ftGameTop = ftGame.offsetTop;
+  console.log(popGameTop);
+
+  if (scroll > popGameTop - 500 && scroll < ftGameTop - 500) {
+    aside.classList.remove("fixed");
+  } else {
+    aside.classList.add("fixed");
+  }
+});
+// 퀵메뉴 종료 - 기서은 //
+
 // 푸터 시작 - 김아름 //
 
 // 푸터 종료 - 김아름 //
+
+// 다크모드 시작 //
+let darkcheck = document.querySelector(".quick_box");
+let darkcheckbox = darkcheck.querySelector("#quick_toggle");
+let darkBtn = darkcheck.querySelector("#darkBtn");
+let body = document.querySelector("body");
+darkBtn.addEventListener("click", ()=> {
+    body.classList.toggle("dark-active");
+  });
+// 다크모드 종료 //
