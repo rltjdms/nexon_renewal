@@ -487,7 +487,9 @@ header.active .header_right a {
   width: 100%;
   height: 216px;
 }
-
+.new_game h2{
+  display: none;
+}
 .new_banner{
   width: 100%;
   height: 216px;
@@ -978,7 +980,9 @@ footer {
   font-size: 14px;
   text-align: center;
 }
-
+footer h2{
+  display: none;
+}
 /* footer 1 body */
 .ft-con1 {
   /* vertical-align: baseline; */
