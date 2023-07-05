@@ -1138,6 +1138,9 @@ footer h2{
   float: left;
   position: relative;
 }
+.ft_con1 li:hover,.ft_con2 li:hover {
+  text-decoration-line: underline;
+}
 /* footer 1 자식간 사이 */
 .ft_con1 li + li {
   margin-left: 74px;
@@ -1191,7 +1194,7 @@ footer h2{
   display: inline-block;
   padding: 0 30px 0 30px;
 }
-.ft-con4 li a:hover {
+.ft_con4 li a:hover {
   text-decoration-line: underline;
 }
 /* ft_con4 개인정보처리방침~광고문의 글씨색상 */
@@ -1252,4 +1255,14 @@ footer h2{
   background-color: #ffffff;
   text-indent: -9999px;
 }
+.youtube:hover{
+  background-color: #0077ff;
+}
+.twiiter:hover{
+  background-color: #0077ff;
+}
+.facebook:hover{
+  background-color: #0077ff;
+}
+
 /*푸터 종료 - 김아름*/
