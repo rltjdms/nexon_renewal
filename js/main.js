@@ -16,8 +16,6 @@ function setCookie(name, value, day) {
 //쿠키 가져오기
 function checkCookie(name) {
   let cookieArr = document.cookie.split(";");
-  console.log(cookieArr)
-
   let visited = false;
 
   for (let cookie of cookieArr) {
@@ -26,7 +24,6 @@ function checkCookie(name) {
       break;
     }
   }
-  console.log(visited);
   if (!visited) {
     popup.setAttribute("open", "");
   }
@@ -151,8 +148,7 @@ function head_moveSlide(num) {
     if (headslideVideo .length > 0) {
        headslideVideo [0].play();
     }
-    console.log(headslideVideo);
-}
+  }
 head_moveSlide(0);
 
 headerpagerBtn.forEach((Btn, idx) => {
@@ -388,9 +384,8 @@ window.addEventListener("scroll", () => {
   scroll = window.scrollY;
   ftGame= document.querySelector('footer');
   ftGameTop = ftGame.offsetTop;
-  console.log(popGameTop);
 
-  if (scroll > popGameTop - 500 && scroll < ftGameTop - 500) {
+  if (scroll > popGameTop - 1000 && scroll < ftGameTop - 1000) {
     aside.classList.remove("fixed");
   } else {
     aside.classList.add("fixed");

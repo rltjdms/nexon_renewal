@@ -1,5 +1,43 @@
 # NEXON RENEWAL PROJECT
-   
+
+※본 사이트는 팀 프로젝트 포트폴리오 사이트입니다.
+
+※넥슨과는 무관함을 안내드립니다.
+
+※이 사이트에 사용된 이미지의 저작권은 넥슨에 있으므로, 무단으로 사용할 수 없습니다.
+* * *
+### 제작기간 
+2023.05.19 ~ 2023.07.06
+
+### 사용언어 
+html, css, javascript
+
+### 구현 완료 페이지 
+메인페이지
+
+### 팀원 
+박O정(팀장), 기O은, 김O훈, 김O름 
+* * *
+### 파트업무분장
+
+#### 기획
+전원참여
+
+#### 디자인
+전원참여
+
+#### 구현
+
+헤더, 퀵메뉴 : 기*은
+
+인기게임, 신규게임 : 박*정
+
+추천게임 : 김*훈
+
+이벤트&공지사항, 푸터, 팝업창 : 김*름
+* * *
+
+
 ## 사이트 개요
 
 ### 회사 소개
@@ -9,7 +47,9 @@
 
 ### 선정 이유
 사용자 경험 기반으로 볼 때, 게임 실행 시 넥슨 홈페이지로 유입되지 않고 실행할 게임 사이트로 유입되어짐 
-> → 넥슨 홈페이지 또한 중요한 브랜드 자산임으로 유입도를 높이는 것은 필수적인 과제
+**-> 넥슨 홈페이지 또한 중요한 브랜드 자산임으로 유입도를 높이는 것은 필수적인 과제**
+* * *   
+
 
 
 ## MAIN SLOGAN
@@ -17,55 +57,3 @@
 ### 넥슨에서 즐거움을 시작하세요!
 
 게임 실행 시 해당 게임의 홈페이지에 접속하는 것이 아닌 넥슨 홈페이지를 통해 접속하게 하는 것이 최종 목표
-
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
