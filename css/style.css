@@ -165,7 +165,7 @@ header h1 > a {
   background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
 header nav > ul > li {
-  margin-right: 45px;
+  padding-right: 45px;
 }
 header nav > ul > li > a,
 .header_right {
@@ -239,6 +239,9 @@ header nav > ul> li.on > a::after {
   box-sizing: border-box;
   background-color: #fff;
   border-top: 1px solid #929898;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 header nav > ul > li:nth-child(2) .header_submenu {
   padding: 40.5px 0 40.5px 496px;
@@ -280,9 +283,6 @@ header nav > ul > li:nth-child(5) .header_submenu {
 /* javascript */
 
 /* none */
-header nav > ul > li .header_submenu {
-  display: none;
-}
 
 #header_all_type.on, 
 #header_all_name {
@@ -305,7 +305,8 @@ header nav > ul > li.on .header_all_tab_menu.on + div > div {
 }
 /* block */
 header nav > ul > li.on .header_submenu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 header nav > ul > li.on .header_submenu .header_all_tab_menu > li.on > a {
