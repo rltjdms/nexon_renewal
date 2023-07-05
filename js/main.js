@@ -385,7 +385,7 @@ window.addEventListener("scroll", () => {
   ftGame= document.querySelector('footer');
   ftGameTop = ftGame.offsetTop;
 
-  if (scroll > popGameTop - 1000 && scroll < ftGameTop - 1000) {
+  if (scroll > popGameTop - 700 && scroll < ftGameTop - 700) {
     aside.classList.remove("fixed");
   } else {
     aside.classList.add("fixed");
