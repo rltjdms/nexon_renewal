@@ -775,6 +775,10 @@ header.active .header_right a {
   border-bottom: 1px solid rgba(146, 152, 152, 0.7);
   line-height: 50px;
 }
+/* 공지사항 리스트 호버시 색상추가 */
+.notice ul li:hover{
+  background:rgba(163, 163, 163, 0.2);
+}
 /* 공지사항 날짜 */
 .date {
   float: left;
