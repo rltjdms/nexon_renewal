@@ -1,40 +1,26 @@
-# Project Title
+# NEXON RENEWAL PROJECT
 
-One Paragraph of project description goes here
 
-## Getting Started
+## 사이트 개요
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### 회사 소개
+넥슨은 게임을 사랑하는 사람들이 모여 즐겁게 게임을 만들며 젊음과 즐거움을 세상에 전하고 있는 회사입니다.
+2009년 이후로 국내 업계 1위 자리를 지키며, 190여개 국가에서 약 50여 종의 게임을 서비스하는 세계 최초의 온라인 게임 서비스 기업 타이틀을 얻어냈습니다.
+지난해(2022년) 매출 3조 4천억 원을 기록하며 최근까지 성장하는 모습을 보여주고있습니다.
 
-### Prerequisites
+### 선정 이유
 
-What things you need to install the software and how to install them
+사용자 경험 기반으로 볼 때, 게임 실행 시 넥슨 홈페이지로 유입되지 않고 실행할 게임 사이트로 유입되어짐 
+→ 넥슨 홈페이지 또한 중요한 브랜드 자산임으로 유입도를 높이는 것은 필수적인 과제
 
-```
-Give examples
-```
 
-### Installing
+## MAIN SLOGAN
 
-A step by step series of examples that tell you how to get a development env running
+### 넥슨에서 즐거움을 시작하세요!
 
-Say what the step will be
+게임 실행 시 해당 게임의 홈페이지에 접속하는 것이 아닌 넥슨 홈페이지를 통해 접속하게 하는 것이 최종 목표
 
-```
-Give the example
-```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
 
