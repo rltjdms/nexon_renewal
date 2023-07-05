@@ -812,6 +812,10 @@ footer {
   float: left;
   position: relative;
 }
+.ft-con1 li:hover,.ft-con2 li:hover {
+  text-decoration-line: underline;
+}
+
 /* footer 1 자식간 사이 */
 .ft-con1 li + li {
   margin-left: 74px;
@@ -864,6 +868,9 @@ footer {
 .ft-con4 li {
   display: inline-block;
   padding: 0 30px 0 30px;
+}
+.ft-con4 li a:hover {
+  text-decoration-line: underline;
 }
 /* ft-con4 개인정보처리방침~광고문의 글씨색상 */
 .ft-con4 ul > li > a {
@@ -923,6 +930,7 @@ footer {
   background-color: #ffffff;
   text-indent: -9999px;
 }
+
 /*푸터 종료 - 김아름*/
 
 /*퀵메뉴 시작 - 기서은*/
