@@ -165,7 +165,7 @@ header h1 > a {
   background: url(../images/header_img/header_logo.png) no-repeat center/contain;
 }
 header nav > ul > li {
-  margin-right: 45px;
+  padding-right: 45px;
 }
 header nav > ul > li > a,
 .header_right {
@@ -239,6 +239,9 @@ header nav > ul> li.on > a::after {
   box-sizing: border-box;
   background-color: #fff;
   border-top: 1px solid #929898;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 header nav > ul > li:nth-child(2) .header_submenu {
   padding: 40.5px 0 40.5px 496px;
@@ -280,9 +283,6 @@ header nav > ul > li:nth-child(5) .header_submenu {
 /* javascript */
 
 /* none */
-header nav > ul > li .header_submenu {
-  display: none;
-}
 
 #header_all_type.on, 
 #header_all_name {
@@ -305,7 +305,8 @@ header nav > ul > li.on .header_all_tab_menu.on + div > div {
 }
 /* block */
 header nav > ul > li.on .header_submenu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 header nav > ul > li.on .header_submenu .header_all_tab_menu > li.on > a {
@@ -811,6 +812,10 @@ header.active .header_right a {
   top: 10px;
   right: 0;
 }
+/* 공지사항 리스트 호버시 색상추가 */
+.notice ul li:hover{
+  background:rgba(163, 163, 163, 0.2);
+}
 /* 공지사항의 내용*/
 .notice ul > li > a > p {
   float: right;
@@ -1133,6 +1138,9 @@ footer h2{
   float: left;
   position: relative;
 }
+.ft_con1 li:hover,.ft_con2 li:hover {
+  text-decoration-line: underline;
+}
 /* footer 1 자식간 사이 */
 .ft_con1 li + li {
   margin-left: 74px;
@@ -1185,6 +1193,9 @@ footer h2{
 .ft_con4 li {
   display: inline-block;
   padding: 0 30px 0 30px;
+}
+.ft_con4 li a:hover {
+  text-decoration-line: underline;
 }
 /* ft_con4 개인정보처리방침~광고문의 글씨색상 */
 .ft_con4 ul > li > a {
@@ -1244,4 +1255,14 @@ footer h2{
   background-color: #ffffff;
   text-indent: -9999px;
 }
+.youtube:hover{
+  background-color: #0077ff;
+}
+.twiiter:hover{
+  background-color: #0077ff;
+}
+.facebook:hover{
+  background-color: #0077ff;
+}
+
 /*푸터 종료 - 김아름*/
