@@ -15,7 +15,7 @@ function setCookie(name, value, day) {
 //쿠키 가져오기
 function checkCookie(name) {
   let cookieArr = document.cookie.split(";");
-  console.log(cookieArr)
+  // console.log(cookieArr)
 
   let visited = false;
 
@@ -25,7 +25,8 @@ function checkCookie(name) {
       break;
     }
   }
-  console.log(visited);
+  //방문
+  // console.log(visited);
   if (!visited) {
     popup.setAttribute("open", "");
   }
@@ -33,11 +34,15 @@ function checkCookie(name) {
 
 //X버튼 클릭하면 닫기
 checkCookie("nexonss");
+
 popupClose.addEventListener("click", () => {
+  // console.log('닫기');
   if (dayCheck.checked) {
     setCookie("nexonss", "home", 1);
+    // console.log('쿠키생성');
   } else {
-    setCookie("nexonss", "home", -1);
+    // setCookie("nexonss", "home", -1);
+    // console.log('쿠키닫기');
   }
   popup.removeAttribute("open");
 });
@@ -288,7 +293,7 @@ lightCloseBtn.addEventListener("click", () => {
 let eventWrapper = document.querySelector(".event"), // event(부모)
   eventSlide = eventWrapper.querySelector(".event-slide"), //event ul
   eventslideList = eventSlide.querySelectorAll("li"),
-  // 각 슬라이드
+  // 각 슬라이드 갯수
   dotPager = eventWrapper.querySelector(".event-dot"), //dot버튼
   dotIndex = "", //닷버튼 공간
   eventTimer, //이벤트 시간
@@ -297,11 +302,13 @@ let eventWrapper = document.querySelector(".event"), // event(부모)
   currentSlideIdx = 0; // 보고있는 이벤트 화면
 
 if (slideCount > 1) {
-  eventslideList.forEach((item, idx) => {
+  eventslideList.forEach((item, idx) => { //슬라이드 이미지 반복해서 보여주기
     item.style.left = `${idx * 100}%`;
     dotIndex += `<a href="">${idx}</a>`; //dot버튼 생성
   });
 }
+
+//닷버튼
 dotPager.innerHTML = dotIndex;
 let dotbtn = dotPager.querySelectorAll("a");
 function eventmoveSlide(num) {
@@ -317,13 +324,14 @@ function eventmoveSlide(num) {
   }
   dotbtn[currentSlideIdx].classList.add("active");
 }
-eventmoveSlide(0);
+eventmoveSlide(0); //첫번째 화면 보여주기
 dotbtn.forEach((item, idx) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    eventmoveSlide(idx);
+  item.addEventListener("click", (e) => { //여기서 e는 닷버튼
+    e.preventDefault(); //a 태그를 누르면 링크로 이동하는데 그걸 방지하기 위한 동작
+    eventmoveSlide(idx); //idx 페이지로 이동
   });
 });
+
 // 이벤트 슬라이드 루프 시작하기
 function event_autoSlide() {
   eventTimer = setInterval(() => {
