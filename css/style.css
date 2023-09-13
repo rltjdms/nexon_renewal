@@ -239,7 +239,6 @@ header nav > ul> li.on > a::after {
   box-sizing: border-box;
   background-color: #fff;
   border-top: 1px solid #929898;
-  transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
 }
@@ -304,9 +303,10 @@ header nav > ul > li.on .header_all_tab_menu.on + div > div {
   display: block;
 }
 /* block */
-header nav > ul > li.on .header_submenu {
+header.active nav > ul > li.on .header_submenu {
   opacity: 1;
   visibility: visible;
+  transition: all 0.5s;
 }
 
 header nav > ul > li.on .header_submenu .header_all_tab_menu > li.on > a {
