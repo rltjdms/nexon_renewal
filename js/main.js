@@ -161,7 +161,7 @@ function head_autoSlide() {
     head_timer = setInterval(() => {
         let headerSlideNext = (headCurrentIndex + 1) % headCounter;
         head_moveSlide(headerSlideNext);
-    }, 28000);
+    }, 27000);
     //clearInterval(timer);
 }
 head_autoSlide();
