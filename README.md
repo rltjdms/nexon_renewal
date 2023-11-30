@@ -19,22 +19,9 @@ html, css, javascript
 박O정(팀장), 기O은, 김O훈, 김O름 
 * * *
 ### 파트업무분장
+![NEXON_renewal_presentaion_ver5 1 1 pptx](https://github.com/rltjdms/nexon_renewal/assets/137126199/5c5216f3-b866-4451-b170-4ab2ad941499)
 
-#### 기획
-전원참여
 
-#### 디자인
-전원참여
-
-#### 구현
-
-헤더, 퀵메뉴 : 기*은
-
-인기게임, 신규게임 : 박*정
-
-추천게임 : 김*훈
-
-이벤트&공지사항, 푸터, 팝업창 : 김*름
 * * *
 
 
