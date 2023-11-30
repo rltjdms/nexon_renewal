@@ -1266,3 +1266,25 @@ footer h2{
 }
 
 /*푸터 종료 - 김아름*/
+
+
+@media (max-width: 1640px) {
+
+  header nav > ul > li {
+    padding-right: 25px;
+  }
+
+  .header_tt {
+    font-size: 18px;
+  }
+ 
+
+  .header_right ul li {
+    margin-right: 15px;
+    font-size: 18px;
+  }
+
+  header .header_right .header_card {
+    width: 124px;
+  }
+}
