@@ -6,8 +6,9 @@
 
 ※이 사이트에 사용된 이미지의 저작권은 넥슨에 있으므로, 무단으로 사용할 수 없습니다.
 
-포트폴리오 보러가기🔍
+완성작 보러가기🔍
 [https://rltjdms.github.io/nexon_renewal/](https://rltjdms.github.io/nexon_renewal/)
+
 * * *
 ### 제작기간 
 2023.05.19 ~ 2023.07.06
